@@ -390,7 +390,7 @@ namespace TFMV.UserControls
 
                 #endregion
 
-                MessageBox.Show(match);
+                //MessageBox.Show(match);
 
 
                 if (match != "")

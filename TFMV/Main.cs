@@ -7757,11 +7757,11 @@ save listbox as cache, effectively deleting anything that isn't in the folder an
 
                     if (((Loadout_Item)loadout_list.Controls[i]).item_name.ToString() == "Voodoo-Cursed Spy Soul")
                     {
-                        MessageBox.Show("WARNING! To view the Voodoo-Cursed Spy Soul correctly in HLMV, click the Model tab and select Skin 22 for Red Team or Skin 23 for Blue team. TFMV Bodygroup selecting is currently not supported for zombie skins but can be overridden using the Submodel dropdowns, at the top of the Model tab.");
+                        MessageBox.Show("WARNING! To view the Voodoo-Cursed Spy Soul correctly in HLMV, click the Model tab and select Skin 22 for Red Team or Skin 23 for Blue team.\n\nTFMV Bodygroup selecting is currently not supported for zombie skins but can be overridden using the Submodel dropdowns, at the top of the Model tab.");
                     }
                     else
                     {
-                        MessageBox.Show("WARNING! To view Voodoo-Cursed Zombie Souls correctly in HLMV, click the Model tab and select Skin 4 for Red Team or Skin 5 for Blue team. TFMV Bodygroup selecting is currently not supported for zombie skins but can be overridden using the Submodel dropdowns, at the top of the Model tab.");
+                        MessageBox.Show("WARNING! To view Voodoo-Cursed Zombie Souls correctly in HLMV, click the Model tab and select Skin 4 for Red Team or Skin 5 for Blue team.\n\nTFMV Bodygroup selecting is currently not supported for zombie skins but can be overridden using the Submodel dropdowns, at the top of the Model tab.");
                     }
                 }
 
