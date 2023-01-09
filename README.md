@@ -1,4 +1,4 @@
-# TFMV Neo 0.5
+# TFMV Neo 0.61
 Team Fortress 2 Model Viewer
 
 DOWNLOAD HERE: https://github.com/NeoDement/TFMV/releases
@@ -6,6 +6,70 @@ DOWNLOAD HERE: https://github.com/NeoDement/TFMV/releases
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 PATCH NOTES:
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+0.61 (01/09/2023)
+_______________________________________________________________________________________________________________________
+
+
+-Fixed left-over debug message popping up when changing bodygroup checkboxes (thanks Papyesh!)
+
+MISSED NOTES FROM PREVIOUS RELEASE:
+
+-Disabled an unnecessary automatic fix to Workshop zip files, as advised by Neodos.
+
+-Fixed some grammar/typos.
+
+_______________________________________________________________________________________________________________________
+
+0.6 (01/08/2023)
+_______________________________________________________________________________________________________________________
+
+BODYGROUP FIXES:
+
+-Fixed the Gunslinger not showing up as a valid item.
+
+-Fixed the Gentle Manne's Service Medal not showing up as a valid item.
+
+-Fixed the Purity Fist not loading the metallic fingers bodygroup.
+
+-Fixed the Sydney Sleeper not loading the darts bodygroup.
+
+-Fixed all tf_weapon_compound_bow weapons (Huntsman, Fortified Compound etc) not loading the arrows bodygroup.
+
+-Fixed the Short Circuit not hiding the rightarm bodygroup.
+
+TURNTABLE GENERATOR IMPROVEMENTS:
+
+-Added an option to output as an image sequence instead of an animated GIF, so you can compress it yourself.
+(in a future update, there will hopefully be some better GIF compression options)
+
+-Reworked settings.
+
+ITEM LIST IMPROVEMENTS:
+
+-Improved search functionality. The displayed name is now searched instead of only the internal name, which should make it behave more like expected.
+
+-You can now right click an item to copy its model path or search it on the Wiki. Removed the original Wiki button.
+
+-Fixed wrong item names being taken from TF_English occasionally (POMSON instead of Pomson 5000, Fishcake Fragment instead of Fishcake etc).
+
+-Fixed Workshop tab occasionally stopping part way through the loading process, when encountering a corrupt zip.
+
+-Added option to download additional medals. These medals will show up under their own Medal item filter type.
+(This only shows medals with unique models, duplicates are currently skipped for performance reasons.)
+
+OTHER IMPROVEMENTS:
+
+-Added options to choose which Class and Slot (ie Primary, Cosmetic) are selected on startup.
+
+-Added style name and copyable model path to Skins tab.
+
+-You no longer need to provide your own Steam API Key. If the built-in Key fails, you will be given the option to provide your own one.
+(if you want to provide your own one anyway, save a txt document containing your Key in "api_key.ini" in the "TFMV/config" directory)
+
+-Many other minor improvements.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
