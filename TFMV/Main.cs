@@ -35,17 +35,18 @@ namespace TFMV
         // this key is necesary in order to download the TF2's item schema from Valve's servers
         // you can get your steam api key here: https://steamcommunity.com/dev/apikey
         // http://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?key=" + steam_api_key +"&format=vdf"
-        //        private string steam_api_key = "<API KEY>";
-        //        private string steam_api_key = "http://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?key=<API KEY>";
+        //        private string steam_api_key = "6D9639EF4883824D5E277DC3E57077D8";
+        //        private string steam_api_key = "http://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?key=6D9639EF4883824D5E277DC3E57077D8";
         //        http://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?key=
 
 
-        //todo: enter an API key from a dummy account here
-        private string internal_steam_api_key = "INVALID KEY";
+        //this is an API key tied to a dummy Steam account (https://steamcommunity.com/id/tfmvdummy/)
+        //you may leave it in place, or replace it with your own if it expires
+        private string internal_steam_api_key = "6D9639EF4883824D5E277DC3E57077D8";
         private string steam_api_key = "";
 
 
-
+        //todo: get rid of this?
         string DirUserName = "jburn";
 
         #endregion
@@ -548,6 +549,7 @@ namespace TFMV
             #region load text file parameters
 
             load_banned_items();
+            //todo: confirm these aren't needed and remove them (creating unnecessary 0kb files!)
             load_hint_modelspaths();
             load_hint_main_modelspaths();
             load_pose_names();
@@ -717,6 +719,8 @@ namespace TFMV
 
             #region custom mods / disable mods
 
+            //neodement: todo: disable confusing wordy "disable mods?" popup. rename custom TFMV dir to !TFMV dir before you commit this.
+            //Maybe add code to keep on adding a preceding ! character until you have highest precedence...
             check_custom_mods();
 
             if (cb_disable_custom_mods.Checked)
@@ -2089,7 +2093,8 @@ namespace TFMV
                 {
                     miscFunc.DeleteDirectoryContent(tmp_workshop_zip_dir);
 
-
+                    //according to the man himself, this code is outdated and should be disabled!
+                    /*
                     int flag = -1;
                     using (BinaryReader b = new BinaryReader(File.Open(zip_path, FileMode.Open)))
                     {
@@ -2109,6 +2114,7 @@ namespace TFMV
                             }
                         }
                     }
+                    */
                 }
                 catch { }
 
@@ -2121,6 +2127,53 @@ namespace TFMV
                 string item_name = "";
 
                 Image icon = null;
+
+
+
+
+
+                /*
+check if cache exists
+
+    it does? load it to a list/array
+
+end if
+
+cache doesnt exist?
+
+    create an empty list/array
+
+end if
+
+
+
+
+
+
+for each zip
+
+get ModDate
+
+
+if cache.contains(entry with exact same date modified and filename and filesize)
+
+    load it to listbox
+
+end if
+
+else (item not in cache)
+
+    add it to cache
+	
+    load it to listbox
+end
+
+
+
+
+save listbox as cache, effectively deleting anything that isn't in the folder anymore and should no longer be cached
+                */
+
 
                 #region extract zip file data
 
@@ -3254,7 +3307,7 @@ namespace TFMV
             }
             catch // (IndexOutOfRangeException e)
             {
-                MessageBox.Show("CpatureApplication() : Unable to get process " + procName);
+                MessageBox.Show("CaptureApplication() : Unable to get process " + procName);
                 return null;
             }
 
@@ -3608,7 +3661,8 @@ namespace TFMV
             {
                 if ((mosaic_image_resolution.X > 15000) || (mosaic_image_resolution.Y > 15000))
                 {
-                    MessageBox.Show("The maxmimum image resolution supported for the paints mosaic is 15 000px by 15 000px\n\nPlease scale down the HLMV window size.\n\nFor higher resolutions generate indivudal images instead (untick \"merge screenshots into a mosaic\").");
+                    //todo: this should be a choice. not forced upon the user.
+                    MessageBox.Show("The maximum image resolution supported for the paints mosaic is 15000px by 15000px.\n\nPlease scale down the HLMV window size.\n\nFor higher resolutions generate individual images instead (untick \"merge screenshots into a mosaic\").");
                     bgWorker_ScreenPaintsTool.CancelAsync();
                     return;
                 }
@@ -6458,7 +6512,7 @@ namespace TFMV
             string path = schema_dir + "icons/" + Path.GetFileName(image_url);
             string schema_icon_path = schema_dir + "icons/" + Path.GetFileName(image_url);
 
-            try // make sure that there's no error loading the image, if there is an erorr laoding it, we redownload the icon, in case it was corrupted
+            try // make sure that there's no error loading the image, if there is an error loading it, we redownload the icon, in case it was corrupted
             {
                 // if file doesn't exist or size = 0 then   download
                 if (!File.Exists(schema_icon_path) || ((new FileInfo(schema_icon_path)).Length == 0))
@@ -6536,7 +6590,7 @@ namespace TFMV
             {
                 if (items_loading == false)
                 {
-                    label_model.Visible = true;
+                    //label_model.Visible = true;
 
                     // get checked/unchecked item
                     ExtdListViewItem item = (ExtdListViewItem)e.Item;
@@ -6588,7 +6642,7 @@ namespace TFMV
 
                         adding_workshop_item_toLoadout = true;
                         adding_workshop_item_zip_path = item.workshop_zip_path;
-                        if (!File.Exists(item.workshop_zip_path)) { MessageBox.Show("Cannot find workshop zip file:\n" + item.workshop_zip_path); return; }
+                        if (!File.Exists(item.workshop_zip_path)) { MessageBox.Show("Cannot find Workshop zip file:\n" + item.workshop_zip_path); return; }
 
                         filter_droped_file(item.workshop_zip_path);
                         return;
@@ -6804,6 +6858,7 @@ namespace TFMV
                             if (item.anim_slot.Eq("primary2")) { out_pose = "stand_PRIMARY"; } // soldier: The Cow Mangler 5000
                             if (item.anim_slot.Eq("building")) { out_pose = "stand_SAPPER"; }
                             if (item.anim_slot.Eq("force_not_used")) { out_pose = "ref"; }
+
 
                             if (out_pose != "")
                             {
@@ -11037,12 +11092,12 @@ namespace TFMV
 
                 if (Directory.GetFiles(steamGameConfig.tf_dir + "custom\\", "*.vpk").Length > 0)
                 {
-                    DialogResult result = MessageBox.Show("TFMV has detected you have mods installed in \\Team Fortress 2\\tf\\custom\\"
-                        + "\nMods can interfere with TFMV team skin switching and bodygroup masking."
+                    DialogResult result = MessageBox.Show("TFMV has detected you have mods installed in\n\"\\Team Fortress 2\\tf\\custom\\\"."
+                        + "\n\nMods can interfere with TFMV team skin switching and bodygroup masking."
 
                          + "\n\nHowever, TFMV can temporarily disable the mods while using TFMV to avoid this."
-                         + "\n\nWould you like TFMV to disable mods? mods will always be re-enabled again when TFMV is closed."
-                         + "\nYou can disable this option in the Settings tab."
+                         + "\n\nWould you like TFMV to disable mods? Mods will always be re-enabled again when TFMV is closed."
+                         + "\n\nYou can disable this option in the Settings tab."
                         ,
 
                         "TFMV: Disable custom mods while using TFMV?", MessageBoxButtons.YesNo);
@@ -12342,6 +12397,11 @@ End Class
             string SearchItemName = (item.Text.Split('(')[0].Replace(" ", "_"));
 
             Process.Start("http://wiki.teamfortress.com/wiki/Special:Search/" + SearchItemName);
+        }
+
+        private void lab_tf2_itemlist_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void disable_custom_mods()

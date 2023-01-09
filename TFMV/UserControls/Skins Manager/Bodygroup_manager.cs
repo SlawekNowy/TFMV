@@ -178,6 +178,10 @@ namespace TFMV.UserControls
             create_bodygroups_mask(true);
         }
 
+        private void Bodygroup_manager_Load(object sender, EventArgs e)
+        {
+
+        }
 
         public void create_bodygroups_mask(bool refresh_hlmv)
         {
@@ -384,7 +388,9 @@ namespace TFMV.UserControls
                     if (match != "") { break; }
                 }
 
-            #endregion
+                #endregion
+
+                MessageBox.Show(match);
 
 
                 if (match != "")

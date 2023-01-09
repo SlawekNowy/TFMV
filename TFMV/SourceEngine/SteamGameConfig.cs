@@ -314,7 +314,7 @@ namespace TFMV.SourceEngine
 
         public void save_game_config()
         {
-            MessageBox.Show(settings_dir);
+            //MessageBox.Show(settings_dir);
             try
             {
                 TextWriter tw = new StreamWriter(settings_dir + "game_config.ini");

@@ -37,6 +37,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Name = "Bodygroup_manager";
             this.Size = new System.Drawing.Size(160, 250);
+            this.Load += new System.EventHandler(this.Bodygroup_manager_Load);
             this.ResumeLayout(false);
 
         }
