@@ -1119,6 +1119,16 @@ namespace TFMV.UserControls.Jigglebone_Editor
         {
             menuResetValue.Show(MousePosition);
         }
+
+        private void groupBox21_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

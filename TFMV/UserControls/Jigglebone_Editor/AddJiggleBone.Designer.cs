@@ -62,7 +62,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.txtBaseLeftFriction = new System.Windows.Forms.NumericUpDown();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.button26 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txtBaseLeftConstraintMax = new System.Windows.Forms.NumericUpDown();
@@ -74,7 +73,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtBaseForwardFriction = new System.Windows.Forms.NumericUpDown();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.txtBaseForwardConstraintMax = new System.Windows.Forms.NumericUpDown();
@@ -89,7 +87,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.txtBaseUpFriction = new System.Windows.Forms.NumericUpDown();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBaseUpConstraintMax = new System.Windows.Forms.NumericUpDown();
@@ -292,6 +289,9 @@
             this.label76 = new System.Windows.Forms.Label();
             this.btn_reset_generic = new System.Windows.Forms.Button();
             this.label53 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
@@ -432,9 +432,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtYawStiffness);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 163);
+            this.groupBox1.Location = new System.Drawing.Point(7, 163);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(187, 196);
+            this.groupBox1.Size = new System.Drawing.Size(192, 196);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -637,6 +637,9 @@
             // grpHasBaseSpring
             // 
             this.grpHasBaseSpring.BackColor = System.Drawing.SystemColors.Control;
+            this.grpHasBaseSpring.Controls.Add(this.button17);
+            this.grpHasBaseSpring.Controls.Add(this.button16);
+            this.grpHasBaseSpring.Controls.Add(this.button26);
             this.grpHasBaseSpring.Controls.Add(this.label57);
             this.grpHasBaseSpring.Controls.Add(this.label56);
             this.grpHasBaseSpring.Controls.Add(this.label55);
@@ -658,9 +661,9 @@
             this.label57.BackColor = System.Drawing.Color.DarkGray;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label57.Location = new System.Drawing.Point(9, 414);
+            this.label57.Location = new System.Drawing.Point(9, 413);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(195, 23);
+            this.label57.Size = new System.Drawing.Size(194, 23);
             this.label57.TabIndex = 75;
             this.label57.Text = "FORWARD";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -670,9 +673,9 @@
             this.label56.BackColor = System.Drawing.Color.DarkGray;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label56.Location = new System.Drawing.Point(9, 281);
+            this.label56.Location = new System.Drawing.Point(9, 278);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(195, 23);
+            this.label56.Size = new System.Drawing.Size(194, 23);
             this.label56.TabIndex = 74;
             this.label56.Text = "UP";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -682,9 +685,9 @@
             this.label55.BackColor = System.Drawing.Color.DarkGray;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label55.Location = new System.Drawing.Point(7, 146);
+            this.label55.Location = new System.Drawing.Point(9, 143);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(195, 23);
+            this.label55.Size = new System.Drawing.Size(194, 23);
             this.label55.TabIndex = 73;
             this.label55.Text = "LEFT";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -694,9 +697,9 @@
             this.groupBox19.Controls.Add(this.groupBox20);
             this.groupBox19.Controls.Add(this.groupBox21);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(7, 156);
+            this.groupBox19.Location = new System.Drawing.Point(9, 155);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(195, 120);
+            this.groupBox19.Size = new System.Drawing.Size(194, 118);
             this.groupBox19.TabIndex = 36;
             this.groupBox19.TabStop = false;
             // 
@@ -706,7 +709,7 @@
             this.groupBox20.Controls.Add(this.label33);
             this.groupBox20.Controls.Add(this.txtBaseLeftFriction);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(9, 71);
+            this.groupBox20.Location = new System.Drawing.Point(8, 69);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(179, 42);
             this.groupBox20.TabIndex = 36;
@@ -743,28 +746,18 @@
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.button26);
             this.groupBox21.Controls.Add(this.label24);
             this.groupBox21.Controls.Add(this.label25);
             this.groupBox21.Controls.Add(this.txtBaseLeftConstraintMax);
             this.groupBox21.Controls.Add(this.txtBaseLeftConstraintMin);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(9, 20);
+            this.groupBox21.Location = new System.Drawing.Point(8, 18);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(179, 52);
             this.groupBox21.TabIndex = 35;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "      left_constraint";
-            // 
-            // button26
-            // 
-            this.button26.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button26.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button26.Location = new System.Drawing.Point(2, -3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(19, 19);
-            this.button26.TabIndex = 39;
-            this.button26.UseVisualStyleBackColor = true;
+            this.groupBox21.Enter += new System.EventHandler(this.groupBox21_Enter);
             // 
             // label24
             // 
@@ -826,9 +819,9 @@
             this.groupBox22.Controls.Add(this.groupBox23);
             this.groupBox22.Controls.Add(this.groupBox24);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.Location = new System.Drawing.Point(7, 424);
+            this.groupBox22.Location = new System.Drawing.Point(9, 425);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(195, 120);
+            this.groupBox22.Size = new System.Drawing.Size(194, 118);
             this.groupBox22.TabIndex = 40;
             this.groupBox22.TabStop = false;
             // 
@@ -838,7 +831,7 @@
             this.groupBox23.Controls.Add(this.label26);
             this.groupBox23.Controls.Add(this.txtBaseForwardFriction);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.Location = new System.Drawing.Point(9, 69);
+            this.groupBox23.Location = new System.Drawing.Point(8, 69);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(179, 42);
             this.groupBox23.TabIndex = 36;
@@ -875,28 +868,17 @@
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.button17);
             this.groupBox24.Controls.Add(this.label27);
             this.groupBox24.Controls.Add(this.label31);
             this.groupBox24.Controls.Add(this.txtBaseForwardConstraintMax);
             this.groupBox24.Controls.Add(this.txtBaseForwardConstraintMin);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(9, 18);
+            this.groupBox24.Location = new System.Drawing.Point(8, 18);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(179, 52);
             this.groupBox24.TabIndex = 35;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "      forward_constraint";
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button17.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button17.Location = new System.Drawing.Point(2, -3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(19, 19);
-            this.button17.TabIndex = 38;
-            this.button17.UseVisualStyleBackColor = true;
             // 
             // label27
             // 
@@ -947,7 +929,7 @@
             this.groupBox25.Controls.Add(this.label40);
             this.groupBox25.Controls.Add(this.txtBaseBaseMass);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox25.Location = new System.Drawing.Point(9, 93);
+            this.groupBox25.Location = new System.Drawing.Point(9, 91);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(194, 47);
             this.groupBox25.TabIndex = 39;
@@ -988,9 +970,9 @@
             this.groupBox6.Controls.Add(this.groupBox17);
             this.groupBox6.Controls.Add(this.groupBox18);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(7, 289);
+            this.groupBox6.Location = new System.Drawing.Point(9, 290);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(195, 120);
+            this.groupBox6.Size = new System.Drawing.Size(194, 118);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             // 
@@ -1000,7 +982,7 @@
             this.groupBox17.Controls.Add(this.label32);
             this.groupBox17.Controls.Add(this.txtBaseUpFriction);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(9, 71);
+            this.groupBox17.Location = new System.Drawing.Point(8, 69);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(179, 42);
             this.groupBox17.TabIndex = 36;
@@ -1010,7 +992,7 @@
             // 
             this.button14.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
             this.button14.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button14.Location = new System.Drawing.Point(2, 14);
+            this.button14.Location = new System.Drawing.Point(2, 13);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(19, 19);
             this.button14.TabIndex = 27;
@@ -1037,28 +1019,17 @@
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.button16);
             this.groupBox18.Controls.Add(this.label10);
             this.groupBox18.Controls.Add(this.label11);
             this.groupBox18.Controls.Add(this.txtBaseUpConstraintMax);
             this.groupBox18.Controls.Add(this.txtBaseUpConstraintMin);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(9, 20);
+            this.groupBox18.Location = new System.Drawing.Point(8, 18);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(179, 52);
             this.groupBox18.TabIndex = 35;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "      up_constraint";
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button16.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button16.Location = new System.Drawing.Point(2, -3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(19, 19);
-            this.button16.TabIndex = 38;
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -1114,7 +1085,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(9, 24);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(193, 68);
+            this.groupBox5.Size = new System.Drawing.Size(194, 68);
             this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             // 
@@ -1310,9 +1281,9 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtAlongStiffness);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 525);
+            this.groupBox3.Location = new System.Drawing.Point(7, 525);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(187, 68);
+            this.groupBox3.Size = new System.Drawing.Size(192, 68);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             // 
@@ -1342,7 +1313,7 @@
             this.groupBox7.Controls.Add(this.txtAngleConstraint);
             this.groupBox7.Controls.Add(this.chkAngleConstraint);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox7.Location = new System.Drawing.Point(8, 115);
+            this.groupBox7.Location = new System.Drawing.Point(7, 115);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(194, 47);
             this.groupBox7.TabIndex = 20;
@@ -1823,9 +1794,9 @@
             this.groupBox26.Controls.Add(this.txtLength);
             this.groupBox26.Controls.Add(this.chkAllowLengthFlex);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox26.Location = new System.Drawing.Point(13, 30);
+            this.groupBox26.Location = new System.Drawing.Point(7, 30);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(187, 60);
+            this.groupBox26.Size = new System.Drawing.Size(192, 60);
             this.groupBox26.TabIndex = 37;
             this.groupBox26.TabStop = false;
             // 
@@ -1915,9 +1886,9 @@
             this.groupBox29.Controls.Add(this.label39);
             this.groupBox29.Controls.Add(this.txtPitchStiffness);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.Location = new System.Drawing.Point(13, 360);
+            this.groupBox29.Location = new System.Drawing.Point(7, 360);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(187, 165);
+            this.groupBox29.Size = new System.Drawing.Size(192, 165);
             this.groupBox29.TabIndex = 38;
             this.groupBox29.TabStop = false;
             // 
@@ -3170,6 +3141,37 @@
             this.label53.TabIndex = 79;
             this.label53.Text = "test TopMost, look it up!";
             // 
+            // button17
+            // 
+            this.button17.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.button17.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.button17.Location = new System.Drawing.Point(19, 305);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(19, 19);
+            this.button17.TabIndex = 76;
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.button16.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.button16.Location = new System.Drawing.Point(19, 440);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(19, 19);
+            this.button16.TabIndex = 77;
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button26
+            // 
+            this.button26.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.button26.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.button26.Location = new System.Drawing.Point(19, 170);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(19, 19);
+            this.button26.TabIndex = 78;
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
             // AddJiggleBone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3475,7 +3477,6 @@
         private CheckBox chkYawConstraint;
         private Button button14;
         private Label label32;
-        private Button button16;
         private Button button15;
         private Label label33;
         private GroupBox groupBox29;
@@ -3496,7 +3497,6 @@
         private Button button13;
         private Label label26;
         private GroupBox groupBox24;
-        private Button button17;
         private Label label27;
         private Label label31;
         private CheckBox chkHasBaseSpring;
@@ -3528,7 +3528,6 @@
         private CheckBox chk_isFlexible;
         private CheckBox chk_isBoing;
         private CheckBox chk_hasBaseSpring;
-        private Button button26;
         private GroupBox groupBox34;
         private TextBox textBox3;
         private Label label49;
@@ -3654,5 +3653,8 @@
         private Label label76;
         private Button btn_reset_generic;
         private Label label53;
+        private Button button17;
+        private Button button16;
+        private Button button26;
     }
 }

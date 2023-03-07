@@ -1582,7 +1582,7 @@ Steam API Key here: https://steamcommunity.com/dev/apikey</value>
     <value>steamGameConfig</value>
   </data>
   <data name="&gt;&gt;steamGameConfig.Type" xml:space="preserve">
-    <value>TFMV.SourceEngine.SteamGameConfig, TFMV, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TFMV.SourceEngine.SteamGameConfig, TFMV, Version=0.61.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;steamGameConfig.Parent" xml:space="preserve">
     <value>Settings</value>
@@ -2182,13 +2182,14 @@ Steam API Key here: https://steamcommunity.com/dev/apikey</value>
     <value>True</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>676, 372</value>
+    <value>676, 386</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
     <value>TODO:
+-disable mipmaps option?
 -Disable TFMV Background Settings checkbox
 -Add many extra bodygroups based on backpack_players
 -Eventually add zombie skin bodygroup compatability?
@@ -3803,7 +3804,7 @@ edit created paint chart dynamically
     <value>colorPicker_master</value>
   </data>
   <data name="&gt;&gt;colorPicker_master.Type" xml:space="preserve">
-    <value>TFMV.PaintColorPicker, TFMV, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TFMV.PaintColorPicker, TFMV, Version=0.61.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;colorPicker_master.Parent" xml:space="preserve">
     <value>panel_paints</value>
@@ -4229,7 +4230,7 @@ edit created paint chart dynamically
     <value>bodygroup_manager_panel</value>
   </data>
   <data name="&gt;&gt;bodygroup_manager_panel.Type" xml:space="preserve">
-    <value>TFMV.UserControls.Bodygroup_manager, TFMV, Version=0.6.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>TFMV.UserControls.Bodygroup_manager, TFMV, Version=0.61.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;bodygroup_manager_panel.Parent" xml:space="preserve">
     <value>panel_tools</value>
