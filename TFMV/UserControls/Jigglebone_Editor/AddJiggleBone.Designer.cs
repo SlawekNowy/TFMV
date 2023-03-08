@@ -34,11 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddJiggleBone));
             this.lstJiggleType = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtYawFriction = new System.Windows.Forms.NumericUpDown();
-            this.chkYawFriction = new System.Windows.Forms.CheckBox();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -51,6 +46,11 @@
             this.lblYawStiffness = new System.Windows.Forms.Label();
             this.lblYawDamping = new System.Windows.Forms.Label();
             this.txtYawStiffness = new System.Windows.Forms.NumericUpDown();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtYawFriction = new System.Windows.Forms.NumericUpDown();
+            this.chkYawFriction = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.grp_HAS_BASE_SPRING = new System.Windows.Forms.GroupBox();
             this.button17 = new System.Windows.Forms.Button();
@@ -121,11 +121,6 @@
             this.txtTipMass = new System.Windows.Forms.NumericUpDown();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.txtPitchFriction = new System.Windows.Forms.NumericUpDown();
-            this.chkPitchFriction = new System.Windows.Forms.CheckBox();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -138,6 +133,11 @@
             this.lblPitchStiffness = new System.Windows.Forms.Label();
             this.lblPitchDamping = new System.Windows.Forms.Label();
             this.txtPitchStiffness = new System.Windows.Forms.NumericUpDown();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.txtPitchFriction = new System.Windows.Forms.NumericUpDown();
+            this.chkPitchFriction = new System.Windows.Forms.CheckBox();
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkHasBaseSpring = new System.Windows.Forms.CheckBox();
@@ -188,7 +188,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label58 = new System.Windows.Forms.Label();
             this.grp_IS_FLEXIBLE = new System.Windows.Forms.GroupBox();
-            this.lbl_Along = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
@@ -245,8 +244,13 @@
             this.resetToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revertToOriginalboneNameValueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_reset_generic = new System.Windows.Forms.Button();
-            this.label53 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown27 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown28 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -274,11 +278,6 @@
             this.numericUpDown26 = new System.Windows.Forms.NumericUpDown();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown27 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown28 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -305,15 +304,19 @@
             this.menuResetAllValues = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lbl_Along = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYawFriction)).BeginInit();
             this.groupBox28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawConstraintMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawConstraintMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawDamping)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawStiffness)).BeginInit();
+            this.groupBox27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYawFriction)).BeginInit();
             this.grp_HAS_BASE_SPRING.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -347,14 +350,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTipMass)).BeginInit();
             this.groupBox29.SuspendLayout();
-            this.groupBox30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPitchFriction)).BeginInit();
             this.groupBox31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchConstraintMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchConstraintMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchDamping)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchStiffness)).BeginInit();
+            this.groupBox30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPitchFriction)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBoingDampingRate)).BeginInit();
             this.groupBox32.SuspendLayout();
@@ -393,6 +396,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
             this.menuResetValue.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).BeginInit();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
             this.groupBox9.SuspendLayout();
@@ -407,9 +413,6 @@
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).BeginInit();
             this.groupBox15.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).BeginInit();
             this.groupBox49.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).BeginInit();
@@ -425,7 +428,7 @@
             "is_flexible",
             "is_rigid",
             "is_boing"});
-            this.lstJiggleType.Location = new System.Drawing.Point(922, 728);
+            this.lstJiggleType.Location = new System.Drawing.Point(1487, 574);
             this.lstJiggleType.Name = "lstJiggleType";
             this.lstJiggleType.Size = new System.Drawing.Size(99, 21);
             this.lstJiggleType.TabIndex = 1;
@@ -433,8 +436,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.groupBox27);
+            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox1.Controls.Add(this.groupBox28);
             this.groupBox1.Controls.Add(this.btnYawDamping);
             this.groupBox1.Controls.Add(this.btnYawStiffness);
@@ -445,9 +447,140 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 188);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 192);
+            this.groupBox1.Size = new System.Drawing.Size(194, 125);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.label34);
+            this.groupBox28.Controls.Add(this.label35);
+            this.groupBox28.Controls.Add(this.txtYawConstraintMax);
+            this.groupBox28.Controls.Add(this.txtYawConstraintMin);
+            this.groupBox28.Controls.Add(this.chkYawConstraint);
+            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox28.Location = new System.Drawing.Point(8, 65);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(179, 52);
+            this.groupBox28.TabIndex = 37;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "     yaw_constraint";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(13, 25);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(27, 13);
+            this.label34.TabIndex = 29;
+            this.label34.Text = "Min:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(93, 25);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(30, 13);
+            this.label35.TabIndex = 28;
+            this.label35.Text = "Max:";
+            // 
+            // txtYawConstraintMax
+            // 
+            this.txtYawConstraintMax.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawConstraintMax.Location = new System.Drawing.Point(123, 23);
+            this.txtYawConstraintMax.Name = "txtYawConstraintMax";
+            this.txtYawConstraintMax.Size = new System.Drawing.Size(49, 20);
+            this.txtYawConstraintMax.TabIndex = 27;
+            this.txtYawConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // txtYawConstraintMin
+            // 
+            this.txtYawConstraintMin.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawConstraintMin.Location = new System.Drawing.Point(43, 23);
+            this.txtYawConstraintMin.Name = "txtYawConstraintMin";
+            this.txtYawConstraintMin.Size = new System.Drawing.Size(49, 20);
+            this.txtYawConstraintMin.TabIndex = 25;
+            this.txtYawConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // chkYawConstraint
+            // 
+            this.chkYawConstraint.AutoSize = true;
+            this.chkYawConstraint.Location = new System.Drawing.Point(4, 1);
+            this.chkYawConstraint.Name = "chkYawConstraint";
+            this.chkYawConstraint.Size = new System.Drawing.Size(15, 14);
+            this.chkYawConstraint.TabIndex = 18;
+            this.chkYawConstraint.UseVisualStyleBackColor = true;
+            this.chkYawConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
+            // 
+            // btnYawDamping
+            // 
+            this.btnYawDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnYawDamping.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnYawDamping.Location = new System.Drawing.Point(5, 39);
+            this.btnYawDamping.Name = "btnYawDamping";
+            this.btnYawDamping.Size = new System.Drawing.Size(19, 19);
+            this.btnYawDamping.TabIndex = 23;
+            this.btnYawDamping.UseVisualStyleBackColor = true;
+            // 
+            // btnYawStiffness
+            // 
+            this.btnYawStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnYawStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnYawStiffness.Location = new System.Drawing.Point(5, 16);
+            this.btnYawStiffness.Name = "btnYawStiffness";
+            this.btnYawStiffness.Size = new System.Drawing.Size(19, 19);
+            this.btnYawStiffness.TabIndex = 22;
+            this.btnYawStiffness.Tag = "txtYawStiffness";
+            this.btnYawStiffness.UseVisualStyleBackColor = true;
+            // 
+            // txtYawDamping
+            // 
+            this.txtYawDamping.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYawDamping.Location = new System.Drawing.Point(125, 38);
+            this.txtYawDamping.Name = "txtYawDamping";
+            this.txtYawDamping.Size = new System.Drawing.Size(60, 20);
+            this.txtYawDamping.TabIndex = 14;
+            this.txtYawDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // lblYawStiffness
+            // 
+            this.lblYawStiffness.AutoSize = true;
+            this.lblYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYawStiffness.Location = new System.Drawing.Point(25, 18);
+            this.lblYawStiffness.Name = "lblYawStiffness";
+            this.lblYawStiffness.Size = new System.Drawing.Size(73, 13);
+            this.lblYawStiffness.TabIndex = 12;
+            this.lblYawStiffness.Text = "yaw_stiffness:";
+            // 
+            // lblYawDamping
+            // 
+            this.lblYawDamping.AutoSize = true;
+            this.lblYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYawDamping.Location = new System.Drawing.Point(25, 41);
+            this.lblYawDamping.Name = "lblYawDamping";
+            this.lblYawDamping.Size = new System.Drawing.Size(75, 13);
+            this.lblYawDamping.TabIndex = 13;
+            this.lblYawDamping.Text = "yaw_damping:";
+            // 
+            // txtYawStiffness
+            // 
+            this.txtYawStiffness.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYawStiffness.Location = new System.Drawing.Point(125, 15);
+            this.txtYawStiffness.Name = "txtYawStiffness";
+            this.txtYawStiffness.Size = new System.Drawing.Size(60, 20);
+            this.txtYawStiffness.TabIndex = 11;
+            this.txtYawStiffness.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.txtYawStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox27
             // 
@@ -455,7 +588,7 @@
             this.groupBox27.Controls.Add(this.checkBox1);
             this.groupBox27.Controls.Add(this.txtYawFriction);
             this.groupBox27.Controls.Add(this.chkYawFriction);
-            this.groupBox27.Location = new System.Drawing.Point(8, 116);
+            this.groupBox27.Location = new System.Drawing.Point(21, 559);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(179, 69);
             this.groupBox27.TabIndex = 38;
@@ -505,137 +638,6 @@
             this.chkYawFriction.Text = "yaw_friction:";
             this.chkYawFriction.UseVisualStyleBackColor = true;
             // 
-            // groupBox28
-            // 
-            this.groupBox28.Controls.Add(this.label34);
-            this.groupBox28.Controls.Add(this.label35);
-            this.groupBox28.Controls.Add(this.txtYawConstraintMax);
-            this.groupBox28.Controls.Add(this.txtYawConstraintMin);
-            this.groupBox28.Controls.Add(this.chkYawConstraint);
-            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.Location = new System.Drawing.Point(8, 65);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(179, 52);
-            this.groupBox28.TabIndex = 37;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "     yaw_constraint";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(13, 25);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(27, 13);
-            this.label34.TabIndex = 29;
-            this.label34.Text = "Min:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(93, 25);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(30, 13);
-            this.label35.TabIndex = 28;
-            this.label35.Text = "Max:";
-            // 
-            // txtYawConstraintMax
-            // 
-            this.txtYawConstraintMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.txtYawConstraintMax.Location = new System.Drawing.Point(123, 23);
-            this.txtYawConstraintMax.Name = "txtYawConstraintMax";
-            this.txtYawConstraintMax.Size = new System.Drawing.Size(49, 20);
-            this.txtYawConstraintMax.TabIndex = 27;
-            this.txtYawConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtYawConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // txtYawConstraintMin
-            // 
-            this.txtYawConstraintMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.txtYawConstraintMin.Location = new System.Drawing.Point(43, 23);
-            this.txtYawConstraintMin.Name = "txtYawConstraintMin";
-            this.txtYawConstraintMin.Size = new System.Drawing.Size(49, 20);
-            this.txtYawConstraintMin.TabIndex = 25;
-            this.txtYawConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtYawConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // chkYawConstraint
-            // 
-            this.chkYawConstraint.AutoSize = true;
-            this.chkYawConstraint.Location = new System.Drawing.Point(4, 1);
-            this.chkYawConstraint.Name = "chkYawConstraint";
-            this.chkYawConstraint.Size = new System.Drawing.Size(15, 14);
-            this.chkYawConstraint.TabIndex = 18;
-            this.chkYawConstraint.UseVisualStyleBackColor = true;
-            this.chkYawConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
-            // 
-            // btnYawDamping
-            // 
-            this.btnYawDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.btnYawDamping.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.btnYawDamping.Location = new System.Drawing.Point(5, 39);
-            this.btnYawDamping.Name = "btnYawDamping";
-            this.btnYawDamping.Size = new System.Drawing.Size(19, 19);
-            this.btnYawDamping.TabIndex = 23;
-            this.btnYawDamping.UseVisualStyleBackColor = true;
-            // 
-            // btnYawStiffness
-            // 
-            this.btnYawStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.btnYawStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.btnYawStiffness.Location = new System.Drawing.Point(5, 16);
-            this.btnYawStiffness.Name = "btnYawStiffness";
-            this.btnYawStiffness.Size = new System.Drawing.Size(19, 19);
-            this.btnYawStiffness.TabIndex = 22;
-            this.btnYawStiffness.Tag = "txtYawStiffness";
-            this.btnYawStiffness.UseVisualStyleBackColor = true;
-            // 
-            // txtYawDamping
-            // 
-            this.txtYawDamping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.txtYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYawDamping.Location = new System.Drawing.Point(125, 38);
-            this.txtYawDamping.Name = "txtYawDamping";
-            this.txtYawDamping.Size = new System.Drawing.Size(60, 20);
-            this.txtYawDamping.TabIndex = 14;
-            this.txtYawDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtYawDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // lblYawStiffness
-            // 
-            this.lblYawStiffness.AutoSize = true;
-            this.lblYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYawStiffness.Location = new System.Drawing.Point(25, 18);
-            this.lblYawStiffness.Name = "lblYawStiffness";
-            this.lblYawStiffness.Size = new System.Drawing.Size(73, 13);
-            this.lblYawStiffness.TabIndex = 12;
-            this.lblYawStiffness.Text = "yaw_stiffness:";
-            // 
-            // lblYawDamping
-            // 
-            this.lblYawDamping.AutoSize = true;
-            this.lblYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYawDamping.Location = new System.Drawing.Point(25, 41);
-            this.lblYawDamping.Name = "lblYawDamping";
-            this.lblYawDamping.Size = new System.Drawing.Size(75, 13);
-            this.lblYawDamping.TabIndex = 13;
-            this.lblYawDamping.Text = "yaw_damping:";
-            // 
-            // txtYawStiffness
-            // 
-            this.txtYawStiffness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.txtYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYawStiffness.Location = new System.Drawing.Point(125, 15);
-            this.txtYawStiffness.Name = "txtYawStiffness";
-            this.txtYawStiffness.Size = new System.Drawing.Size(60, 20);
-            this.txtYawStiffness.TabIndex = 11;
-            this.txtYawStiffness.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.txtYawStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtYawStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -662,9 +664,9 @@
             this.grp_HAS_BASE_SPRING.Controls.Add(this.groupBox6);
             this.grp_HAS_BASE_SPRING.Controls.Add(this.groupBox5);
             this.grp_HAS_BASE_SPRING.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_HAS_BASE_SPRING.Location = new System.Drawing.Point(232, 97);
+            this.grp_HAS_BASE_SPRING.Location = new System.Drawing.Point(1297, 647);
             this.grp_HAS_BASE_SPRING.Name = "grp_HAS_BASE_SPRING";
-            this.grp_HAS_BASE_SPRING.Size = new System.Drawing.Size(212, 686);
+            this.grp_HAS_BASE_SPRING.Size = new System.Drawing.Size(212, 551);
             this.grp_HAS_BASE_SPRING.TabIndex = 19;
             this.grp_HAS_BASE_SPRING.TabStop = false;
             // 
@@ -737,6 +739,7 @@
             // 
             // groupBox19
             // 
+            this.groupBox19.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox19.Controls.Add(this.groupBox20);
             this.groupBox19.Controls.Add(this.groupBox21);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -779,7 +782,7 @@
             // 
             // txtBaseLeftFriction
             // 
-            this.txtBaseLeftFriction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.txtBaseLeftFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseLeftFriction.Name = "txtBaseLeftFriction";
             this.txtBaseLeftFriction.Size = new System.Drawing.Size(60, 20);
@@ -822,7 +825,7 @@
             // 
             // txtBaseLeftConstraintMax
             // 
-            this.txtBaseLeftConstraintMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.txtBaseLeftConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseLeftConstraintMax.Name = "txtBaseLeftConstraintMax";
             this.txtBaseLeftConstraintMax.Size = new System.Drawing.Size(49, 20);
@@ -837,7 +840,7 @@
             // 
             // txtBaseLeftConstraintMin
             // 
-            this.txtBaseLeftConstraintMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.txtBaseLeftConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseLeftConstraintMin.Name = "txtBaseLeftConstraintMin";
             this.txtBaseLeftConstraintMin.Size = new System.Drawing.Size(49, 20);
@@ -859,6 +862,7 @@
             // 
             // groupBox22
             // 
+            this.groupBox22.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox22.Controls.Add(this.groupBox23);
             this.groupBox22.Controls.Add(this.groupBox24);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -901,7 +905,7 @@
             // 
             // txtBaseForwardFriction
             // 
-            this.txtBaseForwardFriction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.txtBaseForwardFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseForwardFriction.Name = "txtBaseForwardFriction";
             this.txtBaseForwardFriction.Size = new System.Drawing.Size(60, 20);
@@ -943,7 +947,7 @@
             // 
             // txtBaseForwardConstraintMax
             // 
-            this.txtBaseForwardConstraintMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.txtBaseForwardConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseForwardConstraintMax.Name = "txtBaseForwardConstraintMax";
             this.txtBaseForwardConstraintMax.Size = new System.Drawing.Size(49, 20);
@@ -958,7 +962,7 @@
             // 
             // txtBaseForwardConstraintMin
             // 
-            this.txtBaseForwardConstraintMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.txtBaseForwardConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseForwardConstraintMin.Name = "txtBaseForwardConstraintMin";
             this.txtBaseForwardConstraintMin.Size = new System.Drawing.Size(49, 20);
@@ -968,6 +972,7 @@
             // 
             // groupBox25
             // 
+            this.groupBox25.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox25.Controls.Add(this.btn_resetBaseMass);
             this.groupBox25.Controls.Add(this.label40);
             this.groupBox25.Controls.Add(this.txtBaseBaseMass);
@@ -1010,6 +1015,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox6.Controls.Add(this.groupBox17);
             this.groupBox6.Controls.Add(this.groupBox18);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1052,7 +1058,7 @@
             // 
             // txtBaseUpFriction
             // 
-            this.txtBaseUpFriction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.txtBaseUpFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseUpFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseUpFriction.Name = "txtBaseUpFriction";
             this.txtBaseUpFriction.Size = new System.Drawing.Size(60, 20);
@@ -1094,7 +1100,7 @@
             // 
             // txtBaseUpConstraintMax
             // 
-            this.txtBaseUpConstraintMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.txtBaseUpConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseUpConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseUpConstraintMax.Name = "txtBaseUpConstraintMax";
             this.txtBaseUpConstraintMax.Size = new System.Drawing.Size(49, 20);
@@ -1109,7 +1115,7 @@
             // 
             // txtBaseUpConstraintMin
             // 
-            this.txtBaseUpConstraintMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.txtBaseUpConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseUpConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseUpConstraintMin.Name = "txtBaseUpConstraintMin";
             this.txtBaseUpConstraintMin.Size = new System.Drawing.Size(49, 20);
@@ -1119,6 +1125,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox5.Controls.Add(this.btn_ResetBaseDamping);
             this.groupBox5.Controls.Add(this.btn_ResetBaseStiffness);
             this.groupBox5.Controls.Add(this.txtBaseDamping);
@@ -1196,7 +1203,7 @@
             // 
             // txtAlongStiffness
             // 
-            this.txtAlongStiffness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.txtAlongStiffness.BackColor = System.Drawing.Color.White;
             this.txtAlongStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongStiffness.Location = new System.Drawing.Point(125, 15);
             this.txtAlongStiffness.Name = "txtAlongStiffness";
@@ -1232,7 +1239,7 @@
             // 
             // txtAlongDamping
             // 
-            this.txtAlongDamping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
+            this.txtAlongDamping.BackColor = System.Drawing.Color.White;
             this.txtAlongDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongDamping.Location = new System.Drawing.Point(125, 38);
             this.txtAlongDamping.Name = "txtAlongDamping";
@@ -1243,7 +1250,7 @@
             // 
             // grp_Along
             // 
-            this.grp_Along.BackColor = System.Drawing.SystemColors.Control;
+            this.grp_Along.BackColor = System.Drawing.Color.Gainsboro;
             this.grp_Along.Controls.Add(this.button5);
             this.grp_Along.Controls.Add(this.button6);
             this.grp_Along.Controls.Add(this.txtAlongDamping);
@@ -1251,7 +1258,7 @@
             this.grp_Along.Controls.Add(this.label4);
             this.grp_Along.Controls.Add(this.txtAlongStiffness);
             this.grp_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_Along.Location = new System.Drawing.Point(9, 611);
+            this.grp_Along.Location = new System.Drawing.Point(9, 477);
             this.grp_Along.Name = "grp_Along";
             this.grp_Along.Size = new System.Drawing.Size(194, 66);
             this.grp_Along.TabIndex = 16;
@@ -1279,7 +1286,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox7.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox7.Controls.Add(this.txtAngleConstraint);
             this.groupBox7.Controls.Add(this.chkAngleConstraint);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -1408,8 +1415,7 @@
             // 
             // groupBox29
             // 
-            this.groupBox29.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox29.Controls.Add(this.groupBox30);
+            this.groupBox29.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox29.Controls.Add(this.groupBox31);
             this.groupBox29.Controls.Add(this.btnPitchDamping);
             this.groupBox29.Controls.Add(this.btnPitchStiffness);
@@ -1418,11 +1424,141 @@
             this.groupBox29.Controls.Add(this.lblPitchDamping);
             this.groupBox29.Controls.Add(this.txtPitchStiffness);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.Location = new System.Drawing.Point(9, 399);
+            this.groupBox29.Location = new System.Drawing.Point(9, 332);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(194, 192);
+            this.groupBox29.Size = new System.Drawing.Size(194, 125);
             this.groupBox29.TabIndex = 38;
             this.groupBox29.TabStop = false;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.label36);
+            this.groupBox31.Controls.Add(this.label37);
+            this.groupBox31.Controls.Add(this.txtPitchConstraintMax);
+            this.groupBox31.Controls.Add(this.txtPitchConstraintMin);
+            this.groupBox31.Controls.Add(this.chkPitchConstraint);
+            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox31.Location = new System.Drawing.Point(8, 65);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(179, 52);
+            this.groupBox31.TabIndex = 37;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "     pitch_constraint";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(13, 25);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(27, 13);
+            this.label36.TabIndex = 29;
+            this.label36.Text = "Min:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(93, 25);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(30, 13);
+            this.label37.TabIndex = 28;
+            this.label37.Text = "Max:";
+            // 
+            // txtPitchConstraintMax
+            // 
+            this.txtPitchConstraintMax.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchConstraintMax.Location = new System.Drawing.Point(123, 23);
+            this.txtPitchConstraintMax.Name = "txtPitchConstraintMax";
+            this.txtPitchConstraintMax.Size = new System.Drawing.Size(49, 20);
+            this.txtPitchConstraintMax.TabIndex = 27;
+            this.txtPitchConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // txtPitchConstraintMin
+            // 
+            this.txtPitchConstraintMin.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchConstraintMin.Location = new System.Drawing.Point(43, 23);
+            this.txtPitchConstraintMin.Name = "txtPitchConstraintMin";
+            this.txtPitchConstraintMin.Size = new System.Drawing.Size(49, 20);
+            this.txtPitchConstraintMin.TabIndex = 25;
+            this.txtPitchConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // chkPitchConstraint
+            // 
+            this.chkPitchConstraint.AutoSize = true;
+            this.chkPitchConstraint.Location = new System.Drawing.Point(4, 1);
+            this.chkPitchConstraint.Name = "chkPitchConstraint";
+            this.chkPitchConstraint.Size = new System.Drawing.Size(15, 14);
+            this.chkPitchConstraint.TabIndex = 18;
+            this.chkPitchConstraint.UseVisualStyleBackColor = true;
+            this.chkPitchConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
+            // 
+            // btnPitchDamping
+            // 
+            this.btnPitchDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnPitchDamping.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnPitchDamping.Location = new System.Drawing.Point(5, 39);
+            this.btnPitchDamping.Name = "btnPitchDamping";
+            this.btnPitchDamping.Size = new System.Drawing.Size(19, 19);
+            this.btnPitchDamping.TabIndex = 23;
+            this.btnPitchDamping.UseVisualStyleBackColor = true;
+            // 
+            // btnPitchStiffness
+            // 
+            this.btnPitchStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnPitchStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnPitchStiffness.Location = new System.Drawing.Point(5, 16);
+            this.btnPitchStiffness.Name = "btnPitchStiffness";
+            this.btnPitchStiffness.Size = new System.Drawing.Size(19, 19);
+            this.btnPitchStiffness.TabIndex = 22;
+            this.btnPitchStiffness.UseVisualStyleBackColor = true;
+            // 
+            // txtPitchDamping
+            // 
+            this.txtPitchDamping.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPitchDamping.Location = new System.Drawing.Point(124, 38);
+            this.txtPitchDamping.Name = "txtPitchDamping";
+            this.txtPitchDamping.Size = new System.Drawing.Size(60, 20);
+            this.txtPitchDamping.TabIndex = 14;
+            this.txtPitchDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
+            // 
+            // lblPitchStiffness
+            // 
+            this.lblPitchStiffness.AutoSize = true;
+            this.lblPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPitchStiffness.Location = new System.Drawing.Point(25, 18);
+            this.lblPitchStiffness.Name = "lblPitchStiffness";
+            this.lblPitchStiffness.Size = new System.Drawing.Size(77, 13);
+            this.lblPitchStiffness.TabIndex = 12;
+            this.lblPitchStiffness.Text = "pitch_stiffness:";
+            // 
+            // lblPitchDamping
+            // 
+            this.lblPitchDamping.AutoSize = true;
+            this.lblPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPitchDamping.Location = new System.Drawing.Point(25, 41);
+            this.lblPitchDamping.Name = "lblPitchDamping";
+            this.lblPitchDamping.Size = new System.Drawing.Size(79, 13);
+            this.lblPitchDamping.TabIndex = 13;
+            this.lblPitchDamping.Text = "pitch_damping:";
+            // 
+            // txtPitchStiffness
+            // 
+            this.txtPitchStiffness.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPitchStiffness.Location = new System.Drawing.Point(124, 15);
+            this.txtPitchStiffness.Name = "txtPitchStiffness";
+            this.txtPitchStiffness.Size = new System.Drawing.Size(60, 20);
+            this.txtPitchStiffness.TabIndex = 11;
+            this.txtPitchStiffness.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.txtPitchStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox30
             // 
@@ -1430,7 +1566,7 @@
             this.groupBox30.Controls.Add(this.checkBox2);
             this.groupBox30.Controls.Add(this.txtPitchFriction);
             this.groupBox30.Controls.Add(this.chkPitchFriction);
-            this.groupBox30.Location = new System.Drawing.Point(8, 116);
+            this.groupBox30.Location = new System.Drawing.Point(29, 601);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Size = new System.Drawing.Size(179, 69);
             this.groupBox30.TabIndex = 38;
@@ -1484,139 +1620,9 @@
             this.chkPitchFriction.UseVisualStyleBackColor = true;
             this.chkPitchFriction.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
             // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.label36);
-            this.groupBox31.Controls.Add(this.label37);
-            this.groupBox31.Controls.Add(this.txtPitchConstraintMax);
-            this.groupBox31.Controls.Add(this.txtPitchConstraintMin);
-            this.groupBox31.Controls.Add(this.chkPitchConstraint);
-            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.Location = new System.Drawing.Point(8, 65);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(179, 52);
-            this.groupBox31.TabIndex = 37;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "     pitch_constraint";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(13, 25);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(27, 13);
-            this.label36.TabIndex = 29;
-            this.label36.Text = "Min:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(93, 25);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(30, 13);
-            this.label37.TabIndex = 28;
-            this.label37.Text = "Max:";
-            // 
-            // txtPitchConstraintMax
-            // 
-            this.txtPitchConstraintMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.txtPitchConstraintMax.Location = new System.Drawing.Point(123, 23);
-            this.txtPitchConstraintMax.Name = "txtPitchConstraintMax";
-            this.txtPitchConstraintMax.Size = new System.Drawing.Size(49, 20);
-            this.txtPitchConstraintMax.TabIndex = 27;
-            this.txtPitchConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtPitchConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // txtPitchConstraintMin
-            // 
-            this.txtPitchConstraintMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.txtPitchConstraintMin.Location = new System.Drawing.Point(43, 23);
-            this.txtPitchConstraintMin.Name = "txtPitchConstraintMin";
-            this.txtPitchConstraintMin.Size = new System.Drawing.Size(49, 20);
-            this.txtPitchConstraintMin.TabIndex = 25;
-            this.txtPitchConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtPitchConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // chkPitchConstraint
-            // 
-            this.chkPitchConstraint.AutoSize = true;
-            this.chkPitchConstraint.Location = new System.Drawing.Point(4, 1);
-            this.chkPitchConstraint.Name = "chkPitchConstraint";
-            this.chkPitchConstraint.Size = new System.Drawing.Size(15, 14);
-            this.chkPitchConstraint.TabIndex = 18;
-            this.chkPitchConstraint.UseVisualStyleBackColor = true;
-            this.chkPitchConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
-            // 
-            // btnPitchDamping
-            // 
-            this.btnPitchDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.btnPitchDamping.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.btnPitchDamping.Location = new System.Drawing.Point(5, 39);
-            this.btnPitchDamping.Name = "btnPitchDamping";
-            this.btnPitchDamping.Size = new System.Drawing.Size(19, 19);
-            this.btnPitchDamping.TabIndex = 23;
-            this.btnPitchDamping.UseVisualStyleBackColor = true;
-            // 
-            // btnPitchStiffness
-            // 
-            this.btnPitchStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.btnPitchStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.btnPitchStiffness.Location = new System.Drawing.Point(5, 16);
-            this.btnPitchStiffness.Name = "btnPitchStiffness";
-            this.btnPitchStiffness.Size = new System.Drawing.Size(19, 19);
-            this.btnPitchStiffness.TabIndex = 22;
-            this.btnPitchStiffness.UseVisualStyleBackColor = true;
-            // 
-            // txtPitchDamping
-            // 
-            this.txtPitchDamping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.txtPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPitchDamping.Location = new System.Drawing.Point(124, 38);
-            this.txtPitchDamping.Name = "txtPitchDamping";
-            this.txtPitchDamping.Size = new System.Drawing.Size(60, 20);
-            this.txtPitchDamping.TabIndex = 14;
-            this.txtPitchDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtPitchDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
-            // lblPitchStiffness
-            // 
-            this.lblPitchStiffness.AutoSize = true;
-            this.lblPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPitchStiffness.Location = new System.Drawing.Point(25, 18);
-            this.lblPitchStiffness.Name = "lblPitchStiffness";
-            this.lblPitchStiffness.Size = new System.Drawing.Size(77, 13);
-            this.lblPitchStiffness.TabIndex = 12;
-            this.lblPitchStiffness.Text = "pitch_stiffness:";
-            // 
-            // lblPitchDamping
-            // 
-            this.lblPitchDamping.AutoSize = true;
-            this.lblPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPitchDamping.Location = new System.Drawing.Point(25, 41);
-            this.lblPitchDamping.Name = "lblPitchDamping";
-            this.lblPitchDamping.Size = new System.Drawing.Size(79, 13);
-            this.lblPitchDamping.TabIndex = 13;
-            this.lblPitchDamping.Text = "pitch_damping:";
-            // 
-            // txtPitchStiffness
-            // 
-            this.txtPitchStiffness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.txtPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPitchStiffness.Location = new System.Drawing.Point(124, 15);
-            this.txtPitchStiffness.Name = "txtPitchStiffness";
-            this.txtPitchStiffness.Size = new System.Drawing.Size(60, 20);
-            this.txtPitchStiffness.TabIndex = 11;
-            this.txtPitchStiffness.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.txtPitchStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtPitchStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
-            // 
             // btnOkay
             // 
-            this.btnOkay.Location = new System.Drawing.Point(791, 760);
+            this.btnOkay.Location = new System.Drawing.Point(1356, 606);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(75, 23);
             this.btnOkay.TabIndex = 39;
@@ -1626,7 +1632,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(869, 760);
+            this.btnCancel.Location = new System.Drawing.Point(1434, 606);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 40;
@@ -1646,7 +1652,7 @@
             // btnApplyJigglebones
             // 
             this.btnApplyJigglebones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyJigglebones.Location = new System.Drawing.Point(852, 727);
+            this.btnApplyJigglebones.Location = new System.Drawing.Point(1417, 573);
             this.btnApplyJigglebones.Name = "btnApplyJigglebones";
             this.btnApplyJigglebones.Size = new System.Drawing.Size(84, 32);
             this.btnApplyJigglebones.TabIndex = 43;
@@ -1656,6 +1662,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox4.Controls.Add(this.button21);
             this.groupBox4.Controls.Add(this.label41);
             this.groupBox4.Controls.Add(this.txtBoingDampingRate);
@@ -1696,6 +1703,7 @@
             // 
             // groupBox32
             // 
+            this.groupBox32.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox32.Controls.Add(this.button22);
             this.groupBox32.Controls.Add(this.button23);
             this.groupBox32.Controls.Add(this.txtBoingImpactAngle);
@@ -1779,6 +1787,7 @@
             // 
             // groupBox33
             // 
+            this.groupBox33.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox33.Controls.Add(this.button24);
             this.groupBox33.Controls.Add(this.button25);
             this.groupBox33.Controls.Add(this.txtBoingAmplitude);
@@ -1978,9 +1987,9 @@
             this.grp_IS_BOING.Controls.Add(this.groupBox33);
             this.grp_IS_BOING.Controls.Add(this.lbl_IS_BOING);
             this.grp_IS_BOING.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_IS_BOING.Location = new System.Drawing.Point(780, 97);
+            this.grp_IS_BOING.Location = new System.Drawing.Point(807, 664);
             this.grp_IS_BOING.Name = "grp_IS_BOING";
-            this.grp_IS_BOING.Size = new System.Drawing.Size(212, 686);
+            this.grp_IS_BOING.Size = new System.Drawing.Size(212, 551);
             this.grp_IS_BOING.TabIndex = 60;
             this.grp_IS_BOING.TabStop = false;
             // 
@@ -2004,7 +2013,7 @@
             this.txt_QC.Multiline = true;
             this.txt_QC.Name = "txt_QC";
             this.txt_QC.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_QC.Size = new System.Drawing.Size(306, 719);
+            this.txt_QC.Size = new System.Drawing.Size(306, 584);
             this.txt_QC.TabIndex = 61;
             this.txt_QC.Text = resources.GetString("txt_QC.Text");
             this.txt_QC.TextChanged += new System.EventHandler(this.txt_QC_TextChanged);
@@ -2076,7 +2085,7 @@
             this.groupBox35.Controls.Add(this.button7);
             this.groupBox35.Controls.Add(this.button28);
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.Location = new System.Drawing.Point(453, 735);
+            this.groupBox35.Location = new System.Drawing.Point(453, 600);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(306, 48);
             this.groupBox35.TabIndex = 70;
@@ -2166,30 +2175,18 @@
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox29);
             this.grp_IS_FLEXIBLE.Controls.Add(this.label58);
             this.grp_IS_FLEXIBLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grp_IS_FLEXIBLE.Location = new System.Drawing.Point(12, 97);
+            this.grp_IS_FLEXIBLE.Location = new System.Drawing.Point(804, 26);
             this.grp_IS_FLEXIBLE.Name = "grp_IS_FLEXIBLE";
-            this.grp_IS_FLEXIBLE.Size = new System.Drawing.Size(212, 686);
+            this.grp_IS_FLEXIBLE.Size = new System.Drawing.Size(212, 551);
             this.grp_IS_FLEXIBLE.TabIndex = 75;
             this.grp_IS_FLEXIBLE.TabStop = false;
-            // 
-            // lbl_Along
-            // 
-            this.lbl_Along.BackColor = System.Drawing.Color.DarkGray;
-            this.lbl_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Along.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Along.Location = new System.Drawing.Point(9, 597);
-            this.lbl_Along.Name = "lbl_Along";
-            this.lbl_Along.Size = new System.Drawing.Size(194, 23);
-            this.lbl_Along.TabIndex = 82;
-            this.lbl_Along.Text = "ALONG";
-            this.lbl_Along.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.DarkGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(9, 386);
+            this.label2.Location = new System.Drawing.Point(9, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 23);
             this.label2.TabIndex = 81;
@@ -2210,7 +2207,7 @@
             // 
             // groupBox48
             // 
-            this.groupBox48.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox48.BackColor = System.Drawing.Color.Gainsboro;
             this.groupBox48.Controls.Add(this.label30);
             this.groupBox48.Controls.Add(this.txtTipMass);
             this.groupBox48.Controls.Add(this.button11);
@@ -2721,7 +2718,7 @@
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(1862, 358);
+            this.label75.Location = new System.Drawing.Point(1695, 348);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(292, 13);
             this.label75.TabIndex = 76;
@@ -2760,21 +2757,15 @@
             this.btn_reset_generic.UseVisualStyleBackColor = true;
             this.btn_reset_generic.Click += new System.EventHandler(this.btn_reset_generic_Click);
             // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(1822, 65);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(121, 13);
-            this.label53.TabIndex = 79;
-            this.label53.Text = "test TopMost, look it up!";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.groupBox16);
+            this.groupBox2.Controls.Add(this.groupBox30);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.groupBox8);
+            this.groupBox2.Controls.Add(this.groupBox27);
             this.groupBox2.Controls.Add(this.lbl_IS_RIGID);
             this.groupBox2.Controls.Add(this.groupBox9);
             this.groupBox2.Controls.Add(this.groupBox10);
@@ -2788,6 +2779,71 @@
             this.groupBox2.Size = new System.Drawing.Size(212, 686);
             this.groupBox2.TabIndex = 80;
             this.groupBox2.TabStop = false;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.numericUpDown27);
+            this.groupBox16.Controls.Add(this.label5);
+            this.groupBox16.Controls.Add(this.checkBox8);
+            this.groupBox16.Controls.Add(this.numericUpDown28);
+            this.groupBox16.Controls.Add(this.checkBox9);
+            this.groupBox16.Location = new System.Drawing.Point(18, 484);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(179, 69);
+            this.groupBox16.TabIndex = 38;
+            this.groupBox16.TabStop = false;
+            // 
+            // numericUpDown27
+            // 
+            this.numericUpDown27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown27.Enabled = false;
+            this.numericUpDown27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown27.Location = new System.Drawing.Point(111, 40);
+            this.numericUpDown27.Name = "numericUpDown27";
+            this.numericUpDown27.Size = new System.Drawing.Size(60, 20);
+            this.numericUpDown27.TabIndex = 21;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, -2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 13);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "these are from old is_flexible";
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox8.Location = new System.Drawing.Point(7, 42);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(94, 17);
+            this.checkBox8.TabIndex = 20;
+            this.checkBox8.Text = "pitch_bounce:";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown28
+            // 
+            this.numericUpDown28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown28.Enabled = false;
+            this.numericUpDown28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown28.Location = new System.Drawing.Point(111, 14);
+            this.numericUpDown28.Name = "numericUpDown28";
+            this.numericUpDown28.Size = new System.Drawing.Size(60, 20);
+            this.numericUpDown28.TabIndex = 21;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox9.Location = new System.Drawing.Point(7, 16);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(89, 17);
+            this.checkBox9.TabIndex = 20;
+            this.checkBox9.Text = "pitch_friction:";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -2936,7 +2992,7 @@
             // 
             // numericUpDown18
             // 
-            this.numericUpDown18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.numericUpDown18.BackColor = System.Drawing.Color.White;
             this.numericUpDown18.Enabled = false;
             this.numericUpDown18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown18.Location = new System.Drawing.Point(111, 40);
@@ -2957,7 +3013,7 @@
             // 
             // numericUpDown19
             // 
-            this.numericUpDown19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.numericUpDown19.BackColor = System.Drawing.Color.White;
             this.numericUpDown19.Enabled = false;
             this.numericUpDown19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown19.Location = new System.Drawing.Point(111, 14);
@@ -3011,7 +3067,7 @@
             // 
             // numericUpDown20
             // 
-            this.numericUpDown20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.numericUpDown20.BackColor = System.Drawing.Color.White;
             this.numericUpDown20.Location = new System.Drawing.Point(123, 23);
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(49, 20);
@@ -3019,7 +3075,7 @@
             // 
             // numericUpDown21
             // 
-            this.numericUpDown21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.numericUpDown21.BackColor = System.Drawing.Color.White;
             this.numericUpDown21.Location = new System.Drawing.Point(43, 23);
             this.numericUpDown21.Name = "numericUpDown21";
             this.numericUpDown21.Size = new System.Drawing.Size(49, 20);
@@ -3066,7 +3122,6 @@
             // groupBox15
             // 
             this.groupBox15.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox15.Controls.Add(this.groupBox16);
             this.groupBox15.Controls.Add(this.groupBox49);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.Location = new System.Drawing.Point(9, 336);
@@ -3074,60 +3129,6 @@
             this.groupBox15.Size = new System.Drawing.Size(194, 146);
             this.groupBox15.TabIndex = 38;
             this.groupBox15.TabStop = false;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.numericUpDown27);
-            this.groupBox16.Controls.Add(this.checkBox8);
-            this.groupBox16.Controls.Add(this.numericUpDown28);
-            this.groupBox16.Controls.Add(this.checkBox9);
-            this.groupBox16.Location = new System.Drawing.Point(8, 69);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(179, 69);
-            this.groupBox16.TabIndex = 38;
-            this.groupBox16.TabStop = false;
-            // 
-            // numericUpDown27
-            // 
-            this.numericUpDown27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.numericUpDown27.Enabled = false;
-            this.numericUpDown27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown27.Location = new System.Drawing.Point(111, 40);
-            this.numericUpDown27.Name = "numericUpDown27";
-            this.numericUpDown27.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown27.TabIndex = 21;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(7, 42);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(94, 17);
-            this.checkBox8.TabIndex = 20;
-            this.checkBox8.Text = "pitch_bounce:";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown28
-            // 
-            this.numericUpDown28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.numericUpDown28.Enabled = false;
-            this.numericUpDown28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown28.Location = new System.Drawing.Point(111, 14);
-            this.numericUpDown28.Name = "numericUpDown28";
-            this.numericUpDown28.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDown28.TabIndex = 21;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(7, 16);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(89, 17);
-            this.checkBox9.TabIndex = 20;
-            this.checkBox9.Text = "pitch_friction:";
-            this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // groupBox49
             // 
@@ -3307,9 +3308,9 @@
             this.btn_loadout_to_HLMV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_loadout_to_HLMV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btn_loadout_to_HLMV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_loadout_to_HLMV.Location = new System.Drawing.Point(16, 801);
+            this.btn_loadout_to_HLMV.Location = new System.Drawing.Point(16, 664);
             this.btn_loadout_to_HLMV.Name = "btn_loadout_to_HLMV";
-            this.btn_loadout_to_HLMV.Size = new System.Drawing.Size(148, 37);
+            this.btn_loadout_to_HLMV.Size = new System.Drawing.Size(146, 37);
             this.btn_loadout_to_HLMV.TabIndex = 89;
             this.btn_loadout_to_HLMV.Text = "Apply";
             this.btn_loadout_to_HLMV.UseVisualStyleBackColor = false;
@@ -3317,11 +3318,12 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.DarkGray;
+            this.panel12.Controls.Add(this.label38);
             this.panel12.Controls.Add(this.button10);
             this.panel12.Controls.Add(this.checkBox11);
             this.panel12.Controls.Add(this.chk_Always_On_Top);
             this.panel12.Controls.Add(this.button20);
-            this.panel12.Location = new System.Drawing.Point(-1, 792);
+            this.panel12.Location = new System.Drawing.Point(-1, 655);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(777, 60);
             this.panel12.TabIndex = 90;
@@ -3333,9 +3335,9 @@
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button10.Location = new System.Drawing.Point(454, 10);
+            this.button10.Location = new System.Drawing.Point(454, 9);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(170, 36);
+            this.button10.Size = new System.Drawing.Size(146, 37);
             this.button10.TabIndex = 89;
             this.button10.Text = "Reset...";
             this.button10.UseVisualStyleBackColor = false;
@@ -3346,7 +3348,7 @@
             this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox11.Location = new System.Drawing.Point(636, 32);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(105, 20);
+            this.checkBox11.Size = new System.Drawing.Size(102, 20);
             this.checkBox11.TabIndex = 18;
             this.checkBox11.Text = "Auto-Apply";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -3358,7 +3360,7 @@
             this.chk_Always_On_Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Always_On_Top.Location = new System.Drawing.Point(636, 7);
             this.chk_Always_On_Top.Name = "chk_Always_On_Top";
-            this.chk_Always_On_Top.Size = new System.Drawing.Size(125, 20);
+            this.chk_Always_On_Top.Size = new System.Drawing.Size(122, 20);
             this.chk_Always_On_Top.TabIndex = 18;
             this.chk_Always_On_Top.Text = "Always on top";
             this.chk_Always_On_Top.UseVisualStyleBackColor = true;
@@ -3371,9 +3373,9 @@
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.button20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button20.Location = new System.Drawing.Point(171, 10);
+            this.button20.Location = new System.Drawing.Point(171, 9);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(146, 36);
+            this.button20.Size = new System.Drawing.Size(146, 37);
             this.button20.TabIndex = 89;
             this.button20.Text = "Close";
             this.button20.UseVisualStyleBackColor = false;
@@ -3398,12 +3400,55 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(318, 22);
             this.toolStripMenuItem2.Text = "Revert all bones to original <mdl name> value";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.LightGray;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(232, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(212, 551);
+            this.label6.TabIndex = 71;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.LightGray;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(12, 97);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(212, 551);
+            this.label12.TabIndex = 71;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(355, 18);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(49, 13);
+            this.label38.TabIndex = 90;
+            this.label38.Text = "788, 749";
+            // 
+            // lbl_Along
+            // 
+            this.lbl_Along.BackColor = System.Drawing.Color.DarkGray;
+            this.lbl_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Along.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Along.Location = new System.Drawing.Point(9, 463);
+            this.lbl_Along.Name = "lbl_Along";
+            this.lbl_Along.Size = new System.Drawing.Size(194, 23);
+            this.lbl_Along.TabIndex = 82;
+            this.lbl_Along.Text = "ALONG";
+            this.lbl_Along.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // AddJiggleBone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1896, 848);
+            this.ClientSize = new System.Drawing.Size(2484, 1427);
             this.Controls.Add(this.btn_loadout_to_HLMV);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button30);
@@ -3418,7 +3463,6 @@
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label53);
             this.Controls.Add(this.btn_reset_generic);
             this.Controls.Add(this.label59);
             this.Controls.Add(this.txt_QC);
@@ -3459,6 +3503,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lstJiggleType);
             this.Controls.Add(this.panel12);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddJiggleBone";
@@ -3467,16 +3513,16 @@
             this.Shown += new System.EventHandler(this.AddJiggleBone_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYawFriction)).EndInit();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawConstraintMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawConstraintMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawDamping)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawStiffness)).EndInit();
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYawFriction)).EndInit();
             this.grp_HAS_BASE_SPRING.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
@@ -3522,16 +3568,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTipMass)).EndInit();
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPitchFriction)).EndInit();
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchConstraintMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchConstraintMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchDamping)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPitchStiffness)).EndInit();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPitchFriction)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBoingDampingRate)).EndInit();
@@ -3582,6 +3628,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
             this.menuResetValue.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
@@ -3601,10 +3651,6 @@
             this.groupBox14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).EndInit();
             this.groupBox15.ResumeLayout(false);
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).EndInit();
             this.groupBox49.ResumeLayout(false);
             this.groupBox49.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).EndInit();
@@ -3820,13 +3866,11 @@
         private CheckBox checkBox1;
         private Label lbl_IS_BOING;
         private Button btn_reset_generic;
-        private Label label53;
         private Button button17;
         private Button button16;
         private Button button26;
         private Label label1;
         private GroupBox groupBox48;
-        private Label lbl_Along;
         private Label label2;
         private NumericUpDown numericUpDown15;
         private CheckBox checkBox2;
@@ -3891,5 +3935,10 @@
         private ContextMenuStrip menuResetAllValues;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
+        private Label label5;
+        private Label label6;
+        private Label label12;
+        private Label label38;
+        private Label lbl_Along;
     }
 }

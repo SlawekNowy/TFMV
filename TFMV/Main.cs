@@ -853,8 +853,11 @@ namespace TFMV
             collapsable_options_panel();
         }
 
+
         private void collapsable_options_panel()
         {
+
+
 
             int fheight = this_height;
             if (btn_expand_item_list.Text == "-") { fheight = this_height_extended; }
