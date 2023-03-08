@@ -393,12 +393,12 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             public Single yawConstraintMin { get; set; }
             public Single yawConstraintMax { get; set; }
-            public Single yawFriction { get; set; }
+            public Single yawFriction { get; set; } //todo: this ALSO seems to be unimplemented?? possibly hide both these unused things?? triple check!
             public Single yawBounce { get; set; } //pretty sure this is unimplemented, but store it anyway. maybe add a checkbox to show it
 
             public Single pitchConstraintMin { get; set; }
             public Single pitchConstraintMax { get; set; }
-            public Single pitchFriction { get; set; }
+            public Single pitchFriction { get; set; } //todo: this ALSO seems to be unimplemented?? possibly hide both these unused things?? triple check!
             public Single pitchBounce { get; set; } //pretty sure this is unimplemented, but store it anyway. maybe add a checkbox to show it
 
 
@@ -1087,10 +1087,48 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if (chk_isRigid.Checked)
             {
                 chk_isFlexible.Checked = false;
+
+                lbl_IS_FLEXIBLE.Text = "IS_RIGID";
+
+                //allow length flex
+                chkAllowLengthFlex.Visible = false;
+
+                //pitch
+                btnPitchStiffness.Visible = false;
+                lblPitchStiffness.Visible = false;
+                txtPitchStiffness.Visible = false;
+
+                btnPitchDamping.Visible = false;
+                lblPitchDamping.Visible = false;
+                txtPitchDamping.Visible = false;
+
+                //yaw
+                btnYawStiffness.Visible = false;
+                lblYawStiffness.Visible = false;
+                txtYawStiffness.Visible = false;
+
+                btnYawDamping.Visible = false;
+                lblYawDamping.Visible = false;
+                txtYawDamping.Visible = false;
+
+                //along
+                lbl_Along.Visible = false;
+                grp_Along.Visible = false;
+
+                //make sure we can see it
+                grp_IS_FLEXIBLE.Location = LEFT_PROPERTY_PANEL_LOCATION;
+
+
                 //chk_isFlexible.Enabled = false;
             }
             else
             {
+                //only hide this panel if both variants of it aren't being used
+                if (!chk_isFlexible.Checked)
+                {
+                    grp_IS_FLEXIBLE.Location = NULL_PROPERTY_PANEL_LOCATION;
+                }
+
                 //chk_isFlexible.Enabled = true;
 
             }
@@ -1103,10 +1141,47 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if (chk_isFlexible.Checked)
             {
                 chk_isRigid.Checked = false;
+
+                lbl_IS_FLEXIBLE.Text = "IS_FLEXIBLE";
+
+                //allow length flex
+                chkAllowLengthFlex.Visible = true;
+
+                //pitch
+                btnPitchStiffness.Visible = true;
+                lblPitchStiffness.Visible = true;
+                txtPitchStiffness.Visible = true;
+
+                btnPitchDamping.Visible = true;
+                lblPitchDamping.Visible = true;
+                txtPitchDamping.Visible = true;
+
+                //yaw
+                btnYawStiffness.Visible = true;
+                lblYawStiffness.Visible = true;
+                txtYawStiffness.Visible = true;
+
+                btnYawDamping.Visible = true;
+                lblYawDamping.Visible = true;
+                txtYawDamping.Visible = true;
+
+                //along
+                lbl_Along.Visible = true;
+                grp_Along.Visible = true;
+
+                //make sure we can see it
+                grp_IS_FLEXIBLE.Location = LEFT_PROPERTY_PANEL_LOCATION;
+
                 //chk_isRigid.Enabled = false;
             }
             else
             {
+                //only hide this panel if both variants of it aren't being used
+                if (!chk_isRigid.Checked)
+                {
+                    grp_IS_FLEXIBLE.Location = NULL_PROPERTY_PANEL_LOCATION;
+                }
+
                 //chk_isRigid.Enabled = true;
             }
 
@@ -1193,6 +1268,23 @@ namespace TFMV.UserControls.Jigglebone_Editor
             
 
 
+        }
+
+        private string txt_QC_backup = "";
+
+        private void txt_QC_Enter(object sender, EventArgs e)
+        {
+            txt_QC_backup = txt_QC.Text;
+        }
+
+        private void txt_QC_TextChanged(object sender, EventArgs e)
+        {
+            bool show_error = (txt_QC.Text == txt_QC_backup);
+            txt_QC.Text = txt_QC_backup;
+            if (show_error)
+            {
+                MessageBox.Show("This text is not directly editable in the BETA version.\n\nPlease use the controls on the left.", "Sorry!");
+            }
         }
     }
 

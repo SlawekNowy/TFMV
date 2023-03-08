@@ -45,11 +45,11 @@
             this.txtYawConstraintMax = new System.Windows.Forms.NumericUpDown();
             this.txtYawConstraintMin = new System.Windows.Forms.NumericUpDown();
             this.chkYawConstraint = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnYawDamping = new System.Windows.Forms.Button();
+            this.btnYawStiffness = new System.Windows.Forms.Button();
             this.txtYawDamping = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblYawStiffness = new System.Windows.Forms.Label();
+            this.lblYawDamping = new System.Windows.Forms.Label();
             this.txtYawStiffness = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.grp_HAS_BASE_SPRING = new System.Windows.Forms.GroupBox();
@@ -105,7 +105,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAlongDamping = new System.Windows.Forms.NumericUpDown();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grp_Along = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -132,11 +132,11 @@
             this.txtPitchConstraintMax = new System.Windows.Forms.NumericUpDown();
             this.txtPitchConstraintMin = new System.Windows.Forms.NumericUpDown();
             this.chkPitchConstraint = new System.Windows.Forms.CheckBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btnPitchDamping = new System.Windows.Forms.Button();
+            this.btnPitchStiffness = new System.Windows.Forms.Button();
             this.txtPitchDamping = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.lblPitchStiffness = new System.Windows.Forms.Label();
+            this.lblPitchDamping = new System.Windows.Forms.Label();
             this.txtPitchStiffness = new System.Windows.Forms.NumericUpDown();
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -173,7 +173,7 @@
             this.chk_hasBaseSpring = new System.Windows.Forms.CheckBox();
             this.grp_IS_BOING = new System.Windows.Forms.GroupBox();
             this.lbl_IS_BOING = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_QC = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.btn_HideQC = new System.Windows.Forms.Button();
             this.label50 = new System.Windows.Forms.Label();
@@ -188,7 +188,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label58 = new System.Windows.Forms.Label();
             this.grp_IS_FLEXIBLE = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_Along = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
@@ -340,7 +340,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseStiffness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlongStiffness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlongDamping)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.grp_Along.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAngleConstraint)).BeginInit();
             this.groupBox26.SuspendLayout();
@@ -436,11 +436,11 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.groupBox27);
             this.groupBox1.Controls.Add(this.groupBox28);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnYawDamping);
+            this.groupBox1.Controls.Add(this.btnYawStiffness);
             this.groupBox1.Controls.Add(this.txtYawDamping);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblYawStiffness);
+            this.groupBox1.Controls.Add(this.lblYawDamping);
             this.groupBox1.Controls.Add(this.txtYawStiffness);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 188);
@@ -568,25 +568,26 @@
             this.chkYawConstraint.UseVisualStyleBackColor = true;
             this.chkYawConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
             // 
-            // button2
+            // btnYawDamping
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button2.Location = new System.Drawing.Point(5, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 19);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnYawDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnYawDamping.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnYawDamping.Location = new System.Drawing.Point(5, 39);
+            this.btnYawDamping.Name = "btnYawDamping";
+            this.btnYawDamping.Size = new System.Drawing.Size(19, 19);
+            this.btnYawDamping.TabIndex = 23;
+            this.btnYawDamping.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnYawStiffness
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button1.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button1.Location = new System.Drawing.Point(5, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 19);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnYawStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnYawStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnYawStiffness.Location = new System.Drawing.Point(5, 16);
+            this.btnYawStiffness.Name = "btnYawStiffness";
+            this.btnYawStiffness.Size = new System.Drawing.Size(19, 19);
+            this.btnYawStiffness.TabIndex = 22;
+            this.btnYawStiffness.Tag = "txtYawStiffness";
+            this.btnYawStiffness.UseVisualStyleBackColor = true;
             // 
             // txtYawDamping
             // 
@@ -599,25 +600,25 @@
             this.txtYawDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
             this.txtYawDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
-            // label6
+            // lblYawStiffness
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "yaw_stiffness:";
+            this.lblYawStiffness.AutoSize = true;
+            this.lblYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYawStiffness.Location = new System.Drawing.Point(25, 18);
+            this.lblYawStiffness.Name = "lblYawStiffness";
+            this.lblYawStiffness.Size = new System.Drawing.Size(73, 13);
+            this.lblYawStiffness.TabIndex = 12;
+            this.lblYawStiffness.Text = "yaw_stiffness:";
             // 
-            // label5
+            // lblYawDamping
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "yaw_damping:";
+            this.lblYawDamping.AutoSize = true;
+            this.lblYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYawDamping.Location = new System.Drawing.Point(25, 41);
+            this.lblYawDamping.Name = "lblYawDamping";
+            this.lblYawDamping.Size = new System.Drawing.Size(75, 13);
+            this.lblYawDamping.TabIndex = 13;
+            this.lblYawDamping.Text = "yaw_damping:";
             // 
             // txtYawStiffness
             // 
@@ -1240,21 +1241,21 @@
             this.txtAlongDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
             this.txtAlongDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
-            // groupBox3
+            // grp_Along
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.txtAlongDamping);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtAlongStiffness);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 611);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(194, 66);
-            this.groupBox3.TabIndex = 16;
-            this.groupBox3.TabStop = false;
+            this.grp_Along.BackColor = System.Drawing.SystemColors.Control;
+            this.grp_Along.Controls.Add(this.button5);
+            this.grp_Along.Controls.Add(this.button6);
+            this.grp_Along.Controls.Add(this.txtAlongDamping);
+            this.grp_Along.Controls.Add(this.label3);
+            this.grp_Along.Controls.Add(this.label4);
+            this.grp_Along.Controls.Add(this.txtAlongStiffness);
+            this.grp_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_Along.Location = new System.Drawing.Point(9, 611);
+            this.grp_Along.Name = "grp_Along";
+            this.grp_Along.Size = new System.Drawing.Size(194, 66);
+            this.grp_Along.TabIndex = 16;
+            this.grp_Along.TabStop = false;
             // 
             // button5
             // 
@@ -1410,11 +1411,11 @@
             this.groupBox29.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox29.Controls.Add(this.groupBox30);
             this.groupBox29.Controls.Add(this.groupBox31);
-            this.groupBox29.Controls.Add(this.button18);
-            this.groupBox29.Controls.Add(this.button19);
+            this.groupBox29.Controls.Add(this.btnPitchDamping);
+            this.groupBox29.Controls.Add(this.btnPitchStiffness);
             this.groupBox29.Controls.Add(this.txtPitchDamping);
-            this.groupBox29.Controls.Add(this.label38);
-            this.groupBox29.Controls.Add(this.label39);
+            this.groupBox29.Controls.Add(this.lblPitchStiffness);
+            this.groupBox29.Controls.Add(this.lblPitchDamping);
             this.groupBox29.Controls.Add(this.txtPitchStiffness);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.Location = new System.Drawing.Point(9, 399);
@@ -1546,25 +1547,25 @@
             this.chkPitchConstraint.UseVisualStyleBackColor = true;
             this.chkPitchConstraint.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
             // 
-            // button18
+            // btnPitchDamping
             // 
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button18.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button18.Location = new System.Drawing.Point(5, 39);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(19, 19);
-            this.button18.TabIndex = 23;
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnPitchDamping.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnPitchDamping.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnPitchDamping.Location = new System.Drawing.Point(5, 39);
+            this.btnPitchDamping.Name = "btnPitchDamping";
+            this.btnPitchDamping.Size = new System.Drawing.Size(19, 19);
+            this.btnPitchDamping.TabIndex = 23;
+            this.btnPitchDamping.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // btnPitchStiffness
             // 
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
-            this.button19.Image = global::TFMV.Properties.Resources.btn_reset;
-            this.button19.Location = new System.Drawing.Point(5, 16);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(19, 19);
-            this.button19.TabIndex = 22;
-            this.button19.UseVisualStyleBackColor = true;
+            this.btnPitchStiffness.Font = new System.Drawing.Font("Segoe UI", 6F, System.Drawing.FontStyle.Bold);
+            this.btnPitchStiffness.Image = global::TFMV.Properties.Resources.btn_reset;
+            this.btnPitchStiffness.Location = new System.Drawing.Point(5, 16);
+            this.btnPitchStiffness.Name = "btnPitchStiffness";
+            this.btnPitchStiffness.Size = new System.Drawing.Size(19, 19);
+            this.btnPitchStiffness.TabIndex = 22;
+            this.btnPitchStiffness.UseVisualStyleBackColor = true;
             // 
             // txtPitchDamping
             // 
@@ -1577,25 +1578,25 @@
             this.txtPitchDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
             this.txtPitchDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
-            // label38
+            // lblPitchStiffness
             // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(25, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(77, 13);
-            this.label38.TabIndex = 12;
-            this.label38.Text = "pitch_stiffness:";
+            this.lblPitchStiffness.AutoSize = true;
+            this.lblPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPitchStiffness.Location = new System.Drawing.Point(25, 18);
+            this.lblPitchStiffness.Name = "lblPitchStiffness";
+            this.lblPitchStiffness.Size = new System.Drawing.Size(77, 13);
+            this.lblPitchStiffness.TabIndex = 12;
+            this.lblPitchStiffness.Text = "pitch_stiffness:";
             // 
-            // label39
+            // lblPitchDamping
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(25, 41);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(79, 13);
-            this.label39.TabIndex = 13;
-            this.label39.Text = "pitch_damping:";
+            this.lblPitchDamping.AutoSize = true;
+            this.lblPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPitchDamping.Location = new System.Drawing.Point(25, 41);
+            this.lblPitchDamping.Name = "lblPitchDamping";
+            this.lblPitchDamping.Size = new System.Drawing.Size(79, 13);
+            this.lblPitchDamping.TabIndex = 13;
+            this.lblPitchDamping.Text = "pitch_damping:";
             // 
             // txtPitchStiffness
             // 
@@ -1615,7 +1616,7 @@
             // 
             // btnOkay
             // 
-            this.btnOkay.Location = new System.Drawing.Point(62, 760);
+            this.btnOkay.Location = new System.Drawing.Point(791, 760);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(75, 23);
             this.btnOkay.TabIndex = 39;
@@ -1625,7 +1626,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(140, 760);
+            this.btnCancel.Location = new System.Drawing.Point(869, 760);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 40;
@@ -1645,7 +1646,7 @@
             // btnApplyJigglebones
             // 
             this.btnApplyJigglebones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyJigglebones.Location = new System.Drawing.Point(123, 727);
+            this.btnApplyJigglebones.Location = new System.Drawing.Point(852, 727);
             this.btnApplyJigglebones.Name = "btnApplyJigglebones";
             this.btnApplyJigglebones.Size = new System.Drawing.Size(84, 32);
             this.btnApplyJigglebones.TabIndex = 43;
@@ -1995,17 +1996,19 @@
             this.lbl_IS_BOING.Text = "IS_BOING";
             this.lbl_IS_BOING.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // txt_QC
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(453, 22);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox3.Size = new System.Drawing.Size(306, 719);
-            this.textBox3.TabIndex = 61;
-            this.textBox3.Text = resources.GetString("textBox3.Text");
+            this.txt_QC.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_QC.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_QC.Location = new System.Drawing.Point(453, 22);
+            this.txt_QC.Multiline = true;
+            this.txt_QC.Name = "txt_QC";
+            this.txt_QC.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txt_QC.Size = new System.Drawing.Size(306, 719);
+            this.txt_QC.TabIndex = 61;
+            this.txt_QC.Text = resources.GetString("txt_QC.Text");
+            this.txt_QC.TextChanged += new System.EventHandler(this.txt_QC_TextChanged);
+            this.txt_QC.Enter += new System.EventHandler(this.txt_QC_Enter);
             // 
             // label49
             // 
@@ -2151,14 +2154,14 @@
             // grp_IS_FLEXIBLE
             // 
             this.grp_IS_FLEXIBLE.BackColor = System.Drawing.SystemColors.Control;
-            this.grp_IS_FLEXIBLE.Controls.Add(this.label12);
+            this.grp_IS_FLEXIBLE.Controls.Add(this.lbl_Along);
             this.grp_IS_FLEXIBLE.Controls.Add(this.label2);
             this.grp_IS_FLEXIBLE.Controls.Add(this.label1);
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox48);
             this.grp_IS_FLEXIBLE.Controls.Add(this.lbl_IS_FLEXIBLE);
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox26);
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox1);
-            this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox3);
+            this.grp_IS_FLEXIBLE.Controls.Add(this.grp_Along);
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox7);
             this.grp_IS_FLEXIBLE.Controls.Add(this.groupBox29);
             this.grp_IS_FLEXIBLE.Controls.Add(this.label58);
@@ -2169,17 +2172,17 @@
             this.grp_IS_FLEXIBLE.TabIndex = 75;
             this.grp_IS_FLEXIBLE.TabStop = false;
             // 
-            // label12
+            // lbl_Along
             // 
-            this.label12.BackColor = System.Drawing.Color.DarkGray;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(9, 597);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(194, 23);
-            this.label12.TabIndex = 82;
-            this.label12.Text = "ALONG";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Along.BackColor = System.Drawing.Color.DarkGray;
+            this.lbl_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Along.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Along.Location = new System.Drawing.Point(9, 597);
+            this.lbl_Along.Name = "lbl_Along";
+            this.lbl_Along.Size = new System.Drawing.Size(194, 23);
+            this.lbl_Along.TabIndex = 82;
+            this.lbl_Along.Text = "ALONG";
+            this.lbl_Along.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -3400,7 +3403,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(772, 848);
+            this.ClientSize = new System.Drawing.Size(1896, 848);
             this.Controls.Add(this.btn_loadout_to_HLMV);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button30);
@@ -3418,7 +3421,7 @@
             this.Controls.Add(this.label53);
             this.Controls.Add(this.btn_reset_generic);
             this.Controls.Add(this.label59);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_QC);
             this.Controls.Add(this.label60);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.groupBox37);
@@ -3508,8 +3511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseStiffness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlongStiffness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlongDamping)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grp_Along.ResumeLayout(false);
+            this.grp_Along.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAngleConstraint)).EndInit();
@@ -3617,10 +3620,10 @@
         #endregion
         private ComboBox lstJiggleType;
         private GroupBox groupBox1;
-        private Button button2;
-        private Button button1;
-        private Label label6;
-        private Label label5;
+        private Button btnYawDamping;
+        private Button btnYawStiffness;
+        private Label lblYawStiffness;
+        private Label lblYawDamping;
         private Label label7;
         private GroupBox grp_HAS_BASE_SPRING;
         private GroupBox groupBox25;
@@ -3641,7 +3644,7 @@
         private Label label9;
         private Label label4;
         private Label label3;
-        private GroupBox groupBox3;
+        private GroupBox grp_Along;
         private Button button5;
         private Button button6;
         private GroupBox groupBox7;
@@ -3669,10 +3672,10 @@
         private Label label36;
         private Label label37;
         private CheckBox chkPitchConstraint;
-        private Button button18;
-        private Button button19;
-        private Label label38;
-        private Label label39;
+        private Button btnPitchDamping;
+        private Button btnPitchStiffness;
+        private Label lblPitchStiffness;
+        private Label lblPitchDamping;
         private Button btnOkay;
         private Button btnCancel;
         private GroupBox groupBox22;
@@ -3712,7 +3715,7 @@
         private CheckBox chk_isBoing;
         private CheckBox chk_hasBaseSpring;
         private GroupBox grp_IS_BOING;
-        private TextBox textBox3;
+        private TextBox txt_QC;
         private Label label49;
         private Button btn_HideQC;
         private Label label50;
@@ -3823,7 +3826,7 @@
         private Button button26;
         private Label label1;
         private GroupBox groupBox48;
-        private Label label12;
+        private Label lbl_Along;
         private Label label2;
         private NumericUpDown numericUpDown15;
         private CheckBox checkBox2;
