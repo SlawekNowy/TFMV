@@ -439,6 +439,9 @@ namespace TFMV.UserControls
         {
             TFMV.UserControls.Jigglebone_Editor.AddJiggleBone jiggleForm = new TFMV.UserControls.Jigglebone_Editor.AddJiggleBone();
 
+            //this seems like it could be prone to breakage but it's fine for now.
+            ParentForm.Enabled = false;
+
             //set up the jigglebone editor so it knows what mdl it's pointing at
             jiggleForm.mdlpath = mdlpath;
             jiggleForm.readJigglebones();

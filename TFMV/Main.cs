@@ -46,10 +46,12 @@ namespace TFMV
         private string steam_api_key = "";
 
 
-        //todo: get rid of this?
-        string DirUserName = "jburn";
+        //this is only used for debug mode
+#if DEBUG
+        public static string DirUserName = Environment.UserName;
+#endif
 
-        #endregion
+#endregion
 
         #region Global vars
 
@@ -377,7 +379,6 @@ namespace TFMV
             // for debugging: set config / schema directories to TFMV in desktop folder
             //(this is to stop you writing crap like updated schema pngs to the debug folder)
 #if DEBUG
-
 
             app_data_dir = "C:\\Users\\" + DirUserName + "\\Desktop\\TFMV\\config\\";
             tools_dir = "C:\\Users\\" + DirUserName + "\\Desktop\\TFMV\\tools\\";
@@ -2399,7 +2400,6 @@ save listbox as cache, effectively deleting anything that isn't in the folder an
         // buttons load class
         private void btn_class_load_Click(object sender, EventArgs e)
         {
-
             if (bgWorker_download_schema.IsBusy) { return; }
             if (bgWorker_load_schema.IsBusy) { return; }
             if (items_loading) { return; }

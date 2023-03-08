@@ -14,16 +14,32 @@ using System.IO;
 
 //TODO: LIMIT TO THREE DECIMAL PLACES TO HIDE IMPRECISION! MAYBE ROUND UP NUMBERS THAT END IN .999!
 
-//TODO: WHEN WRITING JIGGLEBONE DATA, CONSIDER MOVING THEM ALL TO THE END OF THE FILE AND RE-POINTING THE OFFSETS! BECAUSE IS_BOING IS WRITING UNKNOWN DATA!!
+//TODO: WHEN WRITING JIGGLEBONE DATA, CONSIDER MOVING THEM ALL TO THE END OF THE FILE AND RE-POINTING THE OFFSETS! BECAUSE IS_BOING IS WRITING OVER 2 BYTES OF UNKNOWN DATA!!
 
 
 namespace TFMV.UserControls.Jigglebone_Editor
 {
 
     using ExtensionMethods;
+    using System.Threading;
+    using System.Windows.Media.Media3D;
 
     public partial class AddJiggleBone : Form
     {
+
+
+        public Form form_AddJigglebone;
+
+        
+        public Thread always_on_top_thread = new Thread(() =>
+                {
+                });
+
+
+        private Point NULL_PROPERTY_PANEL_LOCATION = new Point(1000, 1000); //out of bounds ;)
+        private Point LEFT_PROPERTY_PANEL_LOCATION = new Point(12, 97);
+        private Point RIGHT_PROPERTY_PANEL_LOCATION = new Point(232, 97);
+
 
         //FLAGS!!!
         public const int JIGGLE_IS_FLEXIBLE = 0x01;
@@ -110,6 +126,28 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         public void readJigglebones()
         {
+
+            
+            //todo: move this somewhere else, like form_load
+            always_on_top_thread = new Thread(() =>
+            {
+                try
+                {
+                    while (true)
+                    {
+                        if (chk_Always_On_Top.Checked)
+                        {
+                            this.Invoke(new MethodInvoker(delegate { this.TopMost = true; }));
+                        }
+                        Thread.Sleep(1);
+                    }
+                }
+                catch (Exception ex) { }
+            });
+
+            always_on_top_thread.Start();
+            
+
             //test item
             //filepath = "C:\\Users\\jburn\\Documents\\Crowbar\\models\\jiggletest_135\\oktoberfester_jiggletest.mdl";
 
@@ -119,7 +157,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             if (File.Exists(filepath))
             {
-                //uncomment this
+                //todo: uncomment this
                 //try
                 //{
                 mdl_data = File.ReadAllBytes(filepath);
@@ -306,7 +344,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             lstBoneName.SelectedIndex = 0;
 
-            this.ShowDialog();
+            this.Show();
         }
 
 
@@ -692,7 +730,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
                     theJiggleBone.hasBaseSpring = chkHasBaseSpring.Checked;
 
                     //disable all controls relating to base spring if it's unchecked
-                    grpHasBaseSpring.Enabled = chkHasBaseSpring.Checked;
+                    grp_HAS_BASE_SPRING.Enabled = chkHasBaseSpring.Checked;
 
                     break;
 
@@ -1080,10 +1118,13 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if (chk_hasBaseSpring.Checked)
             {
                 chk_isBoing.Checked = false;
+
+                grp_HAS_BASE_SPRING.Location = RIGHT_PROPERTY_PANEL_LOCATION;
                 //chk_isBoing.Enabled = false;
             }
             else
             {
+                grp_HAS_BASE_SPRING.Location = NULL_PROPERTY_PANEL_LOCATION;
                 //chk_isBoing.Enabled = true;
             }
 
@@ -1095,10 +1136,13 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if (chk_isBoing.Checked)
             {
                 chk_hasBaseSpring.Checked = false;
+
+                grp_IS_BOING.Location = RIGHT_PROPERTY_PANEL_LOCATION;
                 //chk_hasBaseSpring.Enabled = false;
             }
             else
             {
+                grp_IS_BOING.Location = NULL_PROPERTY_PANEL_LOCATION;
                 //chk_hasBaseSpring.Enabled = true;
             }
 
@@ -1129,6 +1173,27 @@ namespace TFMV.UserControls.Jigglebone_Editor
         {
 
         }
+
+        private void chk_Always_On_Top_CheckedChanged(object sender, EventArgs e)
+        {
+            //todo: this might break if the hlmv refresh button ever needs to start a new hlmv.exe process
+            
+            if (chk_Always_On_Top.Checked)
+            {
+                //this.TopMost = true;
+
+                //always_on_top_thread.Resume();
+
+            }
+            else
+            {
+                //always_on_top_thread.Suspend();
+                this.TopMost = false;
+            }
+            
+
+
+        }
     }
 
 
@@ -1139,7 +1204,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
         public static class MyExtensions
         {
 
-        //extends textbox, puts a float into a textbox and correctly formats it (with option to convert radians to degrees)
+        //extends NumericUpDown, puts a float into the text box and correctly formats it (with option to convert radians to degrees)
         public static void SetNumber(this System.Windows.Forms.NumericUpDown txtBox, double value, bool RadiansToDegrees, bool isBoingImpactAngle = false)
             {
 
@@ -1177,7 +1242,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
                 return;
             }
 
-        //extends textbox, gets the text from a textbox and correctly formats it as a Single (with option to convert degrees to radians)
+        //extends NumericUpDown, gets the text from the text box and correctly formats it as a Single (with option to convert degrees to radians)
         public static Single GetNumber(this System.Windows.Forms.NumericUpDown txtBox, bool DegreesToRadians, bool isBoingImpactAngle = false)
             {
 

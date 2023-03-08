@@ -36,10 +36,10 @@ namespace TFMV.SourceEngine
         public SteamGameConfig()
         {
             InitializeComponent();
-//            #if DEBUG
+            #if DEBUG
 //neodement: commented out this hard coded path so it looks wherever it's running from instead.
-//                settings_dir = "C:\\Users\\Mike\\Desktop\\TFMV\\config\\";
-//            #endif
+                settings_dir = "C:\\Users\\" + Main.DirUserName + "\\Desktop\\TFMV\\config\\";
+#endif
         }
 
         // get Steam install directory from the windows registry
