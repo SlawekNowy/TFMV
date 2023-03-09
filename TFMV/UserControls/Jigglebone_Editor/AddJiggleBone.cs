@@ -21,6 +21,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
 {
 
     using ExtensionMethods;
+    using System.Security.Policy;
     using System.Threading;
     using System.Windows.Media.Media3D;
 
@@ -39,6 +40,8 @@ namespace TFMV.UserControls.Jigglebone_Editor
         private Point NULL_PROPERTY_PANEL_LOCATION = new Point(1000, 1000); //out of bounds ;)
         private Point LEFT_PROPERTY_PANEL_LOCATION = new Point(12, 97);
         private Point RIGHT_PROPERTY_PANEL_LOCATION = new Point(232, 97);
+
+        private bool resetting_all_jigglebone_values = true;
 
 
         //FLAGS!!!
@@ -92,6 +95,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
         }
 
 
+
         public List<jiggleBone> allJiggleBones = new List<jiggleBone>();
 
         //currently loaded mdl
@@ -124,6 +128,35 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         }
 
+
+        private string ReadNullTerminatedString(BinaryReader inputFileReader)
+        {
+            StringBuilder text = new StringBuilder();
+
+            text.Length = 0;
+
+            while (inputFileReader.PeekChar() > 0)
+            {
+
+                text.Append(inputFileReader.ReadChar());
+            }
+
+            //' Read the null character.
+
+            try
+            {
+                inputFileReader.ReadChar();
+            }
+            catch (IOException)
+            {
+                //return "<INVALID>";
+            }
+
+            return text.ToString();
+
+        }
+
+
         public void readJigglebones()
         {
 
@@ -149,11 +182,11 @@ namespace TFMV.UserControls.Jigglebone_Editor
             
 
             //test item
-            //filepath = "C:\\Users\\jburn\\Documents\\Crowbar\\models\\jiggletest_135\\oktoberfester_jiggletest.mdl";
+            string filepath = "C:\\Users\\jburn\\Documents\\Crowbar\\models\\jiggletest_135\\oktoberfester_jiggletest.mdl"; //NOTE WHEN YOU REMOVE THIS YOU NEED TO REMOVE IT ELSEWHERE IN THIS FILE TOO OR IT WONT SAVE HEX EDITED BONES CORRECTLY!
 
             //            MessageBox.Show(filepath);
 
-            string filepath = TFMV.Main.tmp_dir + mdlpath;
+            //string filepath = TFMV.Main.tmp_dir + mdlpath;
 
             if (File.Exists(filepath))
             {
@@ -198,9 +231,10 @@ namespace TFMV.UserControls.Jigglebone_Editor
                         int bone_name_offset = BitConverter.ToInt32(mdl_data, bone_offset) + bone_offset;
 
                         //this stops reading strings from attempting to seek past the end of the file
-                        int numBytesToRead = mdl_data.Length - bone_name_offset;
+                        //int numBytesToRead = mdl_data.Length - bone_name_offset;
 
-                        string bone_name = Encoding.Default.GetString(mdl_data, bone_name_offset, numBytesToRead);
+                        //string bone_name = Encoding.Default.GetString(mdl_data, bone_name_offset, numBytesToRead);
+
 
                         int jiggleboneDataOffset = BitConverter.ToInt32(mdl_data, bone_offset + 168);
 
@@ -211,12 +245,16 @@ namespace TFMV.UserControls.Jigglebone_Editor
                         //make a new serialized jigglebone object to set params
                         jiggleBone theJiggleBone = new jiggleBone();
 
-                        theJiggleBone.Name = bone_name;
+                        //theJiggleBone.Name = bone_name;
 
                         using (var stream = File.Open(filepath, FileMode.Open))
                         {
                             using (var reader = new BinaryReader(stream, Encoding.UTF8, false))
                             {
+                                //read the name from the strings table
+                                reader.BaseStream.Position = bone_name_offset;
+                                theJiggleBone.Name = ReadNullTerminatedString(reader);
+
 
                                 //set (and immediately make use of) the offset to this bones jigglebone data
                                 theJiggleBone.Offset = jiggleboneDataOffset;
@@ -342,6 +380,13 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             }
 
+            if (lstBoneName.Items.Count == 0)
+            {
+                this.Close();
+                MessageBox.Show("No jigglebones found on model:" + "\n\n" + mdlpath);
+                return;
+            }
+
             lstBoneName.SelectedIndex = 0;
 
             this.Show();
@@ -356,15 +401,12 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             public string Name { get; set; }
 
-            //todo: this is incorrect! there are 2 types of jigglebone and 2 subproperties!
-//            public JiggleType jiggleType { get; set; } //isFlexible, isRigid or isBoing
-
             //rotational property groups
             public bool isRigid { get; set; }
             public bool isFlexible { get; set; }
 
             //translational property groups
-            public bool hasBaseSpring { get; set; } //todo: don't allow this with certain types of jigglebone
+            public bool hasBaseSpring { get; set; }
             public bool isBoing { get; set; }
 
 
@@ -427,6 +469,8 @@ namespace TFMV.UserControls.Jigglebone_Editor
             //NOTE: These fields seem to be only in models compiled with Source SDK Base 2013 MP and SP.
             //(might be important for a non-tf2 version of this?)
 
+            //MORE IMPORTANT NOTE: If a model isn't compiled with boing jigglebones, it won't have the extra bytes required for those properties. so we are probably reading unknown data.
+
             public Single boingImpactSpeed { get; set; }
             public Single boingImpactAngle { get; set; }
 
@@ -485,6 +529,15 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
             }
 
+
+
+            //funky extra properties for offset of this jigglebones start and end in the qc textbox
+            public int QC_START { get; set; } = 0;
+
+            public int QC_END { get; set; } = 0;
+
+
+
         }
 
 
@@ -496,7 +549,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         private void lstBoneName_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+                                              
             jiggleBone theJiggleBone = allJiggleBones[lstBoneName.SelectedIndex];
 
 
@@ -529,40 +582,48 @@ namespace TFMV.UserControls.Jigglebone_Editor
             }
 
 
+
+            //todo: this works but seems like a dumb way of locking the values?
+            resetting_all_jigglebone_values = true;
+
+
+
+
+
             //GENERAL
-            txtLength.SetNumber(theJiggleBone.length, false);
-            txtTipMass.SetNumber(theJiggleBone.tipMass, false);
+            txtLength.SetNumber(theJiggleBone.length);
+            txtTipMass.SetNumber(theJiggleBone.tipMass);
 
             chkAngleConstraint.Checked = theJiggleBone.hasAngleConstraint;
             txtAngleConstraint.SetNumber(theJiggleBone.angleLimit, true); // in radians
 
             //YAW
-            txtYawStiffness.SetNumber(theJiggleBone.yawStiffness, false);
-            txtYawDamping.SetNumber(theJiggleBone.yawDamping, false);
+            txtYawStiffness.SetNumber(theJiggleBone.yawStiffness);
+            txtYawDamping.SetNumber(theJiggleBone.yawDamping);
 
             chkYawConstraint.Checked = theJiggleBone.hasYawConstraint;
             txtYawConstraintMin.SetNumber(theJiggleBone.yawConstraintMin, true); // in radians
             txtYawConstraintMax.SetNumber(theJiggleBone.yawConstraintMax, true); // in radians
 
             //chkYawFriction.Checked = false;
-            txtYawFriction.SetNumber(theJiggleBone.yawFriction, false);
+            txtYawFriction.SetNumber(theJiggleBone.yawFriction);
 
 
             //PITCH
-            txtPitchStiffness.SetNumber(theJiggleBone.pitchStiffness, false);
-            txtPitchDamping.SetNumber(theJiggleBone.pitchDamping, false);
+            txtPitchStiffness.SetNumber(theJiggleBone.pitchStiffness);
+            txtPitchDamping.SetNumber(theJiggleBone.pitchDamping);
 
             chkPitchConstraint.Checked = theJiggleBone.hasPitchConstraint;
             txtPitchConstraintMin.SetNumber(theJiggleBone.pitchConstraintMin, true); // in radians
             txtPitchConstraintMax.SetNumber(theJiggleBone.pitchConstraintMax, true); // in radians
 
             //chkPitchFriction.Checked = false;
-            txtPitchFriction.SetNumber(theJiggleBone.pitchFriction, false);
+            txtPitchFriction.SetNumber(theJiggleBone.pitchFriction);
 
 
             //ALONG
-            txtAlongStiffness.SetNumber(theJiggleBone.alongStiffness, false);
-            txtAlongDamping.SetNumber(theJiggleBone.alongDamping, false);
+            txtAlongStiffness.SetNumber(theJiggleBone.alongStiffness);
+            txtAlongDamping.SetNumber(theJiggleBone.alongDamping);
 
             ///////////////////////////
             ///BASE SPRING PARAMS!!! //
@@ -576,28 +637,28 @@ namespace TFMV.UserControls.Jigglebone_Editor
                 chkHasBaseSpring.Checked = theJiggleBone.hasBaseSpring;
 
                 //GENERAL
-                txtBaseStiffness.SetNumber(theJiggleBone.baseStiffness, false);
-                txtBaseDamping.SetNumber(theJiggleBone.baseDamping, false);
+                txtBaseStiffness.SetNumber(theJiggleBone.baseStiffness);
+                txtBaseDamping.SetNumber(theJiggleBone.baseDamping);
 
-                txtBaseBaseMass.SetNumber(theJiggleBone.baseMass, false);
+                txtBaseBaseMass.SetNumber(theJiggleBone.baseMass);
 
                 //LEFT_CONSTRAINT
-                txtBaseLeftConstraintMin.SetNumber(theJiggleBone.baseLeftConstraintMin, false);
-                txtBaseLeftConstraintMax.SetNumber(theJiggleBone.baseLeftConstraintMax, false);
+                txtBaseLeftConstraintMin.SetNumber(theJiggleBone.baseLeftConstraintMin);
+                txtBaseLeftConstraintMax.SetNumber(theJiggleBone.baseLeftConstraintMax);
 
-                txtBaseLeftFriction.SetNumber(theJiggleBone.baseLeftFriction, false);
+                txtBaseLeftFriction.SetNumber(theJiggleBone.baseLeftFriction);
 
                 //UP_CONSTRAINT
-                txtBaseUpConstraintMin.SetNumber(theJiggleBone.baseUpConstraintMin, false);
-                txtBaseUpConstraintMax.SetNumber(theJiggleBone.baseUpConstraintMax, false);
+                txtBaseUpConstraintMin.SetNumber(theJiggleBone.baseUpConstraintMin);
+                txtBaseUpConstraintMax.SetNumber(theJiggleBone.baseUpConstraintMax);
 
-                txtBaseLeftFriction.SetNumber(theJiggleBone.baseLeftFriction, false);
+                txtBaseLeftFriction.SetNumber(theJiggleBone.baseLeftFriction);
 
                 //FORWARD_CONSTRAINT
-                txtBaseForwardConstraintMin.SetNumber(theJiggleBone.baseForwardConstraintMin, false);
-                txtBaseForwardConstraintMax.SetNumber(theJiggleBone.baseForwardConstraintMax, false);
+                txtBaseForwardConstraintMin.SetNumber(theJiggleBone.baseForwardConstraintMin);
+                txtBaseForwardConstraintMax.SetNumber(theJiggleBone.baseForwardConstraintMax);
 
-                txtBaseForwardFriction.SetNumber(theJiggleBone.baseForwardFriction, false);
+                txtBaseForwardFriction.SetNumber(theJiggleBone.baseForwardFriction);
 
             }
 
@@ -606,13 +667,18 @@ namespace TFMV.UserControls.Jigglebone_Editor
             ///   BOING PARAMS!!!   ///
             ///////////////////////////
 
-            txtBoingImpactSpeed.SetNumber(theJiggleBone.boingImpactSpeed, false);
+            txtBoingImpactSpeed.SetNumber(theJiggleBone.boingImpactSpeed);
             txtBoingImpactAngle.SetNumber(theJiggleBone.boingImpactAngle, true, true); //run cosine on the degrees and then convert to radians
 
-            txtBoingDampingRate.SetNumber(theJiggleBone.boingDampingRate, false);
+            txtBoingDampingRate.SetNumber(theJiggleBone.boingDampingRate);
 
-            txtBoingFrequency.SetNumber(theJiggleBone.boingFrequency, false);
-            txtBoingAmplitude.SetNumber(theJiggleBone.boingAmplitude, false);
+            txtBoingFrequency.SetNumber(theJiggleBone.boingFrequency);
+            txtBoingAmplitude.SetNumber(theJiggleBone.boingAmplitude);
+
+
+            //done! let auto-refreshing commence.
+            resetting_all_jigglebone_values = false;
+
 
         }
 
@@ -642,6 +708,13 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if (sender.GetType() == typeof(TextBox))
             {
                 TextBox obj = (TextBox)sender;
+                obj_name = obj.Name.ToString();
+                arg = obj.Text.ToString();
+            }
+
+            if (sender.GetType() == typeof(NumericUpDown))
+            {
+                NumericUpDown obj = (NumericUpDown)sender;
                 obj_name = obj.Name.ToString();
                 arg = obj.Text.ToString();
             }
@@ -806,28 +879,608 @@ namespace TFMV.UserControls.Jigglebone_Editor
             }
 
 
-            //
-            //WriteJiggleBoneToFile();
+            if (chk_Auto_Apply.Checked && !resetting_all_jigglebone_values)
+            {
+                WriteJiggleBoneToFile();
 
-            //yeah
+                TFMV.Main.refresh_hlmv(false);
+
+            }
 
 
+            }
+
+
+
+
+
+        private void WriteJiggleBoneConstraints(jiggleBone theJiggleBone)
+        {
+
+            //bit easier to read than \t \r\n repeatedly
+            string Tab = "\t";
+            string NewLine = "\r\n";
+
+
+            string line = "";
+
+
+            if (theJiggleBone.hasPitchConstraint)
+            { 
+                line = Tab;
+
+                line += Tab;
+                line += "pitch_constraint ";
+
+                line += SingleToString(theJiggleBone.pitchConstraintMin, true);  // in radians
+
+                line += " ";
+
+                line += SingleToString(theJiggleBone.pitchConstraintMax, true);  // in radians
+
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                line = Tab;
+
+                line += Tab;
+                line += "pitch_friction ";
+
+                line += theJiggleBone.pitchFriction;
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                line = Tab;
+
+                line += Tab;
+                line += "pitch_bounce ";
+
+                line += theJiggleBone.pitchBounce;
+
+                line += NewLine;
+                txt_QC.Text += line;
+            }
+
+            if (theJiggleBone.hasYawConstraint)
+            {
+                line = Tab;
+
+                line += Tab;
+                line += "yaw_constraint ";
+
+                line += SingleToString(theJiggleBone.yawConstraintMin);  // in radians
+
+                line += " ";
+
+                line += SingleToString(theJiggleBone.yawConstraintMax);  // in radians
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                line = Tab;
+
+                line += Tab;
+                line += "yaw_friction ";
+
+                line += theJiggleBone.yawFriction;
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                line = Tab;
+
+                line += Tab;
+                line += "yaw_bounce ";
+
+                line += theJiggleBone.yawBounce;
+
+                line += NewLine;
+                txt_QC.Text += line;
+            }
+
+            if (theJiggleBone.hasAngleConstraint)
+                {
+                line = Tab;
+
+                line += Tab;
+                line += "angle_constraint ";
+
+                line += SingleToString(theJiggleBone.angleLimit, true); // in radians
+
+                line += NewLine;
+                txt_QC.Text += line;
+            }
         }
 
 
 
+
+
+        //todo: this should probably say jiggleBONES...?
         private void WriteJiggleBoneToFile()
         {
 
-            string filepath = TFMV.Main.tfmv_dir + mdlpath;
 
-                //MessageBox.Show(filepath);
 
-                //create the file if it doesn't exist before you write to it
-                if (!File.Exists(filepath))
+
+
+
+            //bit easier to read than \t \" \r\n repeatedly
+            string Tab = "\t";
+            string Quote = "\"";
+            string NewLine = "\r\n";
+
+
+            txt_QC.Text = "";
+
+
+            //we can finally get qc params out of this!
+
+            //iterate thru all jigglebones!!!
+            for (var i = 0; i < allJiggleBones.Count; i++)
+            {
+                jiggleBone theJiggleBone = allJiggleBones[i];
+
+                //remember where this bone starts so we can select it with the button
+                theJiggleBone.QC_START = txt_QC.Text.Length;
+
+
+                string line = "$jigglebone ";
+
+                line += "\"";
+                line += theJiggleBone.Name;
+                line += Quote;
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                line = "{";
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+                if (theJiggleBone.isFlexible)
+                {
+                    line = Tab;
+
+                    line += "is_flexible";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "{";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "length ";
+
+                    line += theJiggleBone.length;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "tip_mass ";
+
+                    line += theJiggleBone.tipMass;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "pitch_stiffness ";
+
+                    line += theJiggleBone.pitchStiffness;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "pitch_damping ";
+
+                    line += theJiggleBone.pitchDamping;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "yaw_stiffness ";
+
+                    line += theJiggleBone.yawStiffness;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "yaw_damping ";
+
+                    line += theJiggleBone.yawDamping;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    if (!theJiggleBone.hasLengthConstraint)
+                    {
+                        line = Tab;
+
+                        line += Tab;
+
+                        line += "allow_length_flex";
+
+                        line += NewLine;
+                        txt_QC.Text += line;
+                    }
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "along_stiffness ";
+
+                    line += theJiggleBone.alongStiffness;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "along_damping ";
+
+                    line += theJiggleBone.alongDamping;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    WriteJiggleBoneConstraints(theJiggleBone);
+
+
+                    line = Tab;
+
+                    line += "}";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+                }
+
+                if (theJiggleBone.isRigid) {
+                    line = Tab;
+
+                    line += "is_rigid";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "{";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "length ";
+
+                    line += theJiggleBone.length;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "tip_mass ";
+
+                    line += theJiggleBone.tipMass;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    WriteJiggleBoneConstraints(theJiggleBone);
+
+
+                    line = Tab;
+
+                    line += "}";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+                }
+
+                if (theJiggleBone.hasBaseSpring)
+                {
+                    line = Tab;
+
+                    line += "has_base_spring";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "{";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "base_mass ";
+
+                    line += theJiggleBone.baseMass;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "stiffness ";
+
+                    line += theJiggleBone.baseStiffness;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "damping ";
+
+                    line += theJiggleBone.baseDamping;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "left_constraint ";
+
+                    //old junk from Crowbar
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMinLeft);
+
+                    //'line += " "
+
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMaxLeft);
+
+                    //todo: so do these need to converted?
+                    line += SingleToString(theJiggleBone.baseLeftConstraintMin, true);
+
+                    line += " ";
+
+                    line += SingleToString(theJiggleBone.baseLeftConstraintMax, true);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "left_friction ";
+
+                    line += SingleToString(theJiggleBone.baseLeftFriction);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "up_constraint ";
+
+                    //old junk from crowbar
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMinUp);
+
+                    //'line += " "
+
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMaxUp);
+
+                    line += SingleToString(theJiggleBone.baseUpConstraintMin, true);
+
+                    line += " ";
+
+                    line += SingleToString(theJiggleBone.baseUpConstraintMax, true);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "up_friction ";
+
+                    line += theJiggleBone.baseUpFriction;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "forward_constraint ";
+
+                    //old junk from crowbar
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMinForward);
+
+                    //'line += " "
+
+                    //'line += MathModule.RadiansToDegrees(theJiggleBone.baseMaxForward);
+
+                    line += SingleToString(theJiggleBone.baseForwardConstraintMin, true);
+
+                    line += " ";
+
+                    line += SingleToString(theJiggleBone.baseForwardConstraintMax, true);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "forward_friction ";
+
+                    line += SingleToString(theJiggleBone.baseForwardFriction);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "}";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+                }
+
+                if (theJiggleBone.isBoing)
+                    {
+                    line = Tab;
+
+                    line += "is_boing";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "{";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "impact_speed ";
+
+                    line += SingleToString(theJiggleBone.boingImpactSpeed);
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "impact_angle ";
+
+                    line += SingleToString(theJiggleBone.boingImpactAngle, true, true); //run cosine on the degrees and then convert to radians
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "damping_rate ";
+
+                    line += theJiggleBone.boingDampingRate;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "frequency ";
+
+                    line += theJiggleBone.boingFrequency;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += Tab;
+
+                    line += "amplitude ";
+
+                    line += theJiggleBone.boingAmplitude;
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+
+                    line = Tab;
+
+                    line += "}";
+
+                    line += NewLine;
+                    txt_QC.Text += line;
+                }
+
+                line = "}";
+
+                line += NewLine;
+                txt_QC.Text += line;
+
+
+                //remember where this bone ends so we can select it with the button
+                theJiggleBone.QC_END = txt_QC.Text.Length;
+
+
+
+
+            }
+
+
+
+
+            //string filepath = TFMV.Main.tfmv_dir + mdlpath;
+
+            //todo: REMOVE THIS!
+            string filepath = "C:\\Users\\jburn\\Documents\\Crowbar\\models\\jiggletest_135\\oktoberfester_jiggletest.mdl";
+
+            //MessageBox.Show(filepath);
+
+            //create the file if it doesn't exist before you write to it
+            if (!File.Exists(filepath))
                 {
                     File.WriteAllBytes(filepath, mdl_data);
-                    MessageBox.Show("wrote a file to " + filepath);
+                    //MessageBox.Show("wrote a file to " + filepath);
                 }
 
                 using (var stream = File.Open(filepath, FileMode.Open))
@@ -981,6 +1634,7 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         }
 
+        //applied jigglebones, show them in hlmv!
         private void btnApplyJigglebones_Click(object sender, EventArgs e)
         {
             WriteJiggleBoneToFile();
@@ -1224,20 +1878,42 @@ namespace TFMV.UserControls.Jigglebone_Editor
             evaluate_Jigglebone_Property_Groups();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
 
+        private string param_to_reset = "";
+
+        private void ResetParamToDefault(string Param_To_Reset)
+        {
+            MessageBox.Show("todo: finish this reset function. each reset button must be linked to a textbox and each textbox must be linked to a param.");
+            //Param_To
         }
 
-        private void resetToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
         }
 
         private void btn_reset_generic_Click(object sender, EventArgs e)
         {
+            Button button = sender as Button;
+
+            param_to_reset = button.Tag.ToString();
+
             menuResetValue.Show(MousePosition);
         }
+
+
+
+
+        private void resetToDefaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResetParamToDefault(param_to_reset);
+        }
+
+        private void revertToOriginalboneNameValueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void groupBox21_Enter(object sender, EventArgs e)
         {
@@ -1251,7 +1927,6 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         private void chk_Always_On_Top_CheckedChanged(object sender, EventArgs e)
         {
-            //todo: this might break if the hlmv refresh button ever needs to start a new hlmv.exe process
             
             if (chk_Always_On_Top.Checked)
             {
@@ -1279,12 +1954,91 @@ namespace TFMV.UserControls.Jigglebone_Editor
 
         private void txt_QC_TextChanged(object sender, EventArgs e)
         {
+            return;
+            //todo: idk?
             bool show_error = (txt_QC.Text == txt_QC_backup);
             txt_QC.Text = txt_QC_backup;
             if (show_error)
             {
-                MessageBox.Show("This text is not directly editable in the BETA version.\n\nPlease use the controls on the left.", "Sorry!");
+                //MessageBox.Show("This text is not directly editable in the BETA version.\n\nPlease use the controls on the left.", "Sorry!");
             }
+        }
+
+        private void txtLength_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //for converting any of the jigglebone properties to their correct string equivalent (with option to convert radians to degrees)
+        public static string SingleToString(double value, bool RadiansToDegrees = false, bool isBoingImpactAngle = false)
+        {
+
+            //according to the crowbar source, we need the INVERSE cosine of the actual value
+            //this is ONLY for boingImpactAngle
+            if (isBoingImpactAngle)
+            {
+                value = Math.Acos(value);
+            }
+
+            //conversion function from crowbar
+            if (RadiansToDegrees)
+            {
+                value = value * 180 / 3.1415926535897931;
+
+                //value = Math.Round(value);
+
+                /*
+                //deal with numbers that aren't quite correct as a result of conversion
+                double rounded = Math.Floor(value);
+                if (value - rounded >= 0.99999)
+                {
+                    value = rounded + 1;
+                }
+                */
+            }
+
+
+            string value_formatted = value.ToString("0.#####");
+
+            /*
+            //set correct string length for desired decimal places, accounting for negative numbers
+            int StringLength = 8;
+            if (value < 0)
+            {
+                StringLength = 9;
+            }
+
+
+            //trim string down to appropriate length, don't trim if it's not long enough
+            if (value_formatted.Length >= StringLength)
+            {
+                value_formatted = value_formatted.Substring(0, StringLength);
+            }
+
+            value_formatted = value_formatted.Replace(".000000", "");
+            */
+
+            return value_formatted;
+        }
+
+        private void btn_QC_select_current_Click(object sender, EventArgs e)
+        {
+            jiggleBone theJiggleBone = allJiggleBones[lstBoneName.SelectedIndex];
+
+            int QC_start = theJiggleBone.QC_START;
+            int QC_count = (theJiggleBone.QC_START - theJiggleBone.QC_END);
+
+            if (QC_count < 1 || (QC_start + QC_count) > txt_QC.TextLength)
+            {
+                theJiggleBone.QC_START = 0;
+                theJiggleBone.QC_END = 0;
+                return;
+            }
+
+            txt_QC.Select(QC_start, QC_count);
+            txt_QC.Focus();
+
         }
     }
 
@@ -1296,41 +2050,10 @@ namespace TFMV.UserControls.Jigglebone_Editor
         public static class MyExtensions
         {
 
-        //extends NumericUpDown, puts a float into the text box and correctly formats it (with option to convert radians to degrees)
-        public static void SetNumber(this System.Windows.Forms.NumericUpDown txtBox, double value, bool RadiansToDegrees, bool isBoingImpactAngle = false)
+            //extends NumericUpDown, puts a float into the text box and correctly formats it (with option to convert radians to degrees)
+            public static void SetNumber(this System.Windows.Forms.NumericUpDown txtBox, double value, bool RadiansToDegrees = false, bool isBoingImpactAngle = false)
             {
-
-                //according to the crowbar source, we need the INVERSE cosine of the actual value
-                //this is ONLY for boingImpactAngle
-                if (isBoingImpactAngle)
-                {
-                    value = Math.Acos(value);
-                }
-
-                //conversion function from crowbar
-                if (RadiansToDegrees)
-                {
-                    value = value * 180 / 3.1415926535897931;
-                }
-
-                //set correct string length for desired decimal places, accounting for negative numbers
-                int StringLength = 8;
-                if (value < 0)
-                {
-                    StringLength = 9;
-                }
-
-                string value_formatted = value.ToString();
-
-                //trim string down to appropriate length, don't trim if it's not long enough
-                if (value_formatted.Length >= StringLength)
-                {
-                    value_formatted = value_formatted.Substring(0, StringLength);
-                }
-
-                value_formatted = value_formatted.Replace(".00000", "");
-
-                txtBox.Text = value_formatted;
+                txtBox.Text = AddJiggleBone.SingleToString(value, RadiansToDegrees, isBoingImpactAngle);
                 return;
             }
 

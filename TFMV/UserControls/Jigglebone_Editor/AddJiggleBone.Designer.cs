@@ -141,7 +141,7 @@
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkHasBaseSpring = new System.Windows.Forms.CheckBox();
-            this.btnApplyJigglebones = new System.Windows.Forms.Button();
+            this.btnApplyJigglebones_OLD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button21 = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
@@ -180,14 +180,15 @@
             this.label51 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
+            this.btn_QC_copy = new System.Windows.Forms.Button();
+            this.btn_QC_select_all = new System.Windows.Forms.Button();
+            this.btn_QC_select_current = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label58 = new System.Windows.Forms.Label();
             this.grp_IS_FLEXIBLE = new System.Windows.Forms.GroupBox();
+            this.lbl_Along = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
@@ -295,19 +296,19 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.btn_loadout_to_HLMV = new System.Windows.Forms.Button();
+            this.btnApplyJigglebones = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.btn_ResetAll = new System.Windows.Forms.Button();
+            this.chk_Auto_Apply = new System.Windows.Forms.CheckBox();
             this.chk_Always_On_Top = new System.Windows.Forms.CheckBox();
-            this.button20 = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.label38 = new System.Windows.Forms.Label();
             this.menuResetAllValues = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.lbl_Along = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtYawConstraintMax)).BeginInit();
@@ -436,7 +437,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.groupBox28);
             this.groupBox1.Controls.Add(this.btnYawDamping);
             this.groupBox1.Controls.Add(this.btnYawStiffness);
@@ -488,6 +489,16 @@
             // 
             this.txtYawConstraintMax.BackColor = System.Drawing.SystemColors.Window;
             this.txtYawConstraintMax.Location = new System.Drawing.Point(123, 23);
+            this.txtYawConstraintMax.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtYawConstraintMax.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtYawConstraintMax.Name = "txtYawConstraintMax";
             this.txtYawConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtYawConstraintMax.TabIndex = 27;
@@ -498,6 +509,16 @@
             // 
             this.txtYawConstraintMin.BackColor = System.Drawing.SystemColors.Window;
             this.txtYawConstraintMin.Location = new System.Drawing.Point(43, 23);
+            this.txtYawConstraintMin.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtYawConstraintMin.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtYawConstraintMin.Name = "txtYawConstraintMin";
             this.txtYawConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtYawConstraintMin.TabIndex = 25;
@@ -532,7 +553,6 @@
             this.btnYawStiffness.Name = "btnYawStiffness";
             this.btnYawStiffness.Size = new System.Drawing.Size(19, 19);
             this.btnYawStiffness.TabIndex = 22;
-            this.btnYawStiffness.Tag = "txtYawStiffness";
             this.btnYawStiffness.UseVisualStyleBackColor = true;
             // 
             // txtYawDamping
@@ -540,6 +560,16 @@
             this.txtYawDamping.BackColor = System.Drawing.SystemColors.Window;
             this.txtYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYawDamping.Location = new System.Drawing.Point(125, 38);
+            this.txtYawDamping.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtYawDamping.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtYawDamping.Name = "txtYawDamping";
             this.txtYawDamping.Size = new System.Drawing.Size(60, 20);
             this.txtYawDamping.TabIndex = 14;
@@ -571,6 +601,16 @@
             this.txtYawStiffness.BackColor = System.Drawing.SystemColors.Window;
             this.txtYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYawStiffness.Location = new System.Drawing.Point(125, 15);
+            this.txtYawStiffness.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtYawStiffness.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtYawStiffness.Name = "txtYawStiffness";
             this.txtYawStiffness.Size = new System.Drawing.Size(60, 20);
             this.txtYawStiffness.TabIndex = 11;
@@ -739,7 +779,7 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox19.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox19.Controls.Add(this.groupBox20);
             this.groupBox19.Controls.Add(this.groupBox21);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -784,6 +824,16 @@
             // 
             this.txtBaseLeftFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftFriction.Location = new System.Drawing.Point(112, 14);
+            this.txtBaseLeftFriction.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseLeftFriction.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseLeftFriction.Name = "txtBaseLeftFriction";
             this.txtBaseLeftFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseLeftFriction.TabIndex = 21;
@@ -827,6 +877,16 @@
             // 
             this.txtBaseLeftConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftConstraintMax.Location = new System.Drawing.Point(120, 23);
+            this.txtBaseLeftConstraintMax.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseLeftConstraintMax.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseLeftConstraintMax.Name = "txtBaseLeftConstraintMax";
             this.txtBaseLeftConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtBaseLeftConstraintMax.TabIndex = 27;
@@ -842,6 +902,16 @@
             // 
             this.txtBaseLeftConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseLeftConstraintMin.Location = new System.Drawing.Point(39, 23);
+            this.txtBaseLeftConstraintMin.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseLeftConstraintMin.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseLeftConstraintMin.Name = "txtBaseLeftConstraintMin";
             this.txtBaseLeftConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseLeftConstraintMin.TabIndex = 25;
@@ -862,7 +932,7 @@
             // 
             // groupBox22
             // 
-            this.groupBox22.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox22.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox22.Controls.Add(this.groupBox23);
             this.groupBox22.Controls.Add(this.groupBox24);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -907,6 +977,16 @@
             // 
             this.txtBaseForwardFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardFriction.Location = new System.Drawing.Point(112, 14);
+            this.txtBaseForwardFriction.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseForwardFriction.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseForwardFriction.Name = "txtBaseForwardFriction";
             this.txtBaseForwardFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseForwardFriction.TabIndex = 21;
@@ -949,6 +1029,16 @@
             // 
             this.txtBaseForwardConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardConstraintMax.Location = new System.Drawing.Point(120, 23);
+            this.txtBaseForwardConstraintMax.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseForwardConstraintMax.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseForwardConstraintMax.Name = "txtBaseForwardConstraintMax";
             this.txtBaseForwardConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtBaseForwardConstraintMax.TabIndex = 27;
@@ -964,6 +1054,16 @@
             // 
             this.txtBaseForwardConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseForwardConstraintMin.Location = new System.Drawing.Point(39, 23);
+            this.txtBaseForwardConstraintMin.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseForwardConstraintMin.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseForwardConstraintMin.Name = "txtBaseForwardConstraintMin";
             this.txtBaseForwardConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseForwardConstraintMin.TabIndex = 25;
@@ -972,7 +1072,7 @@
             // 
             // groupBox25
             // 
-            this.groupBox25.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox25.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox25.Controls.Add(this.btn_resetBaseMass);
             this.groupBox25.Controls.Add(this.label40);
             this.groupBox25.Controls.Add(this.txtBaseBaseMass);
@@ -991,7 +1091,6 @@
             this.btn_resetBaseMass.Name = "btn_resetBaseMass";
             this.btn_resetBaseMass.Size = new System.Drawing.Size(19, 19);
             this.btn_resetBaseMass.TabIndex = 24;
-            this.btn_resetBaseMass.Tag = "base_mass";
             this.btn_resetBaseMass.UseVisualStyleBackColor = true;
             this.btn_resetBaseMass.Click += new System.EventHandler(this.btn_reset_generic_Click);
             // 
@@ -1007,6 +1106,16 @@
             // txtBaseBaseMass
             // 
             this.txtBaseBaseMass.Location = new System.Drawing.Point(125, 14);
+            this.txtBaseBaseMass.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseBaseMass.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseBaseMass.Name = "txtBaseBaseMass";
             this.txtBaseBaseMass.Size = new System.Drawing.Size(60, 20);
             this.txtBaseBaseMass.TabIndex = 19;
@@ -1015,7 +1124,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox6.Controls.Add(this.groupBox17);
             this.groupBox6.Controls.Add(this.groupBox18);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1060,6 +1169,16 @@
             // 
             this.txtBaseUpFriction.BackColor = System.Drawing.Color.White;
             this.txtBaseUpFriction.Location = new System.Drawing.Point(112, 14);
+            this.txtBaseUpFriction.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseUpFriction.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseUpFriction.Name = "txtBaseUpFriction";
             this.txtBaseUpFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseUpFriction.TabIndex = 21;
@@ -1102,6 +1221,16 @@
             // 
             this.txtBaseUpConstraintMax.BackColor = System.Drawing.Color.White;
             this.txtBaseUpConstraintMax.Location = new System.Drawing.Point(120, 23);
+            this.txtBaseUpConstraintMax.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseUpConstraintMax.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseUpConstraintMax.Name = "txtBaseUpConstraintMax";
             this.txtBaseUpConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtBaseUpConstraintMax.TabIndex = 27;
@@ -1117,6 +1246,16 @@
             // 
             this.txtBaseUpConstraintMin.BackColor = System.Drawing.Color.White;
             this.txtBaseUpConstraintMin.Location = new System.Drawing.Point(39, 23);
+            this.txtBaseUpConstraintMin.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseUpConstraintMin.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseUpConstraintMin.Name = "txtBaseUpConstraintMin";
             this.txtBaseUpConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseUpConstraintMin.TabIndex = 25;
@@ -1125,7 +1264,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox5.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox5.Controls.Add(this.btn_ResetBaseDamping);
             this.groupBox5.Controls.Add(this.btn_ResetBaseStiffness);
             this.groupBox5.Controls.Add(this.txtBaseDamping);
@@ -1147,7 +1286,6 @@
             this.btn_ResetBaseDamping.Name = "btn_ResetBaseDamping";
             this.btn_ResetBaseDamping.Size = new System.Drawing.Size(19, 19);
             this.btn_ResetBaseDamping.TabIndex = 23;
-            this.btn_ResetBaseDamping.Tag = "base_damping";
             this.btn_ResetBaseDamping.UseVisualStyleBackColor = true;
             this.btn_ResetBaseDamping.Click += new System.EventHandler(this.btn_reset_generic_Click);
             // 
@@ -1159,7 +1297,6 @@
             this.btn_ResetBaseStiffness.Name = "btn_ResetBaseStiffness";
             this.btn_ResetBaseStiffness.Size = new System.Drawing.Size(19, 19);
             this.btn_ResetBaseStiffness.TabIndex = 22;
-            this.btn_ResetBaseStiffness.Tag = "base_stiffness";
             this.btn_ResetBaseStiffness.UseVisualStyleBackColor = true;
             this.btn_ResetBaseStiffness.Click += new System.EventHandler(this.btn_reset_generic_Click);
             // 
@@ -1167,6 +1304,16 @@
             // 
             this.txtBaseDamping.BackColor = System.Drawing.SystemColors.Window;
             this.txtBaseDamping.Location = new System.Drawing.Point(125, 38);
+            this.txtBaseDamping.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseDamping.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseDamping.Name = "txtBaseDamping";
             this.txtBaseDamping.Size = new System.Drawing.Size(60, 20);
             this.txtBaseDamping.TabIndex = 14;
@@ -1195,6 +1342,16 @@
             // 
             this.txtBaseStiffness.BackColor = System.Drawing.SystemColors.Window;
             this.txtBaseStiffness.Location = new System.Drawing.Point(125, 15);
+            this.txtBaseStiffness.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBaseStiffness.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBaseStiffness.Name = "txtBaseStiffness";
             this.txtBaseStiffness.Size = new System.Drawing.Size(60, 20);
             this.txtBaseStiffness.TabIndex = 11;
@@ -1206,6 +1363,16 @@
             this.txtAlongStiffness.BackColor = System.Drawing.Color.White;
             this.txtAlongStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongStiffness.Location = new System.Drawing.Point(125, 15);
+            this.txtAlongStiffness.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtAlongStiffness.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtAlongStiffness.Name = "txtAlongStiffness";
             this.txtAlongStiffness.Size = new System.Drawing.Size(60, 20);
             this.txtAlongStiffness.TabIndex = 11;
@@ -1242,6 +1409,16 @@
             this.txtAlongDamping.BackColor = System.Drawing.Color.White;
             this.txtAlongDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongDamping.Location = new System.Drawing.Point(125, 38);
+            this.txtAlongDamping.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtAlongDamping.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtAlongDamping.Name = "txtAlongDamping";
             this.txtAlongDamping.Size = new System.Drawing.Size(60, 20);
             this.txtAlongDamping.TabIndex = 14;
@@ -1250,7 +1427,7 @@
             // 
             // grp_Along
             // 
-            this.grp_Along.BackColor = System.Drawing.Color.Gainsboro;
+            this.grp_Along.BackColor = System.Drawing.SystemColors.Control;
             this.grp_Along.Controls.Add(this.button5);
             this.grp_Along.Controls.Add(this.button6);
             this.grp_Along.Controls.Add(this.txtAlongDamping);
@@ -1286,7 +1463,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox7.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox7.Controls.Add(this.txtAngleConstraint);
             this.groupBox7.Controls.Add(this.chkAngleConstraint);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -1298,7 +1475,18 @@
             // 
             // txtAngleConstraint
             // 
+            this.txtAngleConstraint.DecimalPlaces = 5;
             this.txtAngleConstraint.Location = new System.Drawing.Point(125, 14);
+            this.txtAngleConstraint.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtAngleConstraint.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtAngleConstraint.Name = "txtAngleConstraint";
             this.txtAngleConstraint.Size = new System.Drawing.Size(60, 20);
             this.txtAngleConstraint.TabIndex = 19;
@@ -1363,6 +1551,16 @@
             // 
             this.txtLength.BackColor = System.Drawing.SystemColors.Window;
             this.txtLength.Location = new System.Drawing.Point(125, 16);
+            this.txtLength.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtLength.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtLength.Name = "txtLength";
             this.txtLength.Size = new System.Drawing.Size(60, 20);
             this.txtLength.TabIndex = 11;
@@ -1372,6 +1570,7 @@
             0,
             0});
             this.txtLength.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtLength.ValueChanged += new System.EventHandler(this.txtLength_ValueChanged);
             this.txtLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // chkAllowLengthFlex
@@ -1398,6 +1597,16 @@
             // 
             this.txtTipMass.BackColor = System.Drawing.SystemColors.Window;
             this.txtTipMass.Location = new System.Drawing.Point(125, 15);
+            this.txtTipMass.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtTipMass.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtTipMass.Name = "txtTipMass";
             this.txtTipMass.Size = new System.Drawing.Size(60, 20);
             this.txtTipMass.TabIndex = 14;
@@ -1415,7 +1624,7 @@
             // 
             // groupBox29
             // 
-            this.groupBox29.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox29.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox29.Controls.Add(this.groupBox31);
             this.groupBox29.Controls.Add(this.btnPitchDamping);
             this.groupBox29.Controls.Add(this.btnPitchStiffness);
@@ -1467,6 +1676,16 @@
             // 
             this.txtPitchConstraintMax.BackColor = System.Drawing.SystemColors.Window;
             this.txtPitchConstraintMax.Location = new System.Drawing.Point(123, 23);
+            this.txtPitchConstraintMax.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtPitchConstraintMax.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtPitchConstraintMax.Name = "txtPitchConstraintMax";
             this.txtPitchConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtPitchConstraintMax.TabIndex = 27;
@@ -1477,6 +1696,16 @@
             // 
             this.txtPitchConstraintMin.BackColor = System.Drawing.SystemColors.Window;
             this.txtPitchConstraintMin.Location = new System.Drawing.Point(43, 23);
+            this.txtPitchConstraintMin.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtPitchConstraintMin.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtPitchConstraintMin.Name = "txtPitchConstraintMin";
             this.txtPitchConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtPitchConstraintMin.TabIndex = 25;
@@ -1518,6 +1747,16 @@
             this.txtPitchDamping.BackColor = System.Drawing.SystemColors.Window;
             this.txtPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPitchDamping.Location = new System.Drawing.Point(124, 38);
+            this.txtPitchDamping.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtPitchDamping.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtPitchDamping.Name = "txtPitchDamping";
             this.txtPitchDamping.Size = new System.Drawing.Size(60, 20);
             this.txtPitchDamping.TabIndex = 14;
@@ -1549,6 +1788,16 @@
             this.txtPitchStiffness.BackColor = System.Drawing.SystemColors.Window;
             this.txtPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPitchStiffness.Location = new System.Drawing.Point(124, 15);
+            this.txtPitchStiffness.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtPitchStiffness.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtPitchStiffness.Name = "txtPitchStiffness";
             this.txtPitchStiffness.Size = new System.Drawing.Size(60, 20);
             this.txtPitchStiffness.TabIndex = 11;
@@ -1649,20 +1898,19 @@
             this.chkHasBaseSpring.UseVisualStyleBackColor = true;
             this.chkHasBaseSpring.CheckedChanged += new System.EventHandler(this.jigglePropertyChanged);
             // 
-            // btnApplyJigglebones
+            // btnApplyJigglebones_OLD
             // 
-            this.btnApplyJigglebones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyJigglebones.Location = new System.Drawing.Point(1417, 573);
-            this.btnApplyJigglebones.Name = "btnApplyJigglebones";
-            this.btnApplyJigglebones.Size = new System.Drawing.Size(84, 32);
-            this.btnApplyJigglebones.TabIndex = 43;
-            this.btnApplyJigglebones.Text = "Preview";
-            this.btnApplyJigglebones.UseVisualStyleBackColor = true;
-            this.btnApplyJigglebones.Click += new System.EventHandler(this.btnApplyJigglebones_Click);
+            this.btnApplyJigglebones_OLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyJigglebones_OLD.Location = new System.Drawing.Point(1375, 531);
+            this.btnApplyJigglebones_OLD.Name = "btnApplyJigglebones_OLD";
+            this.btnApplyJigglebones_OLD.Size = new System.Drawing.Size(84, 32);
+            this.btnApplyJigglebones_OLD.TabIndex = 43;
+            this.btnApplyJigglebones_OLD.Text = "Preview";
+            this.btnApplyJigglebones_OLD.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Controls.Add(this.button21);
             this.groupBox4.Controls.Add(this.label41);
             this.groupBox4.Controls.Add(this.txtBoingDampingRate);
@@ -1695,6 +1943,16 @@
             // txtBoingDampingRate
             // 
             this.txtBoingDampingRate.Location = new System.Drawing.Point(121, 16);
+            this.txtBoingDampingRate.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBoingDampingRate.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBoingDampingRate.Name = "txtBoingDampingRate";
             this.txtBoingDampingRate.Size = new System.Drawing.Size(60, 20);
             this.txtBoingDampingRate.TabIndex = 19;
@@ -1703,7 +1961,7 @@
             // 
             // groupBox32
             // 
-            this.groupBox32.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox32.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox32.Controls.Add(this.button22);
             this.groupBox32.Controls.Add(this.button23);
             this.groupBox32.Controls.Add(this.txtBoingImpactAngle);
@@ -1741,6 +1999,16 @@
             // 
             this.txtBoingImpactAngle.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoingImpactAngle.Location = new System.Drawing.Point(121, 40);
+            this.txtBoingImpactAngle.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBoingImpactAngle.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBoingImpactAngle.Name = "txtBoingImpactAngle";
             this.txtBoingImpactAngle.Size = new System.Drawing.Size(60, 20);
             this.txtBoingImpactAngle.TabIndex = 14;
@@ -1774,6 +2042,16 @@
             // 
             this.txtBoingImpactSpeed.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoingImpactSpeed.Location = new System.Drawing.Point(121, 16);
+            this.txtBoingImpactSpeed.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBoingImpactSpeed.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBoingImpactSpeed.Name = "txtBoingImpactSpeed";
             this.txtBoingImpactSpeed.Size = new System.Drawing.Size(60, 20);
             this.txtBoingImpactSpeed.TabIndex = 11;
@@ -1787,7 +2065,7 @@
             // 
             // groupBox33
             // 
-            this.groupBox33.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox33.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox33.Controls.Add(this.button24);
             this.groupBox33.Controls.Add(this.button25);
             this.groupBox33.Controls.Add(this.txtBoingAmplitude);
@@ -1825,6 +2103,16 @@
             // 
             this.txtBoingAmplitude.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoingAmplitude.Location = new System.Drawing.Point(121, 40);
+            this.txtBoingAmplitude.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBoingAmplitude.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBoingAmplitude.Name = "txtBoingAmplitude";
             this.txtBoingAmplitude.Size = new System.Drawing.Size(60, 20);
             this.txtBoingAmplitude.TabIndex = 14;
@@ -1853,6 +2141,16 @@
             // 
             this.txtBoingFrequency.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoingFrequency.Location = new System.Drawing.Point(121, 16);
+            this.txtBoingFrequency.Maximum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            0});
+            this.txtBoingFrequency.Minimum = new decimal(new int[] {
+            -1,
+            -1,
+            -1,
+            -2147483648});
             this.txtBoingFrequency.Name = "txtBoingFrequency";
             this.txtBoingFrequency.Size = new System.Drawing.Size(60, 20);
             this.txtBoingFrequency.TabIndex = 11;
@@ -2015,7 +2313,6 @@
             this.txt_QC.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_QC.Size = new System.Drawing.Size(306, 584);
             this.txt_QC.TabIndex = 61;
-            this.txt_QC.Text = resources.GetString("txt_QC.Text");
             this.txt_QC.TextChanged += new System.EventHandler(this.txt_QC_TextChanged);
             this.txt_QC.Enter += new System.EventHandler(this.txt_QC_Enter);
             // 
@@ -2033,7 +2330,7 @@
             // 
             this.btn_HideQC.BackColor = System.Drawing.SystemColors.Control;
             this.btn_HideQC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HideQC.Location = new System.Drawing.Point(369, -4);
+            this.btn_HideQC.Location = new System.Drawing.Point(268, 727);
             this.btn_HideQC.Name = "btn_HideQC";
             this.btn_HideQC.Size = new System.Drawing.Size(75, 21);
             this.btn_HideQC.TabIndex = 63;
@@ -2081,9 +2378,9 @@
             // groupBox35
             // 
             this.groupBox35.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox35.Controls.Add(this.button8);
-            this.groupBox35.Controls.Add(this.button7);
-            this.groupBox35.Controls.Add(this.button28);
+            this.groupBox35.Controls.Add(this.btn_QC_copy);
+            this.groupBox35.Controls.Add(this.btn_QC_select_all);
+            this.groupBox35.Controls.Add(this.btn_QC_select_current);
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox35.Location = new System.Drawing.Point(453, 600);
             this.groupBox35.Name = "groupBox35";
@@ -2091,35 +2388,36 @@
             this.groupBox35.TabIndex = 70;
             this.groupBox35.TabStop = false;
             // 
-            // button8
+            // btn_QC_copy
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(211, 15);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(82, 23);
-            this.button8.TabIndex = 70;
-            this.button8.Text = "Copy";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_QC_copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QC_copy.Location = new System.Drawing.Point(211, 15);
+            this.btn_QC_copy.Name = "btn_QC_copy";
+            this.btn_QC_copy.Size = new System.Drawing.Size(82, 23);
+            this.btn_QC_copy.TabIndex = 70;
+            this.btn_QC_copy.Text = "Copy";
+            this.btn_QC_copy.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_QC_select_all
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(122, 15);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(82, 23);
-            this.button7.TabIndex = 70;
-            this.button7.Text = "Select All";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_QC_select_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QC_select_all.Location = new System.Drawing.Point(122, 15);
+            this.btn_QC_select_all.Name = "btn_QC_select_all";
+            this.btn_QC_select_all.Size = new System.Drawing.Size(82, 23);
+            this.btn_QC_select_all.TabIndex = 70;
+            this.btn_QC_select_all.Text = "Select All";
+            this.btn_QC_select_all.UseVisualStyleBackColor = true;
             // 
-            // button28
+            // btn_QC_select_current
             // 
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Location = new System.Drawing.Point(13, 15);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(102, 23);
-            this.button28.TabIndex = 70;
-            this.button28.Text = "Select Current";
-            this.button28.UseVisualStyleBackColor = true;
+            this.btn_QC_select_current.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QC_select_current.Location = new System.Drawing.Point(13, 15);
+            this.btn_QC_select_current.Name = "btn_QC_select_current";
+            this.btn_QC_select_current.Size = new System.Drawing.Size(102, 23);
+            this.btn_QC_select_current.TabIndex = 70;
+            this.btn_QC_select_current.Text = "Select Current";
+            this.btn_QC_select_current.UseVisualStyleBackColor = true;
+            this.btn_QC_select_current.Click += new System.EventHandler(this.btn_QC_select_current_Click);
             // 
             // button30
             // 
@@ -2181,6 +2479,18 @@
             this.grp_IS_FLEXIBLE.TabIndex = 75;
             this.grp_IS_FLEXIBLE.TabStop = false;
             // 
+            // lbl_Along
+            // 
+            this.lbl_Along.BackColor = System.Drawing.Color.DarkGray;
+            this.lbl_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Along.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Along.Location = new System.Drawing.Point(9, 463);
+            this.lbl_Along.Name = "lbl_Along";
+            this.lbl_Along.Size = new System.Drawing.Size(194, 23);
+            this.lbl_Along.TabIndex = 82;
+            this.lbl_Along.Text = "ALONG";
+            this.lbl_Along.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.DarkGray;
@@ -2207,7 +2517,7 @@
             // 
             // groupBox48
             // 
-            this.groupBox48.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox48.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox48.Controls.Add(this.label30);
             this.groupBox48.Controls.Add(this.txtTipMass);
             this.groupBox48.Controls.Add(this.button11);
@@ -2745,6 +3055,7 @@
             this.revertToOriginalboneNameValueToolStripMenuItem.Name = "revertToOriginalboneNameValueToolStripMenuItem";
             this.revertToOriginalboneNameValueToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.revertToOriginalboneNameValueToolStripMenuItem.Text = "Revert to original <bone name> value";
+            this.revertToOriginalboneNameValueToolStripMenuItem.Click += new System.EventHandler(this.revertToOriginalboneNameValueToolStripMenuItem_Click);
             // 
             // btn_reset_generic
             // 
@@ -3294,91 +3605,106 @@
             // 
             this.button9.BackColor = System.Drawing.SystemColors.Control;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(1385, 720);
+            this.button9.Location = new System.Drawing.Point(1481, 489);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(83, 23);
             this.button9.TabIndex = 70;
             this.button9.Text = "Preview";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // btn_loadout_to_HLMV
+            // btnApplyJigglebones
             // 
-            this.btn_loadout_to_HLMV.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_loadout_to_HLMV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loadout_to_HLMV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_loadout_to_HLMV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btn_loadout_to_HLMV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_loadout_to_HLMV.Location = new System.Drawing.Point(16, 664);
-            this.btn_loadout_to_HLMV.Name = "btn_loadout_to_HLMV";
-            this.btn_loadout_to_HLMV.Size = new System.Drawing.Size(146, 37);
-            this.btn_loadout_to_HLMV.TabIndex = 89;
-            this.btn_loadout_to_HLMV.Text = "Apply";
-            this.btn_loadout_to_HLMV.UseVisualStyleBackColor = false;
+            this.btnApplyJigglebones.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnApplyJigglebones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplyJigglebones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyJigglebones.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnApplyJigglebones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnApplyJigglebones.Location = new System.Drawing.Point(16, 664);
+            this.btnApplyJigglebones.Name = "btnApplyJigglebones";
+            this.btnApplyJigglebones.Size = new System.Drawing.Size(146, 37);
+            this.btnApplyJigglebones.TabIndex = 89;
+            this.btnApplyJigglebones.Text = "Apply";
+            this.btnApplyJigglebones.UseVisualStyleBackColor = false;
+            this.btnApplyJigglebones.Click += new System.EventHandler(this.btnApplyJigglebones_Click);
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.DarkGray;
-            this.panel12.Controls.Add(this.label38);
-            this.panel12.Controls.Add(this.button10);
-            this.panel12.Controls.Add(this.checkBox11);
+            this.panel12.Controls.Add(this.btn_ResetAll);
+            this.panel12.Controls.Add(this.chk_Auto_Apply);
             this.panel12.Controls.Add(this.chk_Always_On_Top);
-            this.panel12.Controls.Add(this.button20);
+            this.panel12.Controls.Add(this.btn_Close);
             this.panel12.Location = new System.Drawing.Point(-1, 655);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(777, 60);
             this.panel12.TabIndex = 90;
             // 
-            // button10
+            // btn_ResetAll
             // 
-            this.button10.BackColor = System.Drawing.Color.Gainsboro;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button10.Location = new System.Drawing.Point(454, 9);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(146, 37);
-            this.button10.TabIndex = 89;
-            this.button10.Text = "Reset...";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btn_ResetAll.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_ResetAll.Enabled = false;
+            this.btn_ResetAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ResetAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ResetAll.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_ResetAll.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_ResetAll.Location = new System.Drawing.Point(454, 9);
+            this.btn_ResetAll.Name = "btn_ResetAll";
+            this.btn_ResetAll.Size = new System.Drawing.Size(146, 37);
+            this.btn_ResetAll.TabIndex = 89;
+            this.btn_ResetAll.Text = "Reset...";
+            this.btn_ResetAll.UseVisualStyleBackColor = false;
             // 
-            // checkBox11
+            // chk_Auto_Apply
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(636, 32);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(102, 20);
-            this.checkBox11.TabIndex = 18;
-            this.checkBox11.Text = "Auto-Apply";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.chk_Always_On_Top_CheckedChanged);
+            this.chk_Auto_Apply.AutoSize = true;
+            this.chk_Auto_Apply.Checked = true;
+            this.chk_Auto_Apply.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Auto_Apply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Auto_Apply.Location = new System.Drawing.Point(636, 32);
+            this.chk_Auto_Apply.Name = "chk_Auto_Apply";
+            this.chk_Auto_Apply.Size = new System.Drawing.Size(93, 19);
+            this.chk_Auto_Apply.TabIndex = 18;
+            this.chk_Auto_Apply.Text = "Auto-Apply";
+            this.chk_Auto_Apply.UseVisualStyleBackColor = true;
+            this.chk_Auto_Apply.CheckedChanged += new System.EventHandler(this.chk_Always_On_Top_CheckedChanged);
             // 
             // chk_Always_On_Top
             // 
             this.chk_Always_On_Top.AutoSize = true;
-            this.chk_Always_On_Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Always_On_Top.Checked = true;
+            this.chk_Always_On_Top.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Always_On_Top.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Always_On_Top.Location = new System.Drawing.Point(636, 7);
             this.chk_Always_On_Top.Name = "chk_Always_On_Top";
-            this.chk_Always_On_Top.Size = new System.Drawing.Size(122, 20);
+            this.chk_Always_On_Top.Size = new System.Drawing.Size(113, 19);
             this.chk_Always_On_Top.TabIndex = 18;
             this.chk_Always_On_Top.Text = "Always on top";
             this.chk_Always_On_Top.UseVisualStyleBackColor = true;
             this.chk_Always_On_Top.CheckedChanged += new System.EventHandler(this.chk_Always_On_Top_CheckedChanged);
             // 
-            // button20
+            // btn_Close
             // 
-            this.button20.BackColor = System.Drawing.Color.Gainsboro;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button20.Location = new System.Drawing.Point(171, 9);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(146, 37);
-            this.button20.TabIndex = 89;
-            this.button20.Text = "Close";
-            this.button20.UseVisualStyleBackColor = false;
+            this.btn_Close.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_Close.Enabled = false;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Close.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Close.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_Close.Location = new System.Drawing.Point(171, 9);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(146, 37);
+            this.btn_Close.TabIndex = 89;
+            this.btn_Close.Text = "Close";
+            this.btn_Close.UseVisualStyleBackColor = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(137, 782);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(49, 13);
+            this.label38.TabIndex = 90;
+            this.label38.Text = "788, 749";
             // 
             // menuResetAllValues
             // 
@@ -3422,34 +3748,24 @@
             this.label12.TabIndex = 71;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label38
+            // label39
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(355, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(49, 13);
-            this.label38.TabIndex = 90;
-            this.label38.Text = "788, 749";
-            // 
-            // lbl_Along
-            // 
-            this.lbl_Along.BackColor = System.Drawing.Color.DarkGray;
-            this.lbl_Along.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Along.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Along.Location = new System.Drawing.Point(9, 463);
-            this.lbl_Along.Name = "lbl_Along";
-            this.lbl_Along.Size = new System.Drawing.Size(194, 23);
-            this.lbl_Along.TabIndex = 82;
-            this.lbl_Along.Text = "ALONG";
-            this.lbl_Along.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(214, 757);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(562, 91);
+            this.label39.TabIndex = 90;
+            this.label39.Text = resources.GetString("label39.Text");
             // 
             // AddJiggleBone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(2484, 1427);
-            this.Controls.Add(this.btn_loadout_to_HLMV);
+            this.ClientSize = new System.Drawing.Size(1892, 1380);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.btnApplyJigglebones);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button30);
             this.Controls.Add(this.button9);
@@ -3494,7 +3810,7 @@
             this.Controls.Add(this.lstPropertyGroupsMain);
             this.Controls.Add(this.label46);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnApplyJigglebones);
+            this.Controls.Add(this.btnApplyJigglebones_OLD);
             this.Controls.Add(this.chkHasBaseSpring);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOkay);
@@ -3733,7 +4049,7 @@
         private Label label31;
         private CheckBox chkHasBaseSpring;
         private CheckBox chkAllowLengthFlex;
-        private Button btnApplyJigglebones;
+        private Button btnApplyJigglebones_OLD;
         private Button btn_resetBaseMass;
         private Label label40;
         private GroupBox groupBox4;
@@ -3770,7 +4086,7 @@
         private GroupBox groupBox35;
         private Button button30;
         private Button button29;
-        private Button button28;
+        private Button btn_QC_select_current;
         private Label lbl_HAS_BASE_SPRING;
         private Label label57;
         private Label label56;
@@ -3923,15 +4239,15 @@
         private CheckBox checkBox3;
         private Label label76;
         private Label label77;
-        private Button button8;
-        private Button button7;
+        private Button btn_QC_copy;
+        private Button btn_QC_select_all;
         private Button button9;
-        private Button btn_loadout_to_HLMV;
+        private Button btnApplyJigglebones;
         private Panel panel12;
-        private Button button10;
+        private Button btn_ResetAll;
         private CheckBox chk_Always_On_Top;
-        private CheckBox checkBox11;
-        private Button button20;
+        private CheckBox chk_Auto_Apply;
+        private Button btn_Close;
         private ContextMenuStrip menuResetAllValues;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
@@ -3940,5 +4256,6 @@
         private Label label12;
         private Label label38;
         private Label lbl_Along;
+        private Label label39;
     }
 }

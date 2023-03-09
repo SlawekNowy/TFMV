@@ -117,62 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txt_QC.Text" xml:space="preserve">
-    <value>$jigglebone "FloppyAndBouncy" {
-	is_rigid {
-		tip_mass 100
-		length 20
-		angle_constraint 60 
-	}
-
-	has_base_spring {
-		stiffness 100 
-		damping 1 
-		left_constraint -20 20
-		up_constraint -20 20
-		forward_constraint -20 20
-	}
-}
-
-$jigglebone "FloppyAndBouncy" {
-	is_rigid {
-		tip_mass 100
-		length 20
-		angle_constraint 60 
-	}
-
-	has_base_spring {
-		stiffness 100 
-		damping 1 
-		left_constraint -20 20
-		up_constraint -20 20
-		forward_constraint -20 20
-	}
-}
-
-$jigglebone "FloppyAndBouncy" {
-	is_rigid {
-		tip_mass 100
-		length 20
-		angle_constraint 60 
-	}
-
-	has_base_spring {
-		stiffness 100 
-		damping 1 
-		left_constraint -20 20
-		up_constraint -20 20
-		forward_constraint -20 20
-	}
-}
-</value>
-  </data>
   <metadata name="menuResetValue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="menuResetAllValues.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="label39.Text" xml:space="preserve">
+    <value>VITAL TODO:
+
+loading any model as the only model and attempting to view jigglebones causes a crash
+the jigglebone editor should be able to support loading a model with no jigglebones, realising, and closing with an error!
+the model name in the Model_Painter.cs form control seems to be incomplete if a class isn't the main model.
+check if a model has jigglebones before showing the thing.
+disable controls instead of hiding them for is_rigid</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

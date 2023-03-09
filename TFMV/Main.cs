@@ -394,6 +394,15 @@ namespace TFMV
             //neodement: cubemaps_dir for cubemap functions
             cubemaps_dir = app_data_dir + "cubemaps\\";
 
+            TFMV.UserControls.Jigglebone_Editor.AddJiggleBone jiggleForm = new TFMV.UserControls.Jigglebone_Editor.AddJiggleBone();
+
+            //this seems like it could be prone to breakage but it's fine for now.
+            //ParentForm.Enabled = false;
+
+            //set up the jigglebone editor so it knows what mdl it's pointing at
+            jiggleForm.mdlpath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2\\tf\\models\\workshop\\player\\items\\medic\\birdkeepers_brim\\birdkeepers_brim.mdl";
+            jiggleForm.readJigglebones();
+
 #endif
 
 
