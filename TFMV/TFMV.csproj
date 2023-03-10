@@ -194,6 +194,9 @@
     <Compile Include="UserControls\Loadout\Loadout_Item_simple.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\NumericUpDown_CustomFormat.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Skins Manager\Bodygroup_manager.cs">
       <SubType>UserControl</SubType>
     </Compile>

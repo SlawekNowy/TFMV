@@ -12,7 +12,7 @@ using System.IO;
 
 //TODO: A LOT OF THIS SHOULD BE PRIVATE!
 
-//TODO: LIMIT TO THREE DECIMAL PLACES TO HIDE IMPRECISION! MAYBE ROUND UP NUMBERS THAT END IN .999!
+//TODO: LIMIT TO THREE DECIMAL PLACES TO HIDE IMPRECISION! MAYBE ROUND UP NUMBERS THAT END IN .999! maybe done?
 
 //TODO: WHEN WRITING JIGGLEBONE DATA, CONSIDER MOVING THEM ALL TO THE END OF THE FILE AND RE-POINTING THE OFFSETS! BECAUSE IS_BOING IS WRITING OVER 2 BYTES OF UNKNOWN DATA!!
 
@@ -21,15 +21,38 @@ namespace TFMV.UserControls.Jigglebone_Editor
 {
 
     using ExtensionMethods;
-    using System.Security.Policy;
+//    using System.Security.Policy;
     using System.Threading;
-    using System.Windows.Media.Media3D;
+//    using System.Windows.Media.Media3D;
+
+    
+
+
 
     public partial class AddJiggleBone : Form
     {
 
+        /*
 
-        public Form form_AddJigglebone;
+        public class TestNum : NumericUpDown
+        {
+            protected override void ValidateEditText()
+            {
+                if (base.UserEdit)
+                {
+                    base.ValidateEditText();
+                }
+            }
+
+            protected override void UpdateEditText()
+            {
+                Text = Convert.ToInt32(base.Value).ToString("00");
+            }
+        }
+        */
+
+
+        //public Form form_AddJigglebone;
 
         
         public Thread always_on_top_thread = new Thread(() =>
@@ -66,8 +89,11 @@ namespace TFMV.UserControls.Jigglebone_Editor
                 e.Handled = true;
             }
 
+            //get the TEXTBOX component of the NumericUpDown
+            TextBox numericUpDown = (TextBox)(sender as NumericUpDown).Controls[1];
+
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == '.') && ((numericUpDown).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
@@ -78,14 +104,14 @@ namespace TFMV.UserControls.Jigglebone_Editor
             if ((e.KeyChar == '-'))
             {
                 //if we already have a - anywhere in the number, ignore the keypress
-                if (((sender as TextBox).Text.IndexOf('-') > -1))
+                if (numericUpDown.Text.IndexOf('-') > -1)
                 {
                     e.Handled = true;
                 }
                 else
                 //if the user is attempting to put a - anywhere but the start of the string, ignore the keypress
                 {
-                    if ((sender as TextBox).SelectionStart != 0)
+                    if (numericUpDown.SelectionStart != 0)
                     {
                         e.Handled = true;
                     }
@@ -712,12 +738,22 @@ namespace TFMV.UserControls.Jigglebone_Editor
                 arg = obj.Text.ToString();
             }
 
+            //todo: ugh...
+            if (sender.GetType() == typeof(DeviceCtrlLibrary.NumericUpDown_CustomFormat))
+            {
+                DeviceCtrlLibrary.NumericUpDown_CustomFormat obj = (DeviceCtrlLibrary.NumericUpDown_CustomFormat)sender;
+                obj_name = obj.Name.ToString();
+                arg = obj.Text.ToString();
+            }
+
+            /*
             if (sender.GetType() == typeof(NumericUpDown))
             {
                 NumericUpDown obj = (NumericUpDown)sender;
                 obj_name = obj.Name.ToString();
                 arg = obj.Text.ToString();
             }
+            */
 
             jiggleBone theJiggleBone = allJiggleBones[lstBoneName.SelectedIndex];
 
@@ -1964,10 +2000,12 @@ namespace TFMV.UserControls.Jigglebone_Editor
             }
         }
 
-        private void txtLength_ValueChanged(object sender, EventArgs e)
+
+        private void numericUpDown_any__ValueChanged(object sender, EventArgs e)
         {
 
         }
+
 
 
         //for converting any of the jigglebone properties to their correct string equivalent (with option to convert radians to degrees)
@@ -2040,6 +2078,35 @@ namespace TFMV.UserControls.Jigglebone_Editor
             txt_QC.Focus();
 
         }
+
+        private void btn_QC_select_all_Click(object sender, EventArgs e)
+        {
+            txt_QC.Select(0, txt_QC.TextLength);
+            txt_QC.Focus();
+        }
+
+
+        private void btn_QC_copy_Click(object sender, EventArgs e)
+        {
+
+            System.Windows.Forms.Clipboard.SetText(txt_QC.Text.Substring(txt_QC.SelectionStart, txt_QC.SelectionLength));
+        }
+
+
+        private void numericUpDown_any_ValueChanged(object sender, EventArgs e)
+        {
+            //DeviceCtrlLibrary.NumericUpDown_CustomFormat i guess
+            //NumericUpDown numericUpDown = sender as NumericUpDown;
+
+
+            /*
+            if (numericUpDown.Value != 0)
+            {
+                numericUpDown.Value = 0;
+            }
+            */
+        }
+
     }
 
 

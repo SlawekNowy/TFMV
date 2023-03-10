@@ -37,19 +37,19 @@
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.txtYawConstraintMax = new System.Windows.Forms.NumericUpDown();
-            this.txtYawConstraintMin = new System.Windows.Forms.NumericUpDown();
+            this.txtYawConstraintMax = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtYawConstraintMin = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkYawConstraint = new System.Windows.Forms.CheckBox();
             this.btnYawDamping = new System.Windows.Forms.Button();
             this.btnYawStiffness = new System.Windows.Forms.Button();
-            this.txtYawDamping = new System.Windows.Forms.NumericUpDown();
+            this.txtYawDamping = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.lblYawStiffness = new System.Windows.Forms.Label();
             this.lblYawDamping = new System.Windows.Forms.Label();
-            this.txtYawStiffness = new System.Windows.Forms.NumericUpDown();
+            this.txtYawStiffness = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown14 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtYawFriction = new System.Windows.Forms.NumericUpDown();
+            this.txtYawFriction = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkYawFriction = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.grp_HAS_BASE_SPRING = new System.Windows.Forms.GroupBox();
@@ -63,80 +63,80 @@
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.button15 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtBaseLeftFriction = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseLeftFriction = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtBaseLeftConstraintMax = new System.Windows.Forms.NumericUpDown();
-            this.txtBaseLeftConstraintMin = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseLeftConstraintMax = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtBaseLeftConstraintMin = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.lbl_HAS_BASE_SPRING = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
-            this.txtBaseForwardFriction = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseForwardFriction = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.txtBaseForwardConstraintMax = new System.Windows.Forms.NumericUpDown();
-            this.txtBaseForwardConstraintMin = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseForwardConstraintMax = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtBaseForwardConstraintMin = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.btn_resetBaseMass = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
-            this.txtBaseBaseMass = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseBaseMass = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.button14 = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
-            this.txtBaseUpFriction = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseUpFriction = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtBaseUpConstraintMax = new System.Windows.Forms.NumericUpDown();
-            this.txtBaseUpConstraintMin = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseUpConstraintMax = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtBaseUpConstraintMin = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btn_ResetBaseDamping = new System.Windows.Forms.Button();
             this.btn_ResetBaseStiffness = new System.Windows.Forms.Button();
-            this.txtBaseDamping = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseDamping = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtBaseStiffness = new System.Windows.Forms.NumericUpDown();
-            this.txtAlongStiffness = new System.Windows.Forms.NumericUpDown();
+            this.txtBaseStiffness = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtAlongStiffness = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAlongDamping = new System.Windows.Forms.NumericUpDown();
+            this.txtAlongDamping = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.grp_Along = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtAngleConstraint = new System.Windows.Forms.NumericUpDown();
+            this.txtAngleConstraint = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkAngleConstraint = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtLength = new System.Windows.Forms.NumericUpDown();
+            this.txtLength = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkAllowLengthFlex = new System.Windows.Forms.CheckBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.txtTipMass = new System.Windows.Forms.NumericUpDown();
+            this.txtTipMass = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.txtPitchConstraintMax = new System.Windows.Forms.NumericUpDown();
-            this.txtPitchConstraintMin = new System.Windows.Forms.NumericUpDown();
+            this.txtPitchConstraintMax = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.txtPitchConstraintMin = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkPitchConstraint = new System.Windows.Forms.CheckBox();
             this.btnPitchDamping = new System.Windows.Forms.Button();
             this.btnPitchStiffness = new System.Windows.Forms.Button();
-            this.txtPitchDamping = new System.Windows.Forms.NumericUpDown();
+            this.txtPitchDamping = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.lblPitchStiffness = new System.Windows.Forms.Label();
             this.lblPitchDamping = new System.Windows.Forms.Label();
-            this.txtPitchStiffness = new System.Windows.Forms.NumericUpDown();
+            this.txtPitchStiffness = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown15 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.txtPitchFriction = new System.Windows.Forms.NumericUpDown();
+            this.txtPitchFriction = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.chkPitchFriction = new System.Windows.Forms.CheckBox();
             this.btnOkay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -145,21 +145,21 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button21 = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
-            this.txtBoingDampingRate = new System.Windows.Forms.NumericUpDown();
+            this.txtBoingDampingRate = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.txtBoingImpactAngle = new System.Windows.Forms.NumericUpDown();
+            this.txtBoingImpactAngle = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.txtBoingImpactSpeed = new System.Windows.Forms.NumericUpDown();
+            this.txtBoingImpactSpeed = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
-            this.txtBoingAmplitude = new System.Windows.Forms.NumericUpDown();
+            this.txtBoingAmplitude = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.txtBoingFrequency = new System.Windows.Forms.NumericUpDown();
+            this.txtBoingFrequency = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label46 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lstPropertyGroupsMain = new System.Windows.Forms.CheckedListBox();
@@ -185,7 +185,7 @@
             this.btn_QC_select_current = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label58 = new System.Windows.Forms.Label();
             this.grp_IS_FLEXIBLE = new System.Windows.Forms.GroupBox();
             this.lbl_Along = new System.Windows.Forms.Label();
@@ -200,46 +200,46 @@
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.button31 = new System.Windows.Forms.Button();
             this.label62 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.numericUpDown4 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.button33 = new System.Windows.Forms.Button();
             this.label66 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.button34 = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.numericUpDown7 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
             this.button35 = new System.Windows.Forms.Button();
             this.label69 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown8 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
             this.button36 = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown9 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
             this.button37 = new System.Windows.Forms.Button();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown10 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.numericUpDown11 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown12 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown13 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label75 = new System.Windows.Forms.Label();
             this.menuResetValue = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.resetToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -247,43 +247,43 @@
             this.btn_reset_generic = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown27 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown27 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown28 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown28 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown16 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.button3 = new System.Windows.Forms.Button();
             this.lbl_IS_RIGID = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown17 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown18 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown19 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown20 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.numericUpDown21 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown26 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown26 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
             this.label54 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.numericUpDown29 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown30 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown29 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
+            this.numericUpDown30 = new DeviceCtrlLibrary.NumericUpDown_CustomFormat();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -488,6 +488,7 @@
             // txtYawConstraintMax
             // 
             this.txtYawConstraintMax.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawConstraintMax.DecimalPlaces = 5;
             this.txtYawConstraintMax.Location = new System.Drawing.Point(123, 23);
             this.txtYawConstraintMax.Maximum = new decimal(new int[] {
             -1,
@@ -503,11 +504,13 @@
             this.txtYawConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtYawConstraintMax.TabIndex = 27;
             this.txtYawConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawConstraintMax.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtYawConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtYawConstraintMin
             // 
             this.txtYawConstraintMin.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawConstraintMin.DecimalPlaces = 5;
             this.txtYawConstraintMin.Location = new System.Drawing.Point(43, 23);
             this.txtYawConstraintMin.Maximum = new decimal(new int[] {
             -1,
@@ -523,6 +526,7 @@
             this.txtYawConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtYawConstraintMin.TabIndex = 25;
             this.txtYawConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawConstraintMin.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtYawConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // chkYawConstraint
@@ -558,6 +562,7 @@
             // txtYawDamping
             // 
             this.txtYawDamping.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawDamping.DecimalPlaces = 5;
             this.txtYawDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYawDamping.Location = new System.Drawing.Point(125, 38);
             this.txtYawDamping.Maximum = new decimal(new int[] {
@@ -574,6 +579,7 @@
             this.txtYawDamping.Size = new System.Drawing.Size(60, 20);
             this.txtYawDamping.TabIndex = 14;
             this.txtYawDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawDamping.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtYawDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // lblYawStiffness
@@ -599,6 +605,7 @@
             // txtYawStiffness
             // 
             this.txtYawStiffness.BackColor = System.Drawing.SystemColors.Window;
+            this.txtYawStiffness.DecimalPlaces = 5;
             this.txtYawStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYawStiffness.Location = new System.Drawing.Point(125, 15);
             this.txtYawStiffness.Maximum = new decimal(new int[] {
@@ -620,6 +627,7 @@
             0,
             0});
             this.txtYawStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtYawStiffness.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtYawStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox27
@@ -658,6 +666,7 @@
             // txtYawFriction
             // 
             this.txtYawFriction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.txtYawFriction.DecimalPlaces = 5;
             this.txtYawFriction.Enabled = false;
             this.txtYawFriction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYawFriction.Location = new System.Drawing.Point(111, 14);
@@ -823,6 +832,7 @@
             // txtBaseLeftFriction
             // 
             this.txtBaseLeftFriction.BackColor = System.Drawing.Color.White;
+            this.txtBaseLeftFriction.DecimalPlaces = 5;
             this.txtBaseLeftFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseLeftFriction.Maximum = new decimal(new int[] {
             -1,
@@ -838,6 +848,7 @@
             this.txtBaseLeftFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseLeftFriction.TabIndex = 21;
             this.txtBaseLeftFriction.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseLeftFriction.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseLeftFriction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox21
@@ -876,6 +887,7 @@
             // txtBaseLeftConstraintMax
             // 
             this.txtBaseLeftConstraintMax.BackColor = System.Drawing.Color.White;
+            this.txtBaseLeftConstraintMax.DecimalPlaces = 5;
             this.txtBaseLeftConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseLeftConstraintMax.Maximum = new decimal(new int[] {
             -1,
@@ -896,11 +908,13 @@
             0,
             0});
             this.txtBaseLeftConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseLeftConstraintMax.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseLeftConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtBaseLeftConstraintMin
             // 
             this.txtBaseLeftConstraintMin.BackColor = System.Drawing.Color.White;
+            this.txtBaseLeftConstraintMin.DecimalPlaces = 5;
             this.txtBaseLeftConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseLeftConstraintMin.Maximum = new decimal(new int[] {
             -1,
@@ -916,6 +930,7 @@
             this.txtBaseLeftConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseLeftConstraintMin.TabIndex = 25;
             this.txtBaseLeftConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseLeftConstraintMin.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseLeftConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // lbl_HAS_BASE_SPRING
@@ -976,6 +991,7 @@
             // txtBaseForwardFriction
             // 
             this.txtBaseForwardFriction.BackColor = System.Drawing.Color.White;
+            this.txtBaseForwardFriction.DecimalPlaces = 5;
             this.txtBaseForwardFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseForwardFriction.Maximum = new decimal(new int[] {
             -1,
@@ -991,6 +1007,7 @@
             this.txtBaseForwardFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseForwardFriction.TabIndex = 21;
             this.txtBaseForwardFriction.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseForwardFriction.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseForwardFriction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox24
@@ -1028,6 +1045,7 @@
             // txtBaseForwardConstraintMax
             // 
             this.txtBaseForwardConstraintMax.BackColor = System.Drawing.Color.White;
+            this.txtBaseForwardConstraintMax.DecimalPlaces = 5;
             this.txtBaseForwardConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseForwardConstraintMax.Maximum = new decimal(new int[] {
             -1,
@@ -1048,11 +1066,13 @@
             0,
             0});
             this.txtBaseForwardConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseForwardConstraintMax.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseForwardConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtBaseForwardConstraintMin
             // 
             this.txtBaseForwardConstraintMin.BackColor = System.Drawing.Color.White;
+            this.txtBaseForwardConstraintMin.DecimalPlaces = 5;
             this.txtBaseForwardConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseForwardConstraintMin.Maximum = new decimal(new int[] {
             -1,
@@ -1068,6 +1088,7 @@
             this.txtBaseForwardConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseForwardConstraintMin.TabIndex = 25;
             this.txtBaseForwardConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseForwardConstraintMin.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseForwardConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox25
@@ -1105,6 +1126,7 @@
             // 
             // txtBaseBaseMass
             // 
+            this.txtBaseBaseMass.DecimalPlaces = 5;
             this.txtBaseBaseMass.Location = new System.Drawing.Point(125, 14);
             this.txtBaseBaseMass.Maximum = new decimal(new int[] {
             -1,
@@ -1120,6 +1142,7 @@
             this.txtBaseBaseMass.Size = new System.Drawing.Size(60, 20);
             this.txtBaseBaseMass.TabIndex = 19;
             this.txtBaseBaseMass.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseBaseMass.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseBaseMass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox6
@@ -1168,6 +1191,7 @@
             // txtBaseUpFriction
             // 
             this.txtBaseUpFriction.BackColor = System.Drawing.Color.White;
+            this.txtBaseUpFriction.DecimalPlaces = 5;
             this.txtBaseUpFriction.Location = new System.Drawing.Point(112, 14);
             this.txtBaseUpFriction.Maximum = new decimal(new int[] {
             -1,
@@ -1183,6 +1207,7 @@
             this.txtBaseUpFriction.Size = new System.Drawing.Size(60, 20);
             this.txtBaseUpFriction.TabIndex = 21;
             this.txtBaseUpFriction.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseUpFriction.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseUpFriction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox18
@@ -1220,6 +1245,7 @@
             // txtBaseUpConstraintMax
             // 
             this.txtBaseUpConstraintMax.BackColor = System.Drawing.Color.White;
+            this.txtBaseUpConstraintMax.DecimalPlaces = 5;
             this.txtBaseUpConstraintMax.Location = new System.Drawing.Point(120, 23);
             this.txtBaseUpConstraintMax.Maximum = new decimal(new int[] {
             -1,
@@ -1240,11 +1266,13 @@
             0,
             0});
             this.txtBaseUpConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseUpConstraintMax.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseUpConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtBaseUpConstraintMin
             // 
             this.txtBaseUpConstraintMin.BackColor = System.Drawing.Color.White;
+            this.txtBaseUpConstraintMin.DecimalPlaces = 5;
             this.txtBaseUpConstraintMin.Location = new System.Drawing.Point(39, 23);
             this.txtBaseUpConstraintMin.Maximum = new decimal(new int[] {
             -1,
@@ -1260,6 +1288,7 @@
             this.txtBaseUpConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtBaseUpConstraintMin.TabIndex = 25;
             this.txtBaseUpConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseUpConstraintMin.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseUpConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox5
@@ -1303,6 +1332,7 @@
             // txtBaseDamping
             // 
             this.txtBaseDamping.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBaseDamping.DecimalPlaces = 5;
             this.txtBaseDamping.Location = new System.Drawing.Point(125, 38);
             this.txtBaseDamping.Maximum = new decimal(new int[] {
             -1,
@@ -1318,6 +1348,7 @@
             this.txtBaseDamping.Size = new System.Drawing.Size(60, 20);
             this.txtBaseDamping.TabIndex = 14;
             this.txtBaseDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseDamping.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label8
@@ -1341,6 +1372,7 @@
             // txtBaseStiffness
             // 
             this.txtBaseStiffness.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBaseStiffness.DecimalPlaces = 5;
             this.txtBaseStiffness.Location = new System.Drawing.Point(125, 15);
             this.txtBaseStiffness.Maximum = new decimal(new int[] {
             -1,
@@ -1356,11 +1388,13 @@
             this.txtBaseStiffness.Size = new System.Drawing.Size(60, 20);
             this.txtBaseStiffness.TabIndex = 11;
             this.txtBaseStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBaseStiffness.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBaseStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtAlongStiffness
             // 
             this.txtAlongStiffness.BackColor = System.Drawing.Color.White;
+            this.txtAlongStiffness.DecimalPlaces = 5;
             this.txtAlongStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongStiffness.Location = new System.Drawing.Point(125, 15);
             this.txtAlongStiffness.Maximum = new decimal(new int[] {
@@ -1382,6 +1416,7 @@
             0,
             0});
             this.txtAlongStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtAlongStiffness.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtAlongStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label4
@@ -1407,6 +1442,7 @@
             // txtAlongDamping
             // 
             this.txtAlongDamping.BackColor = System.Drawing.Color.White;
+            this.txtAlongDamping.DecimalPlaces = 5;
             this.txtAlongDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlongDamping.Location = new System.Drawing.Point(125, 38);
             this.txtAlongDamping.Maximum = new decimal(new int[] {
@@ -1423,6 +1459,7 @@
             this.txtAlongDamping.Size = new System.Drawing.Size(60, 20);
             this.txtAlongDamping.TabIndex = 14;
             this.txtAlongDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtAlongDamping.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtAlongDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // grp_Along
@@ -1491,6 +1528,7 @@
             this.txtAngleConstraint.Size = new System.Drawing.Size(60, 20);
             this.txtAngleConstraint.TabIndex = 19;
             this.txtAngleConstraint.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtAngleConstraint.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtAngleConstraint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // chkAngleConstraint
@@ -1550,6 +1588,7 @@
             // txtLength
             // 
             this.txtLength.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLength.DecimalPlaces = 5;
             this.txtLength.Location = new System.Drawing.Point(125, 16);
             this.txtLength.Maximum = new decimal(new int[] {
             -1,
@@ -1570,7 +1609,7 @@
             0,
             0});
             this.txtLength.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
-            this.txtLength.ValueChanged += new System.EventHandler(this.txtLength_ValueChanged);
+            this.txtLength.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // chkAllowLengthFlex
@@ -1596,6 +1635,7 @@
             // txtTipMass
             // 
             this.txtTipMass.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTipMass.DecimalPlaces = 5;
             this.txtTipMass.Location = new System.Drawing.Point(125, 15);
             this.txtTipMass.Maximum = new decimal(new int[] {
             -1,
@@ -1611,6 +1651,7 @@
             this.txtTipMass.Size = new System.Drawing.Size(60, 20);
             this.txtTipMass.TabIndex = 14;
             this.txtTipMass.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtTipMass.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtTipMass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label30
@@ -1675,6 +1716,7 @@
             // txtPitchConstraintMax
             // 
             this.txtPitchConstraintMax.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchConstraintMax.DecimalPlaces = 5;
             this.txtPitchConstraintMax.Location = new System.Drawing.Point(123, 23);
             this.txtPitchConstraintMax.Maximum = new decimal(new int[] {
             -1,
@@ -1690,11 +1732,13 @@
             this.txtPitchConstraintMax.Size = new System.Drawing.Size(49, 20);
             this.txtPitchConstraintMax.TabIndex = 27;
             this.txtPitchConstraintMax.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchConstraintMax.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtPitchConstraintMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // txtPitchConstraintMin
             // 
             this.txtPitchConstraintMin.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchConstraintMin.DecimalPlaces = 5;
             this.txtPitchConstraintMin.Location = new System.Drawing.Point(43, 23);
             this.txtPitchConstraintMin.Maximum = new decimal(new int[] {
             -1,
@@ -1710,6 +1754,7 @@
             this.txtPitchConstraintMin.Size = new System.Drawing.Size(49, 20);
             this.txtPitchConstraintMin.TabIndex = 25;
             this.txtPitchConstraintMin.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchConstraintMin.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtPitchConstraintMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // chkPitchConstraint
@@ -1745,6 +1790,7 @@
             // txtPitchDamping
             // 
             this.txtPitchDamping.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchDamping.DecimalPlaces = 5;
             this.txtPitchDamping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPitchDamping.Location = new System.Drawing.Point(124, 38);
             this.txtPitchDamping.Maximum = new decimal(new int[] {
@@ -1761,6 +1807,7 @@
             this.txtPitchDamping.Size = new System.Drawing.Size(60, 20);
             this.txtPitchDamping.TabIndex = 14;
             this.txtPitchDamping.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchDamping.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtPitchDamping.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // lblPitchStiffness
@@ -1786,6 +1833,7 @@
             // txtPitchStiffness
             // 
             this.txtPitchStiffness.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPitchStiffness.DecimalPlaces = 5;
             this.txtPitchStiffness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPitchStiffness.Location = new System.Drawing.Point(124, 15);
             this.txtPitchStiffness.Maximum = new decimal(new int[] {
@@ -1807,6 +1855,7 @@
             0,
             0});
             this.txtPitchStiffness.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtPitchStiffness.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtPitchStiffness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox30
@@ -1824,6 +1873,7 @@
             // numericUpDown15
             // 
             this.numericUpDown15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown15.DecimalPlaces = 5;
             this.numericUpDown15.Enabled = false;
             this.numericUpDown15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown15.Location = new System.Drawing.Point(111, 40);
@@ -1848,6 +1898,7 @@
             // txtPitchFriction
             // 
             this.txtPitchFriction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.txtPitchFriction.DecimalPlaces = 5;
             this.txtPitchFriction.Enabled = false;
             this.txtPitchFriction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPitchFriction.Location = new System.Drawing.Point(111, 14);
@@ -1942,6 +1993,7 @@
             // 
             // txtBoingDampingRate
             // 
+            this.txtBoingDampingRate.DecimalPlaces = 5;
             this.txtBoingDampingRate.Location = new System.Drawing.Point(121, 16);
             this.txtBoingDampingRate.Maximum = new decimal(new int[] {
             -1,
@@ -1957,6 +2009,7 @@
             this.txtBoingDampingRate.Size = new System.Drawing.Size(60, 20);
             this.txtBoingDampingRate.TabIndex = 19;
             this.txtBoingDampingRate.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBoingDampingRate.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBoingDampingRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox32
@@ -1998,6 +2051,7 @@
             // txtBoingImpactAngle
             // 
             this.txtBoingImpactAngle.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoingImpactAngle.DecimalPlaces = 5;
             this.txtBoingImpactAngle.Location = new System.Drawing.Point(121, 40);
             this.txtBoingImpactAngle.Maximum = new decimal(new int[] {
             -1,
@@ -2018,6 +2072,7 @@
             0,
             0});
             this.txtBoingImpactAngle.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBoingImpactAngle.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBoingImpactAngle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label42
@@ -2041,6 +2096,7 @@
             // txtBoingImpactSpeed
             // 
             this.txtBoingImpactSpeed.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoingImpactSpeed.DecimalPlaces = 5;
             this.txtBoingImpactSpeed.Location = new System.Drawing.Point(121, 16);
             this.txtBoingImpactSpeed.Maximum = new decimal(new int[] {
             -1,
@@ -2061,6 +2117,7 @@
             0,
             0});
             this.txtBoingImpactSpeed.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBoingImpactSpeed.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBoingImpactSpeed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // groupBox33
@@ -2102,6 +2159,7 @@
             // txtBoingAmplitude
             // 
             this.txtBoingAmplitude.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoingAmplitude.DecimalPlaces = 5;
             this.txtBoingAmplitude.Location = new System.Drawing.Point(121, 40);
             this.txtBoingAmplitude.Maximum = new decimal(new int[] {
             -1,
@@ -2117,6 +2175,7 @@
             this.txtBoingAmplitude.Size = new System.Drawing.Size(60, 20);
             this.txtBoingAmplitude.TabIndex = 14;
             this.txtBoingAmplitude.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBoingAmplitude.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBoingAmplitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label44
@@ -2140,6 +2199,7 @@
             // txtBoingFrequency
             // 
             this.txtBoingFrequency.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoingFrequency.DecimalPlaces = 5;
             this.txtBoingFrequency.Location = new System.Drawing.Point(121, 16);
             this.txtBoingFrequency.Maximum = new decimal(new int[] {
             -1,
@@ -2160,6 +2220,7 @@
             0,
             0});
             this.txtBoingFrequency.TextChanged += new System.EventHandler(this.jigglePropertyChanged);
+            this.txtBoingFrequency.ValueChanged += new System.EventHandler(this.numericUpDown_any_ValueChanged);
             this.txtBoingFrequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeric_KeyPress);
             // 
             // label46
@@ -2397,6 +2458,7 @@
             this.btn_QC_copy.TabIndex = 70;
             this.btn_QC_copy.Text = "Copy";
             this.btn_QC_copy.UseVisualStyleBackColor = true;
+            this.btn_QC_copy.Click += new System.EventHandler(this.btn_QC_copy_Click);
             // 
             // btn_QC_select_all
             // 
@@ -2407,6 +2469,7 @@
             this.btn_QC_select_all.TabIndex = 70;
             this.btn_QC_select_all.Text = "Select All";
             this.btn_QC_select_all.UseVisualStyleBackColor = true;
+            this.btn_QC_select_all.Click += new System.EventHandler(this.btn_QC_select_all_Click);
             // 
             // btn_QC_select_current
             // 
@@ -3107,6 +3170,7 @@
             // numericUpDown27
             // 
             this.numericUpDown27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown27.DecimalPlaces = 5;
             this.numericUpDown27.Enabled = false;
             this.numericUpDown27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown27.Location = new System.Drawing.Point(111, 40);
@@ -3138,6 +3202,7 @@
             // numericUpDown28
             // 
             this.numericUpDown28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown28.DecimalPlaces = 5;
             this.numericUpDown28.Enabled = false;
             this.numericUpDown28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown28.Location = new System.Drawing.Point(111, 14);
@@ -3205,6 +3270,7 @@
             // numericUpDown16
             // 
             this.numericUpDown16.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown16.DecimalPlaces = 5;
             this.numericUpDown16.Location = new System.Drawing.Point(125, 16);
             this.numericUpDown16.Name = "numericUpDown16";
             this.numericUpDown16.Size = new System.Drawing.Size(60, 20);
@@ -3267,6 +3333,7 @@
             // numericUpDown17
             // 
             this.numericUpDown17.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown17.DecimalPlaces = 5;
             this.numericUpDown17.Location = new System.Drawing.Point(125, 14);
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(60, 20);
@@ -3304,6 +3371,7 @@
             // numericUpDown18
             // 
             this.numericUpDown18.BackColor = System.Drawing.Color.White;
+            this.numericUpDown18.DecimalPlaces = 5;
             this.numericUpDown18.Enabled = false;
             this.numericUpDown18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown18.Location = new System.Drawing.Point(111, 40);
@@ -3325,6 +3393,7 @@
             // numericUpDown19
             // 
             this.numericUpDown19.BackColor = System.Drawing.Color.White;
+            this.numericUpDown19.DecimalPlaces = 5;
             this.numericUpDown19.Enabled = false;
             this.numericUpDown19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown19.Location = new System.Drawing.Point(111, 14);
@@ -3379,6 +3448,7 @@
             // numericUpDown20
             // 
             this.numericUpDown20.BackColor = System.Drawing.Color.White;
+            this.numericUpDown20.DecimalPlaces = 5;
             this.numericUpDown20.Location = new System.Drawing.Point(123, 23);
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(49, 20);
@@ -3387,6 +3457,7 @@
             // numericUpDown21
             // 
             this.numericUpDown21.BackColor = System.Drawing.Color.White;
+            this.numericUpDown21.DecimalPlaces = 5;
             this.numericUpDown21.Location = new System.Drawing.Point(43, 23);
             this.numericUpDown21.Name = "numericUpDown21";
             this.numericUpDown21.Size = new System.Drawing.Size(49, 20);
@@ -3415,6 +3486,7 @@
             // 
             // numericUpDown26
             // 
+            this.numericUpDown26.DecimalPlaces = 5;
             this.numericUpDown26.Location = new System.Drawing.Point(125, 14);
             this.numericUpDown26.Name = "numericUpDown26";
             this.numericUpDown26.Size = new System.Drawing.Size(60, 20);
@@ -3477,6 +3549,7 @@
             // numericUpDown29
             // 
             this.numericUpDown29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown29.DecimalPlaces = 5;
             this.numericUpDown29.Location = new System.Drawing.Point(123, 23);
             this.numericUpDown29.Name = "numericUpDown29";
             this.numericUpDown29.Size = new System.Drawing.Size(49, 20);
@@ -3485,6 +3558,7 @@
             // numericUpDown30
             // 
             this.numericUpDown30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
+            this.numericUpDown30.DecimalPlaces = 5;
             this.numericUpDown30.Location = new System.Drawing.Point(43, 23);
             this.numericUpDown30.Name = "numericUpDown30";
             this.numericUpDown30.Size = new System.Drawing.Size(49, 20);
@@ -3753,7 +3827,7 @@
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(214, 757);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(562, 91);
+            this.label39.Size = new System.Drawing.Size(791, 182);
             this.label39.TabIndex = 90;
             this.label39.Text = resources.GetString("label39.Text");
             // 
@@ -4091,7 +4165,7 @@
         private Label label57;
         private Label label56;
         private Label label55;
-        private NumericUpDown numericUpDown1;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown1;
         private Label label58;
         private GroupBox grp_IS_FLEXIBLE;
         private Label label59;
@@ -4101,84 +4175,84 @@
         private GroupBox groupBox38;
         private Button button31;
         private Label label62;
-        private NumericUpDown numericUpDown2;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown2;
         private GroupBox groupBox39;
         private Button button32;
         private Label label63;
         private Label label64;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown4;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown3;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown4;
         private Label lbl_IS_FLEXIBLE;
         private GroupBox groupBox40;
         private GroupBox groupBox41;
         private Button button33;
         private Label label66;
-        private NumericUpDown numericUpDown5;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown5;
         private GroupBox groupBox42;
         private Button button34;
         private Label label67;
         private Label label68;
-        private NumericUpDown numericUpDown6;
-        private NumericUpDown numericUpDown7;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown6;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown7;
         private GroupBox groupBox43;
         private Button button35;
         private Label label69;
-        private NumericUpDown numericUpDown8;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown8;
         private GroupBox groupBox44;
         private GroupBox groupBox45;
         private Button button36;
         private Label label70;
-        private NumericUpDown numericUpDown9;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown9;
         private GroupBox groupBox46;
         private Button button37;
         private Label label71;
         private Label label72;
-        private NumericUpDown numericUpDown10;
-        private NumericUpDown numericUpDown11;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown10;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown11;
         private GroupBox groupBox47;
         private Button button38;
         private Button button39;
-        private NumericUpDown numericUpDown12;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown12;
         private Label label73;
         private Label label74;
-        private NumericUpDown numericUpDown13;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown13;
         private Label label75;
         private ContextMenuStrip menuResetValue;
-        private NumericUpDown txtYawDamping;
-        private NumericUpDown txtYawStiffness;
-        private NumericUpDown txtBaseBaseMass;
-        private NumericUpDown txtBaseUpFriction;
-        private NumericUpDown txtBaseUpConstraintMax;
-        private NumericUpDown txtBaseUpConstraintMin;
-        private NumericUpDown txtBaseLeftFriction;
-        private NumericUpDown txtBaseLeftConstraintMax;
-        private NumericUpDown txtBaseLeftConstraintMin;
-        private NumericUpDown txtBaseDamping;
-        private NumericUpDown txtBaseStiffness;
-        private NumericUpDown txtAlongStiffness;
-        private NumericUpDown txtAlongDamping;
-        private NumericUpDown txtAngleConstraint;
-        private NumericUpDown txtTipMass;
-        private NumericUpDown txtLength;
-        private NumericUpDown txtYawFriction;
-        private NumericUpDown txtYawConstraintMax;
-        private NumericUpDown txtYawConstraintMin;
-        private NumericUpDown txtPitchFriction;
-        private NumericUpDown txtPitchConstraintMax;
-        private NumericUpDown txtPitchConstraintMin;
-        private NumericUpDown txtPitchDamping;
-        private NumericUpDown txtPitchStiffness;
-        private NumericUpDown txtBaseForwardFriction;
-        private NumericUpDown txtBaseForwardConstraintMax;
-        private NumericUpDown txtBaseForwardConstraintMin;
-        private NumericUpDown txtBoingDampingRate;
-        private NumericUpDown txtBoingImpactAngle;
-        private NumericUpDown txtBoingImpactSpeed;
-        private NumericUpDown txtBoingAmplitude;
-        private NumericUpDown txtBoingFrequency;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtYawDamping;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtYawStiffness;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseBaseMass;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseUpFriction;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseUpConstraintMax;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseUpConstraintMin;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseLeftFriction;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseLeftConstraintMax;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseLeftConstraintMin;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseDamping;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseStiffness;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtAlongStiffness;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtAlongDamping;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtAngleConstraint;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtTipMass;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtLength;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtYawFriction;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtYawConstraintMax;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtYawConstraintMin;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtPitchFriction;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtPitchConstraintMax;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtPitchConstraintMin;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtPitchDamping;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtPitchStiffness;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseForwardFriction;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseForwardConstraintMax;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBaseForwardConstraintMin;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBoingDampingRate;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBoingImpactAngle;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBoingImpactSpeed;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBoingAmplitude;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat txtBoingFrequency;
         private ToolStripMenuItem resetToDefaultToolStripMenuItem;
         private ToolStripMenuItem revertToOriginalboneNameValueToolStripMenuItem;
-        private NumericUpDown numericUpDown14;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown14;
         private CheckBox checkBox1;
         private Label lbl_IS_BOING;
         private Button btn_reset_generic;
@@ -4188,46 +4262,46 @@
         private Label label1;
         private GroupBox groupBox48;
         private Label label2;
-        private NumericUpDown numericUpDown15;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown15;
         private CheckBox checkBox2;
         private GroupBox groupBox2;
         private Label label14;
         private Label label15;
         private GroupBox groupBox8;
         private Label label16;
-        private NumericUpDown numericUpDown16;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown16;
         private Button button3;
         private Label lbl_IS_RIGID;
         private GroupBox groupBox9;
         private Button button4;
         private Label label18;
-        private NumericUpDown numericUpDown17;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown17;
         private GroupBox groupBox10;
         private GroupBox groupBox11;
-        private NumericUpDown numericUpDown18;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown18;
         private CheckBox checkBox4;
-        private NumericUpDown numericUpDown19;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown19;
         private CheckBox checkBox5;
         private GroupBox groupBox12;
         private Label label19;
         private Label label20;
-        private NumericUpDown numericUpDown20;
-        private NumericUpDown numericUpDown21;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown20;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown21;
         private CheckBox checkBox6;
         private GroupBox groupBox14;
-        private NumericUpDown numericUpDown26;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown26;
         private CheckBox checkBox7;
         private GroupBox groupBox15;
         private GroupBox groupBox16;
-        private NumericUpDown numericUpDown27;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown27;
         private CheckBox checkBox8;
-        private NumericUpDown numericUpDown28;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown28;
         private CheckBox checkBox9;
         private GroupBox groupBox49;
         private Label label54;
         private Label label65;
-        private NumericUpDown numericUpDown29;
-        private NumericUpDown numericUpDown30;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown29;
+        private DeviceCtrlLibrary.NumericUpDown_CustomFormat numericUpDown30;
         private CheckBox checkBox10;
         private Label label78;
         private Label label13;
