@@ -1,0 +1,1 @@
+[ ] Add gunslinger support (This is an edgecase; gunslinger uses a skin instead of weapon model)
